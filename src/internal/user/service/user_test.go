@@ -31,7 +31,6 @@ func TestUserServiceTestSuite(t *testing.T) {
 }
 
 // Login
-
 func (suite *UserServiceTestSuite) TestLoginFail() {
 
 	req := &dto.LoginReq{
@@ -137,6 +136,37 @@ func (suite *UserServiceTestSuite) TestRegisterSuccess() {
 		Return(nil).Times(1)
 
 	user, err := suite.service.Register(context.Background(), req)
+
+	suite.NotNil(user)
+	suite.Nil(err)
+}
+
+// GetUserByID
+func (suite *UserServiceTestSuite) TestGetUserByIDFail() {
+
+	id := "12"
+
+	suite.mockRepo.On("GetUserByID", mock.Anything, mock.Anything).
+		Return(nil, errors.New("error")).Times(1)
+
+	user, err := suite.service.GetUserByID(context.Background(), id)
+
+	suite.Nil(user)
+	suite.NotNil(err)
+
+}
+
+func (suite *UserServiceTestSuite) TestGetUserByIDSuccess() {
+
+	id := "13"
+
+	suite.mockRepo.On("GetUserByID", mock.Anything, mock.Anything).
+		Return(&model.User{
+			Email:    "test@test.com",
+			Password: utils.HashAndSalt([]byte("test123456")),
+		}, nil).Times(1)
+
+	user, err := suite.service.GetUserByID(context.Background(), id)
 
 	suite.NotNil(user)
 	suite.Nil(err)

@@ -15,6 +15,7 @@ import (
 type IUserService interface {
 	Login(ctx context.Context, req *dto.LoginReq) (*model.User, error)
 	Register(ctx context.Context, req *dto.RegisterReq) (*model.User, error)
+	GetUserByID(ctx context.Context, id string) (*model.User, error)
 }
 
 type UserService struct {
@@ -64,4 +65,15 @@ func (s *UserService) Register(ctx context.Context, req *dto.RegisterReq) (*mode
 	}
 
 	return &newUser, nil
+}
+
+func (s *UserService) GetUserByID(ctx context.Context, id string) (*model.User, error) {
+
+	user, err := s.repo.GetUserByID(ctx, id)
+
+	if err != nil {
+		return nil, err
+	}
+
+	return user, nil
 }
