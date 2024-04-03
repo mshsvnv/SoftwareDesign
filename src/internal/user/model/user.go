@@ -5,6 +5,7 @@ type UserRole string
 const (
 	UserRoleAdmin    UserRole = "admin"
 	UserRoleCustomer UserRole = "customer"
+	UserRoleSeller   UserRole = "seller"
 )
 
 type User struct {
@@ -13,8 +14,3 @@ type User struct {
 	Password string
 	Role     UserRole
 }
-
-// func (user *User) BeforeCreate(tx *gorm.DB) error {
-
-// 	user.ID =
-// }
