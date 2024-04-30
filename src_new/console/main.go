@@ -1,34 +1,79 @@
 package main
 
 import (
+	"context"
 	"fmt"
-
-	"github.com/rivo/tview"
+	"src_new/internal/dto"
+	"src_new/internal/model"
+	"src_new/internal/repository"
+	"src_new/internal/service"
 )
 
-const pageCount = 5
-
 func main() {
-	app := tview.NewApplication()
-	pages := tview.NewPages()
-	for page := 0; page < pageCount; page++ {
-		func(page int) {
-			pages.AddPage(fmt.Sprintf("page-%d", page),
-				tview.NewModal().
-					SetText(fmt.Sprintf("This is page %d. Choose where to go next.", page+1)).
-					AddButtons([]string{"Next", "Quit"}).
-					SetDoneFunc(func(buttonIndex int, buttonLabel string) {
-						if buttonIndex == 0 {
-							pages.SwitchToPage(fmt.Sprintf("page-%d", (page+1)%pageCount))
-						} else {
-							app.Stop()
-						}
-					}),
-				false,
-				page == 0)
-		}(page)
-	}
-	if err := app.SetRoot(pages, true).SetFocus(pages).Run(); err != nil {
-		panic(err)
+
+	ctx := context.Background()
+
+	orderrepo := repository.NewOrderRepository()
+	racketrepo := repository.NewRacketRepository()
+
+	orderserv := service.NewOrderService(orderrepo,
+		racketrepo)
+
+	_ = racketrepo.Create(ctx, &model.Racket{
+		ID:       0,
+		Quantity: 10,
+		Price:    100,
+	})
+
+	_ = racketrepo.Create(ctx, &model.Racket{
+		ID:       1,
+		Quantity: 10,
+		Price:    200,
+	})
+
+	_, _ = orderserv.CreateOrder(ctx, &dto.PlaceOrderReq{
+		UserID: 0,
+		Lines: []*dto.PlaceOrderLineReq{{
+			RacketID: 0,
+			Quantity: 1,
+		},
+			{
+				RacketID: 1,
+				Quantity: 2,
+			},
+		},
+	})
+
+	_, _ = orderserv.CreateOrder(ctx, &dto.PlaceOrderReq{
+		UserID: 0,
+		Lines: []*dto.PlaceOrderLineReq{{
+			RacketID: 0,
+			Quantity: 10,
+		},
+			{
+				RacketID: 1,
+				Quantity: 2,
+			},
+		},
+	})
+
+	// if err == nil {
+	// 	fmt.Printf("Hehe, %f\n", order.TotalPrice)
+	// } else {
+	// 	fmt.Println(err.Error())
+	// }
+
+	// for _, line := range order.Lines {
+	// 	fmt.Printf("%d, %d, %f\n", line.RacketID, line.Quantity, line.Price)
+	// }
+
+	orders, _ := orderserv.GetMyOrders(ctx, 0)
+
+	for _, order := range orders {
+		fmt.Printf("%d %f\n", order.ID, order.TotalPrice)
+
+		for _, racket := range order.Lines {
+			fmt.Printf("	ID %d Price %f Quantitiy %d\n", racket.RacketID, racket.Price, racket.Quantity)
+		}
 	}
 }
