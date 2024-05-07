@@ -5,3 +5,8 @@ type Racket struct {
 	Brand string
 	Price float64
 }
+
+type UpdateRacketReq struct {
+	ID       string
+	Quantity uint
+}

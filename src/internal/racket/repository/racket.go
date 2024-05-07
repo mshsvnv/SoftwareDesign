@@ -11,6 +11,7 @@ import (
 type IRacketRepository interface {
 	Create(ctx context.Context, Racket *model.Racket) error
 	Update(ctx context.Context, Racket *model.Racket) error
+	Delete(ctx context.Context, id string) error
 	ListRackets(ctx context.Context, req *dto.ListRacketReq) ([]*model.Racket, error)
 	GetRacketByID(ctx context.Context, id string) (*model.Racket, error)
 }

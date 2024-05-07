@@ -16,17 +16,35 @@ type IPaymentRepository struct {
 	mock.Mock
 }
 
-// CreatePayment provides a mock function with given fields: ctx, Payment
-func (_m *IPaymentRepository) CreatePayment(ctx context.Context, Payment *model.Payment) error {
+// Create provides a mock function with given fields: ctx, Payment
+func (_m *IPaymentRepository) Create(ctx context.Context, Payment *model.Payment) error {
 	ret := _m.Called(ctx, Payment)
 
 	if len(ret) == 0 {
-		panic("no return value specified for CreatePayment")
+		panic("no return value specified for Create")
 	}
 
 	var r0 error
 	if rf, ok := ret.Get(0).(func(context.Context, *model.Payment) error); ok {
 		r0 = rf(ctx, Payment)
+	} else {
+		r0 = ret.Error(0)
+	}
+
+	return r0
+}
+
+// Delete provides a mock function with given fields: ctx, orderID
+func (_m *IPaymentRepository) Delete(ctx context.Context, orderID string) error {
+	ret := _m.Called(ctx, orderID)
+
+	if len(ret) == 0 {
+		panic("no return value specified for Delete")
+	}
+
+	var r0 error
+	if rf, ok := ret.Get(0).(func(context.Context, string) error); ok {
+		r0 = rf(ctx, orderID)
 	} else {
 		r0 = ret.Error(0)
 	}
@@ -94,12 +112,12 @@ func (_m *IPaymentRepository) GetPaymentByOrderID(ctx context.Context, orderID s
 	return r0, r1
 }
 
-// UpdatePayment provides a mock function with given fields: ctx, Payment
-func (_m *IPaymentRepository) UpdatePayment(ctx context.Context, Payment *model.Payment) error {
+// Update provides a mock function with given fields: ctx, Payment
+func (_m *IPaymentRepository) Update(ctx context.Context, Payment *model.Payment) error {
 	ret := _m.Called(ctx, Payment)
 
 	if len(ret) == 0 {
-		panic("no return value specified for UpdatePayment")
+		panic("no return value specified for Update")
 	}
 
 	var r0 error

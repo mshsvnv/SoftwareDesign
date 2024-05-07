@@ -1,6 +1,6 @@
 package model
 
-type OrderLine struct {
+type OrderRacket struct {
 	OrderID  string
 	RacketID string
 	Racket   *Racket

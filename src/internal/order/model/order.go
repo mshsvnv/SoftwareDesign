@@ -18,7 +18,6 @@ type Order struct {
 	DeliveryDate  time.Time
 	Address       string
 	RecepientName string
-	Lines         []*OrderLine
+	Rackets       []*OrderRacket
 	Status        OrderStatus
-	TotalPrice    float64
 }

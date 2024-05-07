@@ -18,47 +18,65 @@ type IOrderService interface {
 }
 
 type OrderService struct {
-	repo       repository.IOrderRepository
-	racketRepo repository.IRacketRepository
+	repo        repository.IOrderRepository
+	racketRepo  repository.IOrderRacketRepository
+	paymentRepo repository.IPaymentRepository
 }
 
 func NewOrderService(
 	repo repository.IOrderRepository,
-	racketRepo repository.IRacketRepository,
+	racketRepo repository.IOrderRacketRepository,
+	paymentRepo repository.IPaymentRepository,
 ) *OrderService {
 	return &OrderService{
-		repo:       repo,
-		racketRepo: racketRepo,
+		repo:        repo,
+		racketRepo:  racketRepo,
+		paymentRepo: paymentRepo,
 	}
 }
 
 func (s *OrderService) PlaceOrder(ctx context.Context, req *dto.PlaceOrderReq) (*model.Order, error) {
 
-	var lines []*model.OrderLine
-	utils.Copy(&req.Lines, &lines)
+	var Rackets []*model.OrderRacket
+	utils.Copy(&req.Rackets, &Rackets)
 
 	racketMap := make(map[string]*model.Racket)
 
-	for _, line := range lines {
+	totalPrice := 0.
 
-		racket, err := s.racketRepo.GetRacketByID(ctx, line.RacketID)
+	for _, Racket := range Rackets {
+
+		racket, err := s.racketRepo.GetRacketByID(ctx, Racket.RacketID)
 
 		if err != nil {
 			return nil, err
 		}
 
-		line.Price = racket.Price * float64(line.Quantity)
-		racketMap[line.RacketID] = racket
+		Racket.Price = racket.Price * float64(Racket.Quantity)
+		totalPrice += Racket.Price
+		racketMap[Racket.RacketID] = racket
 	}
 
-	order, err := s.repo.CreateOrder(ctx, req.UserID, lines)
+	order, err := s.repo.Create(ctx, req.UserID, Rackets)
 
 	if err != nil {
 		return nil, err
 	}
 
-	for _, line := range order.Lines {
-		line.Racket = racketMap[line.RacketID]
+	payment := &model.Payment{
+		OrderID:    order.ID,
+		Status:     model.PaymentStatusInProgress,
+		TotalPrice: totalPrice,
+	}
+
+	err = s.paymentRepo.Create(ctx, payment)
+
+	if err != nil {
+		return nil, err
+	}
+
+	for _, Racket := range order.Rackets {
+		Racket.Racket = racketMap[Racket.RacketID]
 	}
 
 	return order, nil
@@ -104,7 +122,21 @@ func (s *OrderService) CancelOrder(ctx context.Context, orderID, userID string) 
 
 	order.Status = model.OrderStatusCancelled
 
-	err = s.repo.UpdateOrder(ctx, order)
+	err = s.repo.Update(ctx, order)
+
+	if err != nil {
+		return nil, err
+	}
+
+	payment, err := s.paymentRepo.GetPaymentByID(ctx, orderID)
+
+	if err != nil {
+		return nil, err
+	}
+
+	payment.Status = model.PaymentStatusCancelled
+
+	err = s.paymentRepo.Update(ctx, payment)
 
 	if err != nil {
 		return nil, err

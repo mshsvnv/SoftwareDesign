@@ -13,6 +13,16 @@ type ListRacketReq struct {
 	OrderDesc bool
 }
 
+type DeleteRacketCartReq struct {
+	RacketID string
+	OrderID  string
+}
+
+type DeleteRacketOrderReq struct {
+	OrderID string
+	CartID  string
+}
+
 type CreateRacketReq struct {
 	Brand    string
 	Quantity uint

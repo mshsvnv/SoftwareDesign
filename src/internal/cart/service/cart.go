@@ -10,8 +10,8 @@ import (
 
 type ICartService interface {
 	AddRacket(ctx context.Context, req *dto.AddRacketReq) (*model.Cart, error)
-	GetCartByUserID(ctx context.Context, userID string) (*model.Cart, error)
 	RemoveRacket(ctx context.Context, req *dto.RemoveRacketReq) (*model.Cart, error)
+	GetCartByUserID(ctx context.Context, userID string) (*model.Cart, error)
 }
 
 type CartService struct {
@@ -31,11 +31,12 @@ func (p *CartService) AddRacket(ctx context.Context, req *dto.AddRacketReq) (*mo
 	cart, err := p.repo.GetCartByUserID(ctx, req.UserID)
 
 	if err != nil {
+
 		cart = &model.Cart{
 			UserID: req.UserID,
-			Lines: []*model.CartLine{{
-				RacketID: req.Line.RacketID,
-				Quantity: req.Line.Quantity,
+			Rackets: []*model.CartRacket{{
+				RacketID: req.Racket.RacketID,
+				Quantity: req.Racket.Quantity,
 			}},
 		}
 
@@ -48,16 +49,16 @@ func (p *CartService) AddRacket(ctx context.Context, req *dto.AddRacketReq) (*mo
 		return cart, nil
 	}
 
-	for _, line := range cart.Lines {
+	for _, Racket := range cart.Rackets {
 
-		if line.RacketID == req.Line.RacketID {
+		if Racket.RacketID == req.Racket.RacketID {
 			return cart, nil
 		}
 	}
 
-	cart.Lines = append(cart.Lines, &model.CartLine{
-		RacketID: req.Line.RacketID,
-		Quantity: req.Line.Quantity,
+	cart.Rackets = append(cart.Rackets, &model.CartRacket{
+		RacketID: req.Racket.RacketID,
+		Quantity: req.Racket.Quantity,
 	})
 
 	err = p.repo.Update(ctx, cart)
@@ -95,6 +96,7 @@ func (p *CartService) RemoveRacket(ctx context.Context, req *dto.RemoveRacketReq
 	cart, err := p.repo.GetCartByUserID(ctx, req.UserID)
 
 	if err != nil {
+
 		cart = &model.Cart{
 			UserID: req.UserID,
 		}
@@ -108,10 +110,10 @@ func (p *CartService) RemoveRacket(ctx context.Context, req *dto.RemoveRacketReq
 		return cart, nil
 	}
 
-	for i, line := range cart.Lines {
+	for i, Racket := range cart.Rackets {
 
-		if line.RacketID == req.RacketID {
-			cart.Lines = append(cart.Lines[:i], cart.Lines[i+1:]...)
+		if Racket.RacketID == req.RacketID {
+			cart.Rackets = append(cart.Rackets[:i], cart.Rackets[i+1:]...)
 			break
 		}
 	}

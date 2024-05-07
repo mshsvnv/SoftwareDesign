@@ -45,7 +45,7 @@ func (suite *CartServiceTestSuite) TestGetCartByUserIDFail() {
 
 	suite.NotNil(cart)
 	suite.Equal("userID", cart.UserID)
-	suite.Equal(0, len(cart.Lines))
+	suite.Equal(0, len(cart.Rackets))
 	suite.Nil(err)
 }
 
@@ -73,7 +73,7 @@ func (suite *CartServiceTestSuite) TestGetCartByUserIDSuccess() {
 			&model.Cart{
 				ID:     "cartId1",
 				UserID: "userID",
-				Lines: []*model.CartLine{
+				Rackets: []*model.CartRacket{
 					{
 						RacketID: "RacketID1",
 						Quantity: 4,
@@ -90,7 +90,7 @@ func (suite *CartServiceTestSuite) TestGetCartByUserIDSuccess() {
 	cart, err := suite.service.GetCartByUserID(context.Background(), userID)
 	suite.NotNil(cart)
 	suite.Equal("userID", cart.UserID)
-	suite.Equal(2, len(cart.Lines))
+	suite.Equal(2, len(cart.Rackets))
 	suite.Nil(err)
 }
 
@@ -99,7 +99,7 @@ func (suite *CartServiceTestSuite) TestAddRacketCartNotFound() {
 
 	req := &dto.AddRacketReq{
 		UserID: "userID",
-		Line: &dto.CartLineReq{
+		Racket: &dto.CartRacketReq{
 			RacketID: "RacketID2",
 			Quantity: 3,
 		},
@@ -110,7 +110,7 @@ func (suite *CartServiceTestSuite) TestAddRacketCartNotFound() {
 
 	suite.mockRepo.On("Create", mock.Anything, &model.Cart{
 		UserID: "userID",
-		Lines: []*model.CartLine{
+		Rackets: []*model.CartRacket{
 			{
 				RacketID: "RacketID2",
 				Quantity: 3,
@@ -122,14 +122,14 @@ func (suite *CartServiceTestSuite) TestAddRacketCartNotFound() {
 
 	suite.NotNil(cart)
 	suite.Equal("userID", cart.UserID)
-	suite.Equal(1, len(cart.Lines))
+	suite.Equal(1, len(cart.Rackets))
 	suite.Nil(err)
 }
 func (suite *CartServiceTestSuite) TestAddRacketCartNotFoundCreateFail() {
 
 	req := &dto.AddRacketReq{
 		UserID: "userID",
-		Line: &dto.CartLineReq{
+		Racket: &dto.CartRacketReq{
 			RacketID: "RacketID2",
 			Quantity: 3,
 		},
@@ -140,7 +140,7 @@ func (suite *CartServiceTestSuite) TestAddRacketCartNotFoundCreateFail() {
 
 	suite.mockRepo.On("Create", mock.Anything, &model.Cart{
 		UserID: "userID",
-		Lines: []*model.CartLine{
+		Rackets: []*model.CartRacket{
 			{
 				RacketID: "RacketID2",
 				Quantity: 3,
@@ -158,7 +158,7 @@ func (suite *CartServiceTestSuite) TestAddRacketAlreadyExistInCart() {
 
 	req := &dto.AddRacketReq{
 		UserID: "userID",
-		Line: &dto.CartLineReq{
+		Racket: &dto.CartRacketReq{
 			RacketID: "RacketID2",
 			Quantity: 3,
 		},
@@ -169,7 +169,7 @@ func (suite *CartServiceTestSuite) TestAddRacketAlreadyExistInCart() {
 			&model.Cart{
 				ID:     "cartId1",
 				UserID: "userID",
-				Lines: []*model.CartLine{
+				Rackets: []*model.CartRacket{
 					{
 						RacketID: "RacketID1",
 						Quantity: 4,
@@ -186,7 +186,7 @@ func (suite *CartServiceTestSuite) TestAddRacketAlreadyExistInCart() {
 	cart, err := suite.service.AddRacket(context.Background(), req)
 	suite.NotNil(cart)
 	suite.Equal("userID", cart.UserID)
-	suite.Equal(2, len(cart.Lines))
+	suite.Equal(2, len(cart.Rackets))
 	suite.Nil(err)
 }
 
@@ -194,7 +194,7 @@ func (suite *CartServiceTestSuite) TestAddRacketUpdateFail() {
 
 	req := &dto.AddRacketReq{
 		UserID: "userID",
-		Line: &dto.CartLineReq{
+		Racket: &dto.CartRacketReq{
 			RacketID: "RacketID2",
 			Quantity: 3,
 		},
@@ -205,7 +205,7 @@ func (suite *CartServiceTestSuite) TestAddRacketUpdateFail() {
 			&model.Cart{
 				ID:     "cartId1",
 				UserID: "userID",
-				Lines: []*model.CartLine{
+				Rackets: []*model.CartRacket{
 					{
 						RacketID: "RacketID1",
 						Quantity: 4,
@@ -218,7 +218,7 @@ func (suite *CartServiceTestSuite) TestAddRacketUpdateFail() {
 	suite.mockRepo.On("Update", mock.Anything, &model.Cart{
 		ID:     "cartId1",
 		UserID: "userID",
-		Lines: []*model.CartLine{
+		Rackets: []*model.CartRacket{
 			{
 				RacketID: "RacketID1",
 				Quantity: 4,
@@ -239,7 +239,7 @@ func (suite *CartServiceTestSuite) TestAddRacketSuccess() {
 
 	req := &dto.AddRacketReq{
 		UserID: "userID",
-		Line: &dto.CartLineReq{
+		Racket: &dto.CartRacketReq{
 			RacketID: "RacketID2",
 			Quantity: 3,
 		},
@@ -250,7 +250,7 @@ func (suite *CartServiceTestSuite) TestAddRacketSuccess() {
 			&model.Cart{
 				ID:     "cartId1",
 				UserID: "userID",
-				Lines: []*model.CartLine{
+				Rackets: []*model.CartRacket{
 					{
 						RacketID: "RacketID1",
 						Quantity: 4,
@@ -263,7 +263,7 @@ func (suite *CartServiceTestSuite) TestAddRacketSuccess() {
 	suite.mockRepo.On("Update", mock.Anything, &model.Cart{
 		ID:     "cartId1",
 		UserID: "userID",
-		Lines: []*model.CartLine{
+		Rackets: []*model.CartRacket{
 			{
 				RacketID: "RacketID1",
 				Quantity: 4,
@@ -279,7 +279,7 @@ func (suite *CartServiceTestSuite) TestAddRacketSuccess() {
 
 	suite.NotNil(cart)
 	suite.Equal("userID", cart.UserID)
-	suite.Equal(2, len(cart.Lines))
+	suite.Equal(2, len(cart.Rackets))
 	suite.Nil(err)
 }
 
@@ -300,7 +300,7 @@ func (suite *CartServiceTestSuite) TestRemoveRacketCartNotFound() {
 
 	suite.NotNil(cart)
 	suite.Equal("userID", cart.UserID)
-	suite.Equal(0, len(cart.Lines))
+	suite.Equal(0, len(cart.Rackets))
 	suite.Nil(err)
 }
 
@@ -332,7 +332,7 @@ func (suite *CartServiceTestSuite) TestRemoveRacketUpdateFail() {
 			&model.Cart{
 				ID:     "cartId1",
 				UserID: "userID",
-				Lines: []*model.CartLine{
+				Rackets: []*model.CartRacket{
 					{
 						RacketID: "RacketID1",
 						Quantity: 4,
@@ -343,9 +343,9 @@ func (suite *CartServiceTestSuite) TestRemoveRacketUpdateFail() {
 		).Times(1)
 
 	suite.mockRepo.On("Update", mock.Anything, &model.Cart{
-		ID:     "cartId1",
-		UserID: "userID",
-		Lines:  []*model.CartLine{},
+		ID:      "cartId1",
+		UserID:  "userID",
+		Rackets: []*model.CartRacket{},
 	}).Return(errors.New("error")).Times(1)
 
 	cart, err := suite.service.RemoveRacket(context.Background(), req)
@@ -365,7 +365,7 @@ func (suite *CartServiceTestSuite) TestRemoveRacketSuccess() {
 			&model.Cart{
 				ID:     "cartId1",
 				UserID: "userID",
-				Lines: []*model.CartLine{
+				Rackets: []*model.CartRacket{
 					{
 						RacketID: "RacketID1",
 						Quantity: 4,
@@ -376,15 +376,15 @@ func (suite *CartServiceTestSuite) TestRemoveRacketSuccess() {
 		).Times(1)
 
 	suite.mockRepo.On("Update", mock.Anything, &model.Cart{
-		ID:     "cartId1",
-		UserID: "userID",
-		Lines:  []*model.CartLine{},
+		ID:      "cartId1",
+		UserID:  "userID",
+		Rackets: []*model.CartRacket{},
 	}).Return(nil).Times(1)
 
 	cart, err := suite.service.RemoveRacket(context.Background(), req)
 
 	suite.NotNil(cart)
 	suite.Equal("userID", cart.UserID)
-	suite.Equal(0, len(cart.Lines))
+	suite.Equal(0, len(cart.Rackets))
 	suite.Nil(err)
 }

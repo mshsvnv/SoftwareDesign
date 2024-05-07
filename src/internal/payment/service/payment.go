@@ -31,11 +31,12 @@ func (p *PaymentService) GetPaymentByOrderID(ctx context.Context, OrderID string
 	payment, err := p.repo.GetPaymentByOrderID(ctx, OrderID)
 
 	if err != nil {
+
 		payment = &model.Payment{
 			OrderID: OrderID,
 		}
 
-		err = p.repo.CreatePayment(ctx, payment)
+		err = p.repo.Create(ctx, payment)
 
 		if err != nil {
 			return nil, err
@@ -76,7 +77,7 @@ func (s *PaymentService) CancelPayment(ctx context.Context, paymentID, orderID s
 
 	payment.Status = model.PaymentStatusCancelled
 
-	err = s.repo.UpdatePayment(ctx, payment)
+	err = s.repo.Update(ctx, payment)
 
 	if err != nil {
 		return nil, err

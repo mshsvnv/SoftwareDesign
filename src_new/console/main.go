@@ -1,79 +1,37 @@
 package main
 
-import (
-	"context"
-	"fmt"
-	"src_new/internal/dto"
-	"src_new/internal/model"
-	"src_new/internal/repository"
-	"src_new/internal/service"
-)
+// import (
+// 	"github.com/rivo/tview"
 
-func main() {
+// 	"src_new/console/handler"
+// )
 
-	ctx := context.Background()
+// // const connURL = "postgresql://postgres:m20031504@localhost:5432/Shop"
 
-	orderrepo := repository.NewOrderRepository()
-	racketrepo := repository.NewRacketRepository()
+// // var testDB *postgres.Postgres
 
-	orderserv := service.NewOrderService(orderrepo,
-		racketrepo)
+// var (
+// 	pages = tview.NewPages()
+// 	app   = tview.NewApplication()
+// 	form  = tview.NewForm()
+// 	// list  = tview.NewList().ShowSecondaryText(true)
+// )
 
-	_ = racketrepo.Create(ctx, &model.Racket{
-		ID:       0,
-		Quantity: 10,
-		Price:    100,
-	})
+// func main() {
 
-	_ = racketrepo.Create(ctx, &model.Racket{
-		ID:       1,
-		Quantity: 10,
-		Price:    200,
-	})
+// 	h := handler.CreateHandler()
 
-	_, _ = orderserv.CreateOrder(ctx, &dto.PlaceOrderReq{
-		UserID: 0,
-		Lines: []*dto.PlaceOrderLineReq{{
-			RacketID: 0,
-			Quantity: 1,
-		},
-			{
-				RacketID: 1,
-				Quantity: 2,
-			},
-		},
-	})
+// 	pages.AddPage("Menu (guest)", h.CreateGuestMenu(form, pages, app), true, true).
+// 		AddPage("keke", form, true, true).
+// 		AddPage("Login", form, true, true)
 
-	_, _ = orderserv.CreateOrder(ctx, &dto.PlaceOrderReq{
-		UserID: 0,
-		Lines: []*dto.PlaceOrderLineReq{{
-			RacketID: 0,
-			Quantity: 10,
-		},
-			{
-				RacketID: 1,
-				Quantity: 2,
-			},
-		},
-	})
+// 	pages.AddPage("Menu (admin)", h.CreateAdminMenu(form, pages, app), true, true).
+// 		AddPage("Register", form, true, true).
+// 		AddPage("Login", form, true, true)
 
-	// if err == nil {
-	// 	fmt.Printf("Hehe, %f\n", order.TotalPrice)
-	// } else {
-	// 	fmt.Println(err.Error())
-	// }
+// 	pages.SwitchToPage("Menu (guest)")
 
-	// for _, line := range order.Lines {
-	// 	fmt.Printf("%d, %d, %f\n", line.RacketID, line.Quantity, line.Price)
-	// }
-
-	orders, _ := orderserv.GetMyOrders(ctx, 0)
-
-	for _, order := range orders {
-		fmt.Printf("%d %f\n", order.ID, order.TotalPrice)
-
-		for _, racket := range order.Lines {
-			fmt.Printf("	ID %d Price %f Quantitiy %d\n", racket.RacketID, racket.Price, racket.Quantity)
-		}
-	}
-}
+//		if err := app.SetRoot(pages, true).SetFocus(pages).Run(); err != nil {
+//			panic(err)
+//		}
+//	}

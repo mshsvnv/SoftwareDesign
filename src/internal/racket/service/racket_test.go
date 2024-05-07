@@ -11,17 +11,29 @@ import (
 	"src/internal/racket/dto"
 	"src/internal/racket/model"
 	"src/internal/racket/repository/mocks"
+
+	cart "src/internal/cart/repository/mocks"
+	order "src/internal/order/repository/mocks"
 )
 
 type RacketServiceTestSuite struct {
 	suite.Suite
-	mockRepo *mocks.IRacketRepository
-	service  IRacketService
+
+	mockRepo      *mocks.IRacketRepository
+	mockRepoOrder *order.IOrderRepository
+	mockRepoCart  *cart.ICartRepository
+
+	service IRacketService
 }
 
 func (suite *RacketServiceTestSuite) SetupTest() {
 	suite.mockRepo = mocks.NewIRacketRepository(suite.T())
-	suite.service = NewRacketService(suite.mockRepo)
+	suite.mockRepoOrder = order.NewIOrderRepository(suite.T())
+	suite.mockRepoCart = cart.NewICartRepository(suite.T())
+
+	suite.service = NewRacketService(suite.mockRepo,
+		suite.mockRepoCart,
+		suite.mockRepoOrder)
 }
 
 func TestRacketServiceTestSuite(t *testing.T) {
@@ -211,5 +223,81 @@ func (suite *RacketServiceTestSuite) TestUpdateSuccess() {
 	suite.NotNil(racket)
 	suite.Equal(req.Brand, racket.Brand)
 	suite.Equal(req.Price, racket.Price)
+	suite.Nil(err)
+}
+
+// Delete
+func (suite *RacketServiceTestSuite) TestDeleteFailNoRacket() {
+
+	id := "123"
+
+	suite.mockRepo.On("GetRacketByID", mock.Anything, id).
+		Return(nil, errors.New("racket not found")).Times(1)
+
+	err := suite.service.Delete(context.Background(), id)
+
+	suite.NotNil(err)
+}
+
+func (suite *RacketServiceTestSuite) TestDeleteCartFail() {
+
+	id := "123"
+
+	suite.mockRepo.On("GetRacketByID", mock.Anything, id).
+		Return(&model.Racket{
+			Brand: "racket",
+			Price: 1.1,
+		}, nil).Times(1)
+
+	suite.mockRepoCart.On("DeleteByRacketID", mock.Anything, id).
+		Return(errors.New("failed to delete associated carts")).Times(1)
+
+	err := suite.service.Delete(context.Background(), id)
+
+	suite.NotNil(err)
+}
+
+func (suite *RacketServiceTestSuite) TestDeleteOrderFail() {
+
+	id := "123"
+
+	suite.mockRepo.On("GetRacketByID", mock.Anything, id).
+		Return(&model.Racket{
+			Brand: "racket",
+			Price: 1.1,
+		}, nil).Times(1)
+
+	suite.mockRepoCart.On("DeleteByRacketID", mock.Anything, id).
+		Return(nil).Times(1)
+
+	suite.mockRepoOrder.On("DeleteOrdersByRacketID", mock.Anything, id).
+		Return(errors.New("failed to delete associated orders")).Times(1)
+
+	err := suite.service.Delete(context.Background(), id)
+
+	suite.NotNil(err)
+}
+
+func (suite *RacketServiceTestSuite) TestDeleteSuccess() {
+
+	id := "123"
+
+	suite.mockRepo.On("GetRacketByID", mock.Anything, id).
+		Return(&model.Racket{
+			Brand: "racket",
+			Price: 1.1,
+		}, nil).Times(1)
+
+	suite.mockRepoCart.On("DeleteByRacketID", mock.Anything, id).
+		Return(nil).Times(1)
+
+	suite.mockRepoOrder.On("DeleteOrdersByRacketID", mock.Anything, id).
+		Return(nil).Times(1)
+
+	suite.mockRepo.On("Delete", mock.Anything, id).
+		Return(nil).Times(1)
+
+	err := suite.service.Delete(context.Background(), id)
+
 	suite.Nil(err)
 }

@@ -1,13 +1,13 @@
 package model
 
 type Cart struct {
-	ID     string
-	UserID string
-	User   *User
-	Lines  []*CartLine
+	ID      string
+	UserID  string
+	User    *User
+	Rackets []*CartRacket
 }
 
-type CartLine struct {
+type CartRacket struct {
 	RacketID string
 	Racket   *Racket
 	Quantity uint

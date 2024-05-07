@@ -10,17 +10,9 @@ type RegisterReq struct {
 	Password string
 }
 
-type RegisterRes struct {
-	User User
-}
-
 type LoginReq struct {
 	Email    string
 	Password string
-}
-
-type LoginRes struct {
-	User User
 }
 
 type ChangePasswordReq struct {

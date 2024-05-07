@@ -5,7 +5,7 @@ import (
 	"src/internal/order/model"
 )
 
-//go:generate mockery --name=IRacketRepository
-type IRacketRepository interface {
+//go:generate mockery --name=IOrderRacketRepository
+type IOrderRacketRepository interface {
 	GetRacketByID(ctx context.Context, id string) (*model.Racket, error)
 }

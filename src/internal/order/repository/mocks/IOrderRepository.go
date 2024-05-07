@@ -16,34 +16,70 @@ type IOrderRepository struct {
 	mock.Mock
 }
 
-// CreateOrder provides a mock function with given fields: ctx, userID, lines
-func (_m *IOrderRepository) CreateOrder(ctx context.Context, userID string, lines []*model.OrderLine) (*model.Order, error) {
-	ret := _m.Called(ctx, userID, lines)
+// Create provides a mock function with given fields: ctx, userID, Rackets
+func (_m *IOrderRepository) Create(ctx context.Context, userID string, Rackets []*model.OrderRacket) (*model.Order, error) {
+	ret := _m.Called(ctx, userID, Rackets)
 
 	if len(ret) == 0 {
-		panic("no return value specified for CreateOrder")
+		panic("no return value specified for Create")
 	}
 
 	var r0 *model.Order
 	var r1 error
-	if rf, ok := ret.Get(0).(func(context.Context, string, []*model.OrderLine) (*model.Order, error)); ok {
-		return rf(ctx, userID, lines)
+	if rf, ok := ret.Get(0).(func(context.Context, string, []*model.OrderRacket) (*model.Order, error)); ok {
+		return rf(ctx, userID, Rackets)
 	}
-	if rf, ok := ret.Get(0).(func(context.Context, string, []*model.OrderLine) *model.Order); ok {
-		r0 = rf(ctx, userID, lines)
+	if rf, ok := ret.Get(0).(func(context.Context, string, []*model.OrderRacket) *model.Order); ok {
+		r0 = rf(ctx, userID, Rackets)
 	} else {
 		if ret.Get(0) != nil {
 			r0 = ret.Get(0).(*model.Order)
 		}
 	}
 
-	if rf, ok := ret.Get(1).(func(context.Context, string, []*model.OrderLine) error); ok {
-		r1 = rf(ctx, userID, lines)
+	if rf, ok := ret.Get(1).(func(context.Context, string, []*model.OrderRacket) error); ok {
+		r1 = rf(ctx, userID, Rackets)
 	} else {
 		r1 = ret.Error(1)
 	}
 
 	return r0, r1
+}
+
+// Delete provides a mock function with given fields: ctx, order
+func (_m *IOrderRepository) Delete(ctx context.Context, order *model.Order) error {
+	ret := _m.Called(ctx, order)
+
+	if len(ret) == 0 {
+		panic("no return value specified for Delete")
+	}
+
+	var r0 error
+	if rf, ok := ret.Get(0).(func(context.Context, *model.Order) error); ok {
+		r0 = rf(ctx, order)
+	} else {
+		r0 = ret.Error(0)
+	}
+
+	return r0
+}
+
+// DeleteOrdersByRacketID provides a mock function with given fields: ctx, id
+func (_m *IOrderRepository) DeleteOrdersByRacketID(ctx context.Context, id string) error {
+	ret := _m.Called(ctx, id)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteOrdersByRacketID")
+	}
+
+	var r0 error
+	if rf, ok := ret.Get(0).(func(context.Context, string) error); ok {
+		r0 = rf(ctx, id)
+	} else {
+		r0 = ret.Error(0)
+	}
+
+	return r0
 }
 
 // GetMyOrders provides a mock function with given fields: ctx, req
@@ -106,12 +142,12 @@ func (_m *IOrderRepository) GetOrderByID(ctx context.Context, id string, preload
 	return r0, r1
 }
 
-// UpdateOrder provides a mock function with given fields: ctx, order
-func (_m *IOrderRepository) UpdateOrder(ctx context.Context, order *model.Order) error {
+// Update provides a mock function with given fields: ctx, order
+func (_m *IOrderRepository) Update(ctx context.Context, order *model.Order) error {
 	ret := _m.Called(ctx, order)
 
 	if len(ret) == 0 {
-		panic("no return value specified for UpdateOrder")
+		panic("no return value specified for Update")
 	}
 
 	var r0 error

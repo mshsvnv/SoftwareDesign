@@ -2,23 +2,23 @@ package dto
 
 type Order struct {
 	ID         string
-	Lines      []*OrderLine
+	Rackets    []*OrderRacket
 	Status     string
 	TotalPrice float64
 }
 
-type OrderLine struct {
+type OrderRacket struct {
 	Racket   Racket
 	Quantity uint
 	Price    float64
 }
 
 type PlaceOrderReq struct {
-	UserID string
-	Lines  []PlaceOrderLineReq
+	UserID  string
+	Rackets []PlaceOrderRacketReq
 }
 
-type PlaceOrderLineReq struct {
+type PlaceOrderRacketReq struct {
 	RacketID string
 	Quantity uint
 }
