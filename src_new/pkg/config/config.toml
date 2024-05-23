@@ -1,5 +1,0 @@
-bind_addr = ":8080"
-log_level = "debug"
-
-[store]
-database_url = "postgresql://postgres:admin@localhost:5432/Shop?sslmode=disable"
