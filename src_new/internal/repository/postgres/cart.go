@@ -2,6 +2,7 @@ package mypostgres
 
 import (
 	"context"
+	"src_new/internal/dto"
 	"src_new/internal/model"
 	"src_new/internal/repository"
 	"src_new/pkg/storage/postgres"
@@ -16,6 +17,63 @@ type CartRepository struct {
 
 func NewCartRepository(db *postgres.Postgres) repository.ICartRepository {
 	return &CartRepository{db}
+}
+
+func (r *CartRepository) AddRacket(ctx context.Context, req *dto.AddRacketCartReq) error {
+
+	query := r.Builder.
+		Insert(cartRacketTable).
+		Columns(
+			cartIDField,
+			racketIDField,
+			quantityField).
+		Values(
+			req.UserID,
+			req.RacketID,
+			req.Quantity).
+		Suffix("returning cart_id")
+
+	sql, args, err := query.ToSql()
+
+	if err != nil {
+		return err
+	}
+
+	row := r.Pool.QueryRow(ctx, sql, args...)
+
+	err = row.Scan(
+		&req.UserID,
+	)
+
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (r *CartRepository) RemoveRacket(ctx context.Context, req *dto.RemoveRacketCartReq) error {
+
+	query := r.Builder.
+		Delete(cartRacketTable).
+		Where(squirrel.And{
+			squirrel.Eq{cartIDField: req.UserID},
+			squirrel.Eq{racketIDField: req.RacketID},
+		})
+
+	sql, args, err := query.ToSql()
+
+	if err != nil {
+		return err
+	}
+
+	_, err = r.Pool.Exec(ctx, sql, args...)
+
+	if err != nil {
+		return err
+	}
+
+	return nil
 }
 
 func (r *CartRepository) Create(ctx context.Context, cart *model.Cart) error {

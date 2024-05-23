@@ -7,6 +7,7 @@ import (
 	"src_new/internal/model"
 	repo "src_new/internal/repository"
 	"src_new/pkg/utils"
+	"time"
 )
 
 type IOrderService interface {
@@ -17,37 +18,51 @@ type IOrderService interface {
 }
 
 type OrderService struct {
-	repo       repo.IOrderRepository
-	repoRacket repo.IRacketRepository
+	repo     repo.IOrderRepository
+	repoCart repo.ICartRepository
 }
 
-func NewOrderService(repo repo.IOrderRepository, repoRacket repo.IRacketRepository) *OrderService {
+func NewOrderService(repo repo.IOrderRepository, repoCart repo.ICartRepository) *OrderService {
 	return &OrderService{
-		repo:       repo,
-		repoRacket: repoRacket,
+		repo:     repo,
+		repoCart: repoCart,
 	}
 }
 
 func (s *OrderService) CreateOrder(ctx context.Context, req *dto.PlaceOrderReq) error {
 
-	var order *model.Order
+	order := &model.Order{}
 	utils.Copy(&order, &req)
 
-	for _, line := range order.Lines {
+	order.CreationDate = time.Now()
 
-		racket, err := s.repoRacket.GetRacketByID(ctx, line.RacketID)
+	cart, err := s.repoCart.GetCartByID(ctx, order.UserID)
 
-		if err != nil {
-			return fmt.Errorf("CreateOrder.GetRacketByID fail, %s", err)
-		}
-
-		order.TotalPrice += float32(racket.Price) * float32(line.Quantity)
+	if err != nil {
+		return fmt.Errorf("CreateOrder.GetCartByID fail, %s", err)
 	}
 
-	err := s.repo.Create(ctx, order)
+	order.Status = model.OrderStatusInProgress
+	order.TotalPrice = cart.TotalPrice
+
+	for _, line := range cart.Lines {
+		order.Lines = append(order.Lines,
+			&model.OrderLine{
+				RacketID: line.RacketID,
+				Quantity: line.Quantity,
+			})
+	}
+
+	err = s.repo.Create(ctx, order)
 
 	if err != nil {
 		return fmt.Errorf("CreateOrder.Create fail, %s", err)
+	}
+
+	err = s.repoCart.Remove(ctx, req.UserID)
+
+	if err != nil {
+		return fmt.Errorf("CreateOrder.Remove fail, %s", err)
 	}
 
 	return nil

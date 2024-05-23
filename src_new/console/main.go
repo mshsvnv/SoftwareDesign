@@ -1,37 +1,60 @@
 package main
 
-// import (
-// 	"github.com/rivo/tview"
+import (
+	"src_new/console/handler"
+	"src_new/pkg/storage/postgres"
 
-// 	"src_new/console/handler"
-// )
+	"github.com/rivo/tview"
+)
 
-// // const connURL = "postgresql://postgres:m20031504@localhost:5432/Shop"
+var (
+	pages = tview.NewPages()
+	app   = tview.NewApplication()
+	form  = tview.NewForm()
+	flex  = tview.NewFlex()
+)
 
-// // var testDB *postgres.Postgres
+func main() {
 
-// var (
-// 	pages = tview.NewPages()
-// 	app   = tview.NewApplication()
-// 	form  = tview.NewForm()
-// 	// list  = tview.NewList().ShowSecondaryText(true)
-// )
+	// logger := logging.GetLogger()
+	// logger.Info("create connection")
 
-// func main() {
+	db, err := postgres.New("postgresql://postgres:admin@localhost:5432/Shop")
 
-// 	h := handler.CreateHandler()
+	if err != nil {
+		panic(err)
+	}
 
-// 	pages.AddPage("Menu (guest)", h.CreateGuestMenu(form, pages, app), true, true).
-// 		AddPage("keke", form, true, true).
-// 		AddPage("Login", form, true, true)
+	h := handler.CreateHandler(db)
 
-// 	pages.AddPage("Menu (admin)", h.CreateAdminMenu(form, pages, app), true, true).
-// 		AddPage("Register", form, true, true).
-// 		AddPage("Login", form, true, true)
+	pages.AddPage("Menu (guest)", h.CreateGuestMenu(flex, form, pages, app), true, true).
+		AddPage("Register", form, true, true).
+		AddPage("Login", form, true, true).
+		AddPage("View the catalog", flex, true, true).
+		AddPage("Finish", form, true, true)
 
-// 	pages.SwitchToPage("Menu (guest)")
+	pages.AddPage("Menu (authorized guest)", h.CreateAuthorizedGuestMenu(flex, form, pages), true, true).
+		AddPage("View the catalog", flex, true, true).
+		AddPage("Add racket to cart", form, true, true).
+		AddPage("View my cart", flex, true, true).
+		AddPage("View my orders", flex, true, true).
+		AddPage("Create an order", form, true, true).
+		AddPage("Create a feedback", form, true, true).
+		AddPage("Exit", form, true, true)
 
-//		if err := app.SetRoot(pages, true).SetFocus(pages).Run(); err != nil {
-//			panic(err)
-//		}
-//	}
+	pages.AddPage("Menu (admin)", h.CreateAdminMenu(flex, form, pages), true, true).
+		AddPage("Add racket", form, true, true).
+		AddPage("Add supplier", form, true, true).
+		AddPage("Remove racket", form, true, true).
+		AddPage("Remove supplier", form, true, true).
+		AddPage("Edit racket", form, true, true).
+		AddPage("Edit supplier", form, true, true).
+		AddPage("Edit order", form, true, true).
+		AddPage("Exit", form, true, true)
+
+	pages.SwitchToPage("Menu (guest)")
+
+	if err := app.SetRoot(pages, true).SetFocus(pages).Run(); err != nil {
+		panic(err)
+	}
+}

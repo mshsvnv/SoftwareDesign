@@ -29,7 +29,8 @@ func (r *RacketRepository) Create(ctx context.Context, racket *model.Racket) err
 			balanceField,
 			headSizeField,
 			quantityField,
-			priceField).
+			priceField,
+			avaliableField).
 		Values(
 			racket.SupplierID,
 			racket.Brand,
@@ -37,7 +38,8 @@ func (r *RacketRepository) Create(ctx context.Context, racket *model.Racket) err
 			racket.Balance,
 			racket.HeadSize,
 			racket.Quantity,
-			racket.Price).
+			racket.Price,
+			racket.Avaliable).
 		Suffix("returning id")
 
 	sql, ars, err := query.ToSql()
@@ -70,6 +72,7 @@ func (r *RacketRepository) Update(ctx context.Context, racket *model.Racket) err
 		Set(headSizeField, racket.HeadSize).
 		Set(quantityField, racket.Quantity).
 		Set(priceField, racket.Price).
+		Set(avaliableField, racket.Avaliable).
 		Where(squirrel.Eq{idField: racket.ID})
 
 	sql, args, err := query.ToSql()
@@ -171,6 +174,7 @@ func (r *RacketRepository) rowToModel(row pgx.Row) (*model.Racket, error) {
 		&racket.Weight,
 		&racket.Balance,
 		&racket.HeadSize,
+		&racket.Avaliable,
 		&racket.Quantity,
 		&racket.Price,
 	)

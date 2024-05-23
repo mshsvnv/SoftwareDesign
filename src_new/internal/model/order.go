@@ -5,14 +5,12 @@ import "time"
 type OrderStatus string
 
 const (
-	// OrderStatusNew        = "New"
 	OrderStatusInProgress = "In progress"
 	OrderStatusCanceled   = "Canceled"
 	OrderStatusDone       = "Done"
 )
 
 type OrderLine struct {
-	OrderID  int
 	RacketID int
 	Quantity int
 }
@@ -26,6 +24,7 @@ type OrderInfo struct {
 type Order struct {
 	ID         int
 	UserID     int
+	CreationDate  time.Time
 	OrderInfo  *OrderInfo
 	Status     OrderStatus
 	Lines      []*OrderLine

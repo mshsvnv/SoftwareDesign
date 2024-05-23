@@ -32,6 +32,66 @@ func (_m *ISupplierRepository) Create(ctx context.Context, supplier *model.Suppl
 	return r0
 }
 
+// GetAllSuppliers provides a mock function with given fields: ctx
+func (_m *ISupplierRepository) GetAllSuppliers(ctx context.Context) ([]*model.Supplier, error) {
+	ret := _m.Called(ctx)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAllSuppliers")
+	}
+
+	var r0 []*model.Supplier
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context) ([]*model.Supplier, error)); ok {
+		return rf(ctx)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context) []*model.Supplier); ok {
+		r0 = rf(ctx)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).([]*model.Supplier)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context) error); ok {
+		r1 = rf(ctx)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetSupplierByEmail provides a mock function with given fields: ctx, email
+func (_m *ISupplierRepository) GetSupplierByEmail(ctx context.Context, email string) (*model.Supplier, error) {
+	ret := _m.Called(ctx, email)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetSupplierByEmail")
+	}
+
+	var r0 *model.Supplier
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, string) (*model.Supplier, error)); ok {
+		return rf(ctx, email)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, string) *model.Supplier); ok {
+		r0 = rf(ctx, email)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*model.Supplier)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, string) error); ok {
+		r1 = rf(ctx, email)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetSupplierByID provides a mock function with given fields: ctx, id
 func (_m *ISupplierRepository) GetSupplierByID(ctx context.Context, id int) (*model.Supplier, error) {
 	ret := _m.Called(ctx, id)

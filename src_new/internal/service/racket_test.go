@@ -15,13 +15,14 @@ import (
 
 type RacketServiceTestSuite struct {
 	suite.Suite
-	mockRepo *mocks.IRacketRepository
-	service  IRacketService
+	mockRepo         *mocks.IRacketRepository
+	mockRepoSupplier *mocks.ISupplierRepository
+	service          IRacketService
 }
 
 func (suite *RacketServiceTestSuite) SetupTest() {
 	suite.mockRepo = mocks.NewIRacketRepository(suite.T())
-	suite.service = NewRacketService(suite.mockRepo)
+	suite.service = NewRacketService(suite.mockRepo, suite.mockRepoSupplier)
 }
 
 func TestRacketServiceTestSuite(t *testing.T) {

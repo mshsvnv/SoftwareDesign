@@ -3,6 +3,7 @@ package service
 import (
 	"context"
 	"fmt"
+	"time"
 
 	"src_new/internal/dto"
 	"src_new/internal/model"
@@ -32,8 +33,8 @@ func NewFeedbackService(repo repo.IFeedbackRepository) *FeedbackService {
 func (s *FeedbackService) CreateFeedback(ctx context.Context, req *dto.CreateFeedbackReq) (*model.Feedback, error) {
 
 	var feedback model.Feedback
-
 	utils.Copy(&feedback, req)
+	feedback.Date = time.Now()
 
 	err := s.repo.Create(ctx, &feedback)
 

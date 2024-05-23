@@ -1,5 +1,7 @@
 package mypostgres
 
+import "fmt"
+
 const (
 	userTable        = "\"user\""
 	racketTable      = "racket"
@@ -7,6 +9,7 @@ const (
 	cartTable        = "cart"
 	feedbackTable    = "feedback"
 	supplierTable    = "supplier"
+	deliveryTable    = "delivery"
 	cartRacketTable  = "cart_racket"
 	orderRacketTable = "order_racket"
 )
@@ -34,9 +37,22 @@ const (
 	headSizeField      = "head_size"
 	addressField       = "address"
 	recepientNameField = "recepient_name"
+	creationDateField  = "creation_date"
 	deliveryDateField  = "delivery_date"
 	ratingField        = "rating"
 	dateField          = "date"
 	townField          = "town"
 	phoneField         = "phone"
+	substruptionField  = "subscription"
+	avaliableField     = "avaliable"
 )
+
+func on(baseTable, targetTable, baseColumn, targetColumn string) string {
+	return fmt.Sprintf("%s on %s.%s=%s.%s",
+		targetTable,
+		baseTable,
+		baseColumn,
+		targetTable,
+		targetColumn,
+	)
+}

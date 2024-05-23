@@ -21,6 +21,7 @@ type IUserService interface {
 }
 
 type UserService struct {
+	// logger logging.Logger
 	repo repo.IUserRepository
 }
 
@@ -58,11 +59,12 @@ func (s *UserService) Register(ctx context.Context, req *dto.RegisterReq) (*mode
 	}
 
 	user = &model.User{
-		ID:       0,
-		Name:     req.Name,
-		Surname:  req.Surname,
-		Email:    req.Email,
-		Password: utils.HashAndSalt([]byte(req.Password)),
+		Name:         req.Name,
+		Surname:      req.Surname,
+		Email:        req.Email,
+		Role:         model.UserRole(req.Role),
+		Subscription: false,
+		Password:     utils.HashAndSalt([]byte(req.Password)),
 	}
 
 	err = s.repo.Create(ctx, user)

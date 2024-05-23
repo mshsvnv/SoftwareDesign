@@ -1,34 +1,36 @@
--- Active: 1696673577093@@127.0.0.1@5432@Shop@public
 create table if not exists "user" (
     id serial primary key,
     name text,
     surname text,
-    email text,
+    email text unique,
     password text,
+    subscription boolean,
     role text
 );
 
 create table if not exists supplier (
     id serial primary key,
+    email text unique,
     name text,
     phone text,
-    town text,
-    email text
+    town text
 );
 
 create table if not exists racket (
     id serial primary key,
-    supplier_id int references supplier(id) on delete cascade,
+    supplier_id int,
     brand text,
     weight float,
     balance float,
     head_size float,
+    avaliable boolean,
     price float,
-    quantity int
+    quantity int,
+    foreign key (supplier_id) references supplier(id) on delete cascade
 );
 
 create table if not exists cart (
-    user_id int,
+    user_id int unique,
     quantity int,
     total_price float,
     primary key (user_id),
@@ -37,12 +39,19 @@ create table if not exists cart (
 
 create table if not exists "order" (
     id serial primary key,
-    user_id int references "user"(id) on delete cascade,
+    user_id int,
+    status text,
+    total_price float,
+    creation_date timestamp,
+    foreign key (user_id) references "user"(id) on delete cascade
+);
+
+create table if not exists delivery (
+    order_id int,
     delivery_date timestamp,
     address text,
     recepient_name text,
-    status text,
-    total_price float
+    foreign key (order_id) references "order"(id) on delete cascade
 );
 
 create table if not exists order_racket (

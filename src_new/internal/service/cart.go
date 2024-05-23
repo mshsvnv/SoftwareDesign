@@ -13,7 +13,6 @@ type ICartService interface {
 	RemoveRacket(ctx context.Context, req *dto.RemoveRacketCartReq) (*model.Cart, error)
 	UpdateRacket(ctx context.Context, req *dto.UpdateRacketCartReq) (*model.Cart, error)
 	GetCartByID(ctx context.Context, userID int) (*model.Cart, error)
-	// CleanCart(ctx context.Context, userID int) (*model.Cart, error)
 }
 
 type CartService struct {
@@ -40,6 +39,17 @@ func (s *CartService) AddRacket(ctx context.Context, req *dto.AddRacketCartReq) 
 			return nil, fmt.Errorf("AddRacket.GetRacketByID fail, error %s", err)
 		}
 
+		if !racket.Avaliable {
+			return nil, fmt.Errorf("AddRacket.GetRacketByID fail, error %s", err)
+		}
+
+		if req.Quantity >= racket.Quantity {
+			req.Quantity = racket.Quantity
+			racket.Quantity = 0
+		} else {
+			racket.Quantity -= req.Quantity
+		}
+
 		cart = &model.Cart{
 			UserID:     req.UserID,
 			TotalPrice: float32(racket.Price) * float32(req.Quantity),
@@ -50,7 +60,6 @@ func (s *CartService) AddRacket(ctx context.Context, req *dto.AddRacketCartReq) 
 			}},
 		}
 
-		racket.Quantity -= req.Quantity
 		err = s.repoRacket.Update(ctx, racket)
 
 		if err != nil {
@@ -73,27 +82,44 @@ func (s *CartService) AddRacket(ctx context.Context, req *dto.AddRacketCartReq) 
 		}
 	}
 
-	cart.Lines = append(cart.Lines,
-		&model.CartLine{
-			RacketID: req.RacketID,
-			Quantity: req.Quantity,
-		})
-
 	racket, err := s.repoRacket.GetRacketByID(ctx, req.RacketID)
 
 	if err != nil {
 		return nil, fmt.Errorf("AddRacket.GetRacketByID fail, error %s", err)
 	}
 
-	racket.Quantity -= req.Quantity
+	if !racket.Avaliable {
+		return nil, fmt.Errorf("AddRacket.GetRacketByID fail, error %s", err)
+	}
+
+	if req.Quantity >= racket.Quantity {
+		req.Quantity = racket.Quantity
+		racket.Quantity = 0
+	} else {
+		racket.Quantity -= req.Quantity
+	}
+
+	err = s.repo.AddRacket(ctx, req)
+
+	if err != nil {
+		return nil, fmt.Errorf("AddRacket.AddRacket fail, error %s", err)
+	}
+
 	err = s.repoRacket.Update(ctx, racket)
 
 	if err != nil {
 		return nil, fmt.Errorf("AddRacket.UpdateRacket fail, error %s", err)
 	}
 
+	cart.Lines = append(cart.Lines,
+		&model.CartLine{
+			RacketID: req.RacketID,
+			Quantity: req.Quantity,
+		})
+
 	cart.Quantity += req.Quantity
 	cart.TotalPrice += float32(racket.Price) * float32(req.Quantity)
+
 	err = s.repo.Update(ctx, cart)
 
 	if err != nil {
@@ -148,6 +174,12 @@ func (s *CartService) RemoveRacket(ctx context.Context, req *dto.RemoveRacketCar
 		}
 	}
 
+	err = s.repo.RemoveRacket(ctx, req)
+
+	if err != nil {
+		return nil, fmt.Errorf("RemoveRacket.RemoveRacket fail, userID: %d, error %s", req.UserID, err)
+	}
+
 	err = s.repo.Update(ctx, cart)
 
 	if err != nil {
@@ -179,7 +211,6 @@ func (s *CartService) UpdateRacket(ctx context.Context, req *dto.UpdateRacketCar
 	for _, line := range cart.Lines {
 
 		if line.RacketID == req.RacketID {
-			line.Quantity = req.Quantity
 
 			racket, err := s.repoRacket.GetRacketByID(ctx, req.RacketID)
 
@@ -187,16 +218,18 @@ func (s *CartService) UpdateRacket(ctx context.Context, req *dto.UpdateRacketCar
 				return nil, fmt.Errorf("UpdateRacket.GetRacketByID fail, error %s", err)
 			}
 
-			cart.TotalPrice -= float32(req.Quantity) * float32(racket.Price)
-			cart.Quantity -= req.Quantity
+			cart.TotalPrice -= float32(line.Quantity-req.Quantity) * float32(racket.Price)
+			cart.Quantity -= line.Quantity - req.Quantity
 
-			racket.Quantity += req.Quantity
+			racket.Quantity += line.Quantity - req.Quantity
 
 			err = s.repoRacket.Update(ctx, racket)
 
 			if err != nil {
 				return nil, fmt.Errorf("UpdateRacket.Update fail, error %s", err)
 			}
+
+			line.Quantity = req.Quantity
 		}
 	}
 

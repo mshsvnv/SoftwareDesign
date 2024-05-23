@@ -68,12 +68,10 @@ func (suite *SupplierServiceTestSuite) TestCreateSupplierSuccess() {
 // RemoveSupplier
 func (suite *SupplierServiceTestSuite) TestRemoveSupplierGetSupplierFail() {
 
-	id := 0
-
-	suite.mockRepo.On("GetSupplierByID", mock.Anything, id).
+	suite.mockRepo.On("GetSupplierByID", mock.Anything, "@mail.ru").
 		Return(nil, errors.New("error")).Times(1)
 
-	err := suite.service.RemoveSupplier(context.Background(), id)
+	err := suite.service.RemoveSupplier(context.Background(), "@mail.ru")
 
 	suite.NotNil(err)
 }
@@ -84,14 +82,14 @@ func (suite *SupplierServiceTestSuite) TestRemoveSupplierFail() {
 
 	suite.mockRepo.On("GetSupplierByID", mock.Anything, id).
 		Return(&model.Supplier{
-			ID:    0,
+			ID:    id,
 			Email: "@mail.ru",
 		}, nil).Times(1)
 
 	suite.mockRepo.On("Remove", mock.Anything, "@mail.ru").
 		Return(errors.New("error")).Times(1)
 
-	err := suite.service.RemoveSupplier(context.Background(), id)
+	err := suite.service.RemoveSupplier(context.Background(), "@mail.ru")
 
 	suite.NotNil(err)
 }
@@ -102,14 +100,14 @@ func (suite *SupplierServiceTestSuite) TestRemoveSupplierSuccess() {
 
 	suite.mockRepo.On("GetSupplierByID", mock.Anything, id).
 		Return(&model.Supplier{
-			ID:    0,
+			ID:    id,
 			Email: "@mail.ru",
 		}, nil).Times(1)
 
 	suite.mockRepo.On("Remove", mock.Anything, "@mail.ru").
 		Return(nil).Times(1)
 
-	err := suite.service.RemoveSupplier(context.Background(), id)
+	err := suite.service.RemoveSupplier(context.Background(), "@mail.ru")
 
 	suite.Nil(err)
 }
@@ -118,11 +116,11 @@ func (suite *SupplierServiceTestSuite) TestRemoveSupplierSuccess() {
 func (suite *SupplierServiceTestSuite) TestUpdateSupplierGetSupplierFail() {
 
 	req := &dto.UpdateSupplierReq{
-		ID:    0,
+		Email: "mail",
 		Phone: "8-499-676-14-95",
 	}
 
-	suite.mockRepo.On("GetSupplierByID", mock.Anything, req.ID).
+	suite.mockRepo.On("GetSupplierByID", mock.Anything, req.Email).
 		Return(nil, errors.New("error")).Times(1)
 
 	err := suite.service.UpdateSupplier(context.Background(), req)
@@ -133,16 +131,14 @@ func (suite *SupplierServiceTestSuite) TestUpdateSupplierGetSupplierFail() {
 func (suite *SupplierServiceTestSuite) TestUpdateSupplierFail() {
 
 	req := &dto.UpdateSupplierReq{
-		ID:    0,
 		Phone: "8-499-676-14-95",
 	}
 
 	supplier := &model.Supplier{
-		ID:    0,
 		Phone: "8-499-676-14-95",
 	}
 
-	suite.mockRepo.On("GetSupplierByID", mock.Anything, req.ID).
+	suite.mockRepo.On("GetSupplierByEmail", mock.Anything, req.Email).
 		Return(supplier, nil).Times(1)
 
 	suite.mockRepo.On("Update", mock.Anything, supplier).
@@ -156,7 +152,6 @@ func (suite *SupplierServiceTestSuite) TestUpdateSupplierFail() {
 func (suite *SupplierServiceTestSuite) TestUpdateSupplierSuccess() {
 
 	req := &dto.UpdateSupplierReq{
-		ID:    0,
 		Phone: "8-499-676-14-95",
 	}
 
@@ -165,7 +160,7 @@ func (suite *SupplierServiceTestSuite) TestUpdateSupplierSuccess() {
 		Phone: "8-499-676-14-95",
 	}
 
-	suite.mockRepo.On("GetSupplierByID", mock.Anything, req.ID).
+	suite.mockRepo.On("GetSupplierByID", mock.Anything, req.Email).
 		Return(supplier, nil).Times(1)
 
 	suite.mockRepo.On("Update", mock.Anything, supplier).

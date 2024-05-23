@@ -15,8 +15,8 @@ func TestSupplierRepositoryCreate(t *testing.T) {
 	repo := NewSupplierRepository(testDB)
 
 	supplier := &model.Supplier{
-		Name:  "IP Ivanov",
-		Email: "ivanov@mail.ru",
+		Name:  "IP petrov",
+		Email: "petrov@mail.ru",
 		Town:  "Armavir",
 		Phone: "8-800-555-35-35",
 	}
@@ -36,8 +36,8 @@ func TestSupplierRepositoryUpdate(t *testing.T) {
 	repo := NewSupplierRepository(testDB)
 
 	supplier := &model.Supplier{
-		Name:  "IP Ivanov",
-		Email: "ivanov@mail.ru",
+		Name:  "IP petrov",
+		Email: "petrov@mail.ru",
 		Town:  "Armavir",
 		Phone: "8-800-555-35-35",
 	}
@@ -61,8 +61,8 @@ func TestSupplierRepositoryGetSupplierByID(t *testing.T) {
 	repo := NewSupplierRepository(testDB)
 
 	supplier := &model.Supplier{
-		Name:  "IP Ivanov",
-		Email: "ivanov@mail.ru",
+		Name:  "IP petrov",
+		Email: "petrov@mail.ru",
 		Town:  "Armavir",
 		Phone: "8-800-555-35-35",
 	}
@@ -79,6 +79,31 @@ func TestSupplierRepositoryGetSupplierByID(t *testing.T) {
 	require.NoError(t, err)
 }
 
+func TestSupplierRepositoryGetSupplierByEmail(t *testing.T) {
+
+	ctx := context.Background()
+
+	repo := NewSupplierRepository(testDB)
+
+	supplier := &model.Supplier{
+		Name:  "IP petrov",
+		Email: "petrov@mail.ru",
+		Town:  "Armavir",
+		Phone: "8-800-555-35-35",
+	}
+
+	err := repo.Create(ctx, supplier)
+	require.NoError(t, err)
+	require.NotEmpty(t, supplier.ID)
+
+	res, err := repo.GetSupplierByEmail(ctx, supplier.Email)
+	require.NoError(t, err)
+	require.Equal(t, res, supplier)
+
+	err = repo.Remove(ctx, supplier.Email)
+	require.NoError(t, err)
+}
+
 func TestSupplierRepositoryRemove(t *testing.T) {
 
 	ctx := context.Background()
@@ -86,8 +111,8 @@ func TestSupplierRepositoryRemove(t *testing.T) {
 	repo := NewSupplierRepository(testDB)
 
 	supplier := &model.Supplier{
-		Name:  "IP Ivanov",
-		Email: "ivanov@mail.ru",
+		Name:  "IP petrov",
+		Email: "petrov@mail.ru",
 		Town:  "Armavir",
 		Phone: "8-800-555-35-35",
 	}

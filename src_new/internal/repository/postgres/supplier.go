@@ -114,16 +114,68 @@ func (r *SupplierRepository) GetSupplierByID(ctx context.Context, id int) (*mode
 	return r.rowToModel(row)
 }
 
+func (r *SupplierRepository) GetSupplierByEmail(ctx context.Context, email string) (*model.Supplier, error) {
+
+	query := r.Builder.
+		Select("*").
+		From(supplierTable).
+		Where(squirrel.Eq{emailField: email})
+
+	sql, args, err := query.ToSql()
+
+	if err != nil {
+		return nil, err
+	}
+
+	row := r.Pool.QueryRow(ctx, sql, args...)
+
+	return r.rowToModel(row)
+}
+
+func (r *SupplierRepository) GetAllSuppliers(ctx context.Context) ([]*model.Supplier, error) {
+
+	query := r.Builder.
+		Select("*").
+		From(supplierTable)
+
+	sql, args, err := query.ToSql()
+
+	if err != nil {
+		return nil, err
+	}
+
+	rows, err := r.Pool.Query(ctx, sql, args...)
+
+	if err != nil {
+		return nil, err
+	}
+
+	var suppliers []*model.Supplier
+
+	for rows.Next() {
+
+		supplier, err := r.rowToModel(rows)
+
+		if err != nil {
+			return nil, err
+		}
+
+		suppliers = append(suppliers, supplier)
+	}
+
+	return suppliers, nil
+}
+
 func (r *SupplierRepository) rowToModel(row pgx.Row) (*model.Supplier, error) {
 
 	var supplier model.Supplier
 
 	err := row.Scan(
 		&supplier.ID,
+		&supplier.Email,
 		&supplier.Name,
 		&supplier.Phone,
 		&supplier.Town,
-		&supplier.Email,
 	)
 
 	if err != nil {

@@ -11,4 +11,5 @@ type RegisterReq struct {
 	Surname  string
 	Email    string
 	Password string
+	Role     string
 }

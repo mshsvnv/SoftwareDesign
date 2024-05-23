@@ -15,11 +15,8 @@ func TestUserRepositoryCreate(t *testing.T) {
 	repo := NewUserRepository(testDB)
 
 	user := &model.User{
-		Name:     "Ivan",
-		Surname:  "Ivanov",
-		Email:    "ivanov@mail.ru",
-		Password: "123",
-		Role:     "Customer",
+		Email: "ivanov@mail.ru",
+		Role:  "Customer",
 	}
 
 	err := repo.Create(ctx, user)

@@ -19,12 +19,14 @@ type IRacketService interface {
 }
 
 type RacketService struct {
-	repo repo.IRacketRepository
+	repo         repo.IRacketRepository
+	repoSupplier repo.ISupplierRepository
 }
 
-func NewRacketService(repo repo.IRacketRepository) *RacketService {
+func NewRacketService(repo repo.IRacketRepository, repoSupplier repo.ISupplierRepository) *RacketService {
 	return &RacketService{
-		repo: repo,
+		repo:         repo,
+		repoSupplier: repoSupplier,
 	}
 }
 
@@ -34,7 +36,21 @@ func (s *RacketService) CreateRacket(ctx context.Context, req *dto.CreateRacketR
 
 	utils.Copy(&racket, req)
 
-	err := s.repo.Create(ctx, &racket)
+	if racket.Quantity > 0 {
+		racket.Avaliable = true
+	} else {
+		racket.Avaliable = false
+	}
+
+	supplier, err := s.repoSupplier.GetSupplierByEmail(ctx, req.SupplierEmail)
+
+	if err != nil {
+		return nil, fmt.Errorf("CreateRacket.GetSupplierByEmail fail, %s", err)
+	}
+
+	racket.SupplierID = supplier.ID
+
+	err = s.repo.Create(ctx, &racket)
 
 	if err != nil {
 		return nil, fmt.Errorf("CreateRacket.GetRacketByID fail, %s", err)
@@ -69,7 +85,14 @@ func (s *RacketService) UpdateRacket(ctx context.Context, req *dto.UpdateRacketR
 		return fmt.Errorf("UpdateRacket.GetRacketByID fail, %d %s", req.ID, err)
 	}
 
+	supplier, err := s.repoSupplier.GetSupplierByEmail(ctx, req.SupplierEmail)
+
+	if err != nil {
+		return err
+	}
+
 	utils.Copy(&racket, req)
+	racket.SupplierID = supplier.ID
 
 	err = s.repo.Update(ctx, racket)
 

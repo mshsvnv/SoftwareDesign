@@ -27,11 +27,13 @@ func (r *UserRepository) Create(ctx context.Context, user *model.User) error {
 			surnameField,
 			emailField,
 			passwordField,
+			substruptionField,
 			roleField).
 		Values(user.Name,
 			user.Surname,
 			user.Email,
 			user.Password,
+			user.Subscription,
 			user.Role).
 		Suffix("returning id")
 
@@ -120,6 +122,7 @@ func (r *UserRepository) rowToModel(row pgx.Row) (*model.User, error) {
 		&user.Surname,
 		&user.Email,
 		&user.Password,
+		&user.Subscription,
 		&user.Role,
 	)
 
