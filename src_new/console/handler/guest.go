@@ -34,12 +34,12 @@ func (h *Handler) RegisterForm(form *tview.Form, pages *tview.Pages) *tview.Form
 			req.Password = password
 		})
 
-	states := []string{"Customer", "Admin"}
+	// states := []string{"Customer", "Admin"}
 
-	form.AddDropDown("Role", states, 0,
-		func(option string, optionIndex int) {
-			req.Role = option
-		})
+	// form.AddDropDown("Role", states, 0,
+	// 	func(option string, optionIndex int) {
+	// 		req.Role = option
+	// 	})
 
 	form.AddButton("Register", func() {
 
@@ -76,19 +76,19 @@ func (h *Handler) LoginForm(form *tview.Form, pages *tview.Pages) *tview.Form {
 
 	form.AddButton("Login", func() {
 
-		user, err := h.userService.Login(context.Background(), req)
+		var err error
+		curUser, err = h.userService.Login(context.Background(), req)
 
 		if err != nil {
 			pages.SwitchToPage("Menu (guest)")
 			return
 		}
 
-		if user.Role == "Admin" {
+		if curUser.Role == model.UserRoleAdmin {
 			pages.SwitchToPage("Menu (admin)")
 			return
 		}
 
-		curUser = user
 		pages.SwitchToPage("Menu (authorized guest)")
 	})
 
@@ -163,7 +163,6 @@ func (h *Handler) ViewCatalogForm(flex *tview.Flex, pages *tview.Pages) *tview.F
 			} else if curUser.Role == model.UserRoleCustomer {
 				pages.SwitchToPage("Menu (authorized guest)")
 			}
-
 		} else {
 			pages.SwitchToPage("Menu (guest)")
 		}

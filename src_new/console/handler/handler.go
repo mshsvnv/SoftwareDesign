@@ -1,12 +1,17 @@
 package handler
 
 import (
+	"context"
+
 	"github.com/rivo/tview"
 
 	"src_new/internal/model"
 	repo "src_new/internal/repository/postgres"
 	"src_new/internal/service"
+
+	"src_new/pkg/logging"
 	"src_new/pkg/storage/postgres"
+	"src_new/pkg/utils"
 )
 
 type Handler struct {
@@ -16,11 +21,12 @@ type Handler struct {
 	cartService     service.CartService
 	orderService    service.OrderService
 	feedbackService service.FeedbackService
+	logger          *logging.Logger
 }
 
-var curUser *model.User = nil
+var curUser *model.User
 
-func CreateHandler(db *postgres.Postgres) *Handler {
+func CreateHandler(db *postgres.Postgres, logger *logging.Logger) *Handler {
 
 	userRepo := repo.NewUserRepository(db)
 	supplierRepo := repo.NewSupplierRepository(db)
@@ -29,6 +35,17 @@ func CreateHandler(db *postgres.Postgres) *Handler {
 	orderRepo := repo.NewOrderRepository(db)
 	feedbackRepo := repo.NewFeedbackRepository(db)
 
+	logger.Infof("here i am")
+
+	userRepo.Create(context.Background(), &model.User{
+		Email:    "admin@mail.ru",
+		Password: utils.HashAndSalt([]byte("admin")),
+		Role:     model.UserRoleAdmin,
+	})
+
+	curUser = &model.User{}
+	// curUser.Role = model.UserRoleAdmin
+
 	return &Handler{
 		userService:     *service.NewUserService(userRepo),
 		supplierService: *service.NewSupplierService(supplierRepo),
@@ -36,6 +53,7 @@ func CreateHandler(db *postgres.Postgres) *Handler {
 		cartService:     *service.NewCartService(cartRepo, racketRepo),
 		orderService:    *service.NewOrderService(orderRepo, cartRepo),
 		feedbackService: *service.NewFeedbackService(feedbackRepo),
+		logger:          logger,
 	}
 }
 
@@ -58,7 +76,7 @@ func (h *Handler) CreateGuestMenu(flex *tview.Flex, form *tview.Form, pages *tvi
 			h.ViewCatalogForm(flex, pages)
 			pages.SwitchToPage("View the catalog")
 		}).
-		AddItem("Finish", "", '4', func() {
+		AddItem("Finish", "", '*', func() {
 			exitFunc.Stop()
 		})
 }
@@ -98,7 +116,7 @@ func (h *Handler) CreateAuthorizedGuestMenu(flex *tview.Flex, form *tview.Form, 
 			h.CreateFeedbackForm(form, pages)
 			pages.SwitchToPage("Create a feedback")
 		}).
-		AddItem("Exit", "", '6', func() {
+		AddItem("Exit", "", '*', func() {
 			curUser = nil
 			pages.SwitchToPage("Menu (guest)")
 		})
@@ -107,32 +125,44 @@ func (h *Handler) CreateAuthorizedGuestMenu(flex *tview.Flex, form *tview.Form, 
 func (h *Handler) CreateAdminMenu(flex *tview.Flex, form *tview.Form, pages *tview.Pages) *tview.List {
 
 	return tview.NewList().
-		AddItem("Add racket", "", '1', func() {
+		AddItem("View suppliers", "", '1', func() {
+			form.Clear(true)
+			flex.Clear()
+			h.ViewSuppliersForm(flex, pages)
+			pages.SwitchToPage("View suppliers")
+		}).
+		AddItem("View the catalog", "", '2', func() {
+			form.Clear(true)
+			flex.Clear()
+			h.ViewCatalogForm(flex, pages)
+			pages.SwitchToPage("View the catalog")
+		}).
+		AddItem("Add racket", "", '3', func() {
 			form.Clear(true)
 			h.AddRacketForm(form, pages)
 			pages.SwitchToPage("Add racket")
 		}).
-		AddItem("Add supplier", "", '2', func() {
+		AddItem("Add supplier", "", '4', func() {
 			form.Clear(true)
 			h.AddSupplierForm(form, pages)
 			pages.SwitchToPage("Add supplier")
 		}).
-		AddItem("Remove racket", "", '3', func() {
+		AddItem("Remove racket", "", '5', func() {
 			form.Clear(true)
 			h.RemoveRacketForm(form, pages)
 			pages.SwitchToPage("Remove racket")
 		}).
-		AddItem("Remove supplier", "", '4', func() {
+		AddItem("Remove supplier", "", '6', func() {
 			form.Clear(true)
 			h.RemoveSupplierForm(form, pages)
 			pages.SwitchToPage("Remove supplier")
 		}).
-		AddItem("Edit racket", "", '5', func() {
+		AddItem("Edit racket", "", '7', func() {
 			form.Clear(true)
 			h.EditRacketForm(form, pages)
 			pages.SwitchToPage("Remove racket")
 		}).
-		AddItem("Edit supplier", "", '6', func() {
+		AddItem("Edit supplier", "", '8', func() {
 			form.Clear(true)
 			h.EditSupplierForm(form, pages)
 			pages.SwitchToPage("Remove supplier")

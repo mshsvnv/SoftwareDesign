@@ -2,12 +2,13 @@ package mypostgres
 
 import (
 	"context"
-	"src_new/internal/dto"
-	"src_new/internal/model"
 	"testing"
 	"time"
 
 	"github.com/stretchr/testify/require"
+
+	"src_new/internal/dto"
+	"src_new/internal/model"
 )
 
 func TestFeedbackRepositoryCreate(t *testing.T) {
@@ -40,7 +41,7 @@ func TestFeedbackRepositoryUpdate(t *testing.T) {
 	ctx := context.Background()
 
 	repo := NewFeedbackRepository(testDB)
-	
+
 	feedback := &model.Feedback{
 		UserID:   ids["userID"],
 		RacketID: ids["racketID"],

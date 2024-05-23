@@ -332,12 +332,7 @@ func (h *Handler) EditRacketForm(form *tview.Form, pages *tview.Pages) *tview.Fo
 
 		form.AddButton("Add", func() {
 
-			err := h.racketService.UpdateRacket(context.Background(), req)
-
-			if err != nil {
-				pages.SwitchToPage("Menu (admin)")
-				return
-			}
+			h.racketService.UpdateRacket(context.Background(), req)
 
 			pages.SwitchToPage("Menu (admin)")
 		})
@@ -436,4 +431,61 @@ func (h *Handler) RemoveRacketForm(form *tview.Form, pages *tview.Pages) *tview.
 	})
 
 	return form
+}
+
+func (h *Handler) ViewSuppliersForm(flex *tview.Flex, pages *tview.Pages) *tview.Flex {
+
+	flex.SetDirection(tview.FlexRow)
+
+	rackets, err := h.supplierService.GetAllSuppliers(context.Background())
+
+	if err != nil {
+		return flex
+	}
+
+	// if len(rackets) == 0 {
+	// 	form.N
+	// }
+
+	table := tview.NewTable().SetBorders(true)
+	rows := len(rackets)
+
+	for r := 0; r <= rows; r++ {
+
+		if r == 0 {
+			table.SetCell(r, 0,
+				tview.NewTableCell("Num"))
+			table.SetCell(r, 1,
+				tview.NewTableCell("Email"))
+			table.SetCell(r, 2,
+				tview.NewTableCell("Name"))
+			table.SetCell(r, 3,
+				tview.NewTableCell("Phone"))
+			table.SetCell(r, 4,
+				tview.NewTableCell("Town"))
+		} else {
+			curR := r - 1
+			id := strconv.FormatInt(int64(rackets[curR].ID), 10)
+			table.SetCell(r, 0,
+				tview.NewTableCell(id))
+
+			table.SetCell(r, 1,
+				tview.NewTableCell(rackets[curR].Name))
+
+			table.SetCell(r, 2,
+				tview.NewTableCell(rackets[curR].Phone))
+
+			table.SetCell(r, 3,
+				tview.NewTableCell(rackets[curR].Town))
+		}
+	}
+
+	button := tview.NewButton("Back").SetSelectedFunc(func() {
+		pages.SwitchToPage("Menu (authorized guest)")
+	})
+
+	flex.AddItem(table, 6*rows, 10, false)
+	flex.AddItem(button, 1, 1, true)
+
+	return flex
 }

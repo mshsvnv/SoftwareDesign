@@ -17,7 +17,6 @@ type IUserService interface {
 	Login(ctx context.Context, req *dto.LoginReq) (*model.User, error)
 	Register(ctx context.Context, req *dto.RegisterReq) (*model.User, error)
 	GetUserByID(ctx context.Context, id int) (*model.User, error)
-	// GetAllUsers()
 }
 
 type UserService struct {
@@ -62,7 +61,7 @@ func (s *UserService) Register(ctx context.Context, req *dto.RegisterReq) (*mode
 		Name:         req.Name,
 		Surname:      req.Surname,
 		Email:        req.Email,
-		Role:         model.UserRole(req.Role),
+		Role:         model.UserRoleCustomer,
 		Subscription: false,
 		Password:     utils.HashAndSalt([]byte(req.Password)),
 	}

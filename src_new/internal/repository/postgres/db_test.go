@@ -41,8 +41,6 @@ func NewTestStorage() *postgres.Postgres {
 	ids["userID"] = initTestUserStorage(NewUserRepository(conn))
 	ids["supplierID"] = initTestSupplierStorage(NewSupplierRepository(conn))
 	ids["racketID"] = initTestRacketStorage(NewRacketRepository(conn))
-	// ids["cartID"] =  initTestCartStorage(NewCartRepository(conn))
-	// ids["orderID"] = initTestOrderStorage(NewOrderRepository(conn))
 
 	return conn
 }
