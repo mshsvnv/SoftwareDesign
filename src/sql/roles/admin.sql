@@ -1,0 +1,10 @@
+CREATE ROLE "admin" WITH
+    LOGIN
+    NOSUPERUSER
+    NOCREATEDB
+    NOREPLICATION
+    PASSWORD 'admin'
+    CONNECTION LIMIT -1;
+
+GRANT SELECT ON racket TO "admin";
+GRANT INSERT ON "user" TO "admin";
