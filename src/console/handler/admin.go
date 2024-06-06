@@ -213,7 +213,11 @@ func (h *Handler) EditRacketStatusForm(form *tview.Form, pages *tview.Pages) *tv
 	rackets, err := h.racketService.GetAllRackets(context.Background())
 
 	if err != nil {
-		pages.SwitchToPage("Menu (admin)")
+		if curUser.Role == model.UserRoleAdmin {
+			pages.SwitchToPage("Menu (admin)")
+		} else {
+			pages.SwitchToPage("Menu (seller)")
+		}
 		return form
 	}
 
@@ -225,7 +229,7 @@ func (h *Handler) EditRacketStatusForm(form *tview.Form, pages *tview.Pages) *tv
 			ids = append(ids, strconv.FormatInt(int64(racket.ID), 10))
 		}
 
-		form.AddDropDown("Racket ID:", ids, 0,
+		form.AddDropDown("Racket ID", ids, 0,
 			func(id string, optionIndex int) {
 				d, _ := strconv.Atoi(id)
 				req.ID = d
@@ -409,7 +413,7 @@ func (h *Handler) ViewCatalogAllForm(flex *tview.Flex, pages *tview.Pages) *tvie
 			table.SetCell(r, 7,
 				tview.NewTableCell("Price"))
 			table.SetCell(r, 8,
-				tview.NewTableCell("Avaliable"))
+				tview.NewTableCell("Available"))
 		} else {
 			racket := rackets[r-1]
 
@@ -444,7 +448,7 @@ func (h *Handler) ViewCatalogAllForm(flex *tview.Flex, pages *tview.Pages) *tvie
 				tview.NewTableCell(price))
 
 			s := "false"
-			if racket.Avaliable {
+			if racket.Available {
 				s = "true"
 			}
 			table.SetCell(r, 8,

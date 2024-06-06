@@ -256,7 +256,7 @@ func (h *Handler) AddRacketToCartForm(form *tview.Form, pages *tview.Pages) *tvi
 		UserID: curUser.ID,
 	}
 
-	rackets, err := h.racketService.GetAllAvaliableRackets(context.Background())
+	rackets, err := h.racketService.GetAllAvailableRackets(context.Background())
 
 	if err != nil {
 		pages.SwitchToPage("Menu (authorized guest)")
