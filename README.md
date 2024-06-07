@@ -67,17 +67,13 @@
 ![](./schemes/svg/BPMN1.svg)
 ![](./schemes/svg/BPMN2.svg)  
 
-## Тип приложения
-Web SPA
-
 ## Технологический стек
 - Backend: Go
-- Frontend: HTML + CSS + JS (Vue)
 - Database: PostgreSQL
   
 ## Верхнеуровневое разбиение на компоненты
 Приложение будет состоять из 3 компонентов:
-- компонент реализации UI
+- компонент реализации TechUI
 - Компонент реализации бизнес-логики (Business Logic)
 - Компонент доступа к данным (Data Access)
   

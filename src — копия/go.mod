@@ -3,17 +3,19 @@ module src
 go 1.22.0
 
 require (
-	github.com/Masterminds/squirrel v1.5.4
-	github.com/jackc/pgx/v5 v5.5.5
-	github.com/rivo/tview v0.0.0-20240426173458-c766eefb3803
-	github.com/stretchr/testify v1.9.0
-	golang.org/x/crypto v0.24.0
+	github.com/mshsvnv/console v0.0.0-20240607153539-b58eef2ea0c5
+	github.com/mshsvnv/repository v0.0.0-20240607152019-34b57d78c74f
+	github.com/mshsvnv/service v0.0.0-20240607151526-e8a717d2fa57
+	github.com/rivo/tview v0.0.0-20240524063012-037df494fb76
 )
 
-require github.com/mshsvnv/service v0.0.0-20240607145026-0131e07b58d4 // indirect
+require (
+	github.com/Masterminds/squirrel v1.5.4 // indirect
+	github.com/jackc/pgx/v5 v5.6.0 // indirect
+	golang.org/x/crypto v0.24.0 // indirect
+)
 
 require (
-	github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc // indirect
 	github.com/fsnotify/fsnotify v1.7.0 // indirect
 	github.com/gdamore/encoding v1.0.1 // indirect
 	github.com/gdamore/tcell/v2 v2.7.4 // indirect
@@ -30,10 +32,9 @@ require (
 	github.com/mattn/go-runewidth v0.0.15 // indirect
 	github.com/mitchellh/mapstructure v1.5.0 // indirect
 	github.com/pelletier/go-toml/v2 v2.2.2 // indirect
-	github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2 // indirect
 	github.com/rivo/uniseg v0.4.7 // indirect
 	github.com/rogpeppe/go-internal v1.12.0 // indirect
-	github.com/rs/zerolog v1.33.0
+	github.com/rs/zerolog v1.33.0 // indirect
 	github.com/sagikazarmark/locafero v0.4.0 // indirect
 	github.com/sagikazarmark/slog-shim v0.1.0 // indirect
 	github.com/sourcegraph/conc v0.3.0 // indirect
@@ -41,7 +42,6 @@ require (
 	github.com/spf13/cast v1.6.0 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
 	github.com/spf13/viper v1.18.2
-	github.com/stretchr/objx v0.5.2 // indirect
 	github.com/subosito/gotenv v1.6.0 // indirect
 	go.uber.org/atomic v1.9.0 // indirect
 	go.uber.org/multierr v1.9.0 // indirect

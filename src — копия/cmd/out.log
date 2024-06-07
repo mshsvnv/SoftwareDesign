@@ -1,0 +1,5 @@
+{"level":"info","time":"2024-06-07T18:40:47+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/rivo/tview@v0.0.0-20240524063012-037df494fb76/button.go:173","message":"login email admin"}
+{"level":"info","time":"2024-06-07T18:40:48+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/mshsvnv/console@v0.0.0-20240607153539-b58eef2ea0c5/handler.go:140","message":"get all rackets"}
+{"level":"info","time":"2024-06-07T18:40:49+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/mshsvnv/console@v0.0.0-20240607153539-b58eef2ea0c5/handler.go:146","message":"get all users"}
+{"level":"info","time":"2024-06-07T18:40:50+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/mshsvnv/console@v0.0.0-20240607153539-b58eef2ea0c5/handler.go:146","message":"get all users"}
+{"level":"info","time":"2024-06-07T18:40:53+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/mshsvnv/console@v0.0.0-20240607153539-b58eef2ea0c5/handler.go:161","message":"get all rackets"}
