@@ -413,7 +413,7 @@ func (h *Handler) ViewCatalogAllForm(flex *tview.Flex, pages *tview.Pages) *tvie
 			table.SetCell(r, 7,
 				tview.NewTableCell("Price"))
 			table.SetCell(r, 8,
-				tview.NewTableCell("Available"))
+				tview.NewTableCell("Avaliable"))
 		} else {
 			racket := rackets[r-1]
 
@@ -448,7 +448,7 @@ func (h *Handler) ViewCatalogAllForm(flex *tview.Flex, pages *tview.Pages) *tvie
 				tview.NewTableCell(price))
 
 			s := "false"
-			if racket.Available {
+			if racket.Avaliable {
 				s = "true"
 			}
 			table.SetCell(r, 8,

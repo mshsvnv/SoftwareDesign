@@ -98,7 +98,7 @@ func (h *Handler) ViewCatalogForm(flex *tview.Flex, pages *tview.Pages) *tview.F
 
 	flex.SetDirection(tview.FlexRow)
 
-	rackets, err := h.racketService.GetAllAvailableRackets(context.Background())
+	rackets, err := h.racketService.GetAllAvaliableRackets(context.Background())
 
 	if err != nil {
 		return flex

@@ -145,12 +145,6 @@ func (h *Handler) ViewMyCartForm(flex *tview.Flex, pages *tview.Pages) *tview.Fl
 
 	if cart.Quantity != 0 {
 
-		flex.AddItem(tview.NewTextView().
-			SetText(fmt.Sprintf("Quantity: %d	Total Price: %f\n",
-				cart.Quantity,
-				cart.TotalPrice)),
-			1, 0, false)
-
 		table := tview.NewTable().SetBorders(true)
 		rows := len(cart.Lines)
 
@@ -256,7 +250,7 @@ func (h *Handler) AddRacketToCartForm(form *tview.Form, pages *tview.Pages) *tvi
 		UserID: curUser.ID,
 	}
 
-	rackets, err := h.racketService.GetAllAvailableRackets(context.Background())
+	rackets, err := h.racketService.GetAllAvaliableRackets(context.Background())
 
 	if err != nil {
 		pages.SwitchToPage("Menu (authorized guest)")

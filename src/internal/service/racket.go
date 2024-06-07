@@ -79,7 +79,7 @@ func (s *RacketService) UpdateRacket(ctx context.Context, req *dto.UpdateRacketR
 		return fmt.Errorf("get racket by id, error %s", err)
 	}
 
-	if racket.Quantity <= 0 {
+	if req.Quantity <= 0 {
 		s.logger.Errorf("unavalibale amount of rackets")
 		return fmt.Errorf("unavalibale amount of rackets")
 	}
