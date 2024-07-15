@@ -37,7 +37,6 @@ func (r *RacketController) ListsAllRackets(c *gin.Context) {
 
 func (r *RacketController) GetRacketByID(c *gin.Context) {
 
-	// cacheKey := c.Request.URL.RequestURI()
 	racketID, _ := strconv.Atoi(c.Param("id"))
 
 	racket, err := r.service.GetRacketByID(c, racketID)

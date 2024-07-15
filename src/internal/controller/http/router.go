@@ -31,11 +31,6 @@ func (c *Controller) SetUserRoute(l logging.Interface, service service.IUserServ
 	c.handler.GET("/me")
 }
 
-// order
-func (c *Controller) SetOrderRoute(l logging.Interface) {
-
-}
-
 // product
 func (c *Controller) SetProductRoute(l logging.Interface, service service.IRacketService) {
 
@@ -46,3 +41,14 @@ func (c *Controller) SetProductRoute(l logging.Interface, service service.IRacke
 }
 
 // cart
+func (c *Controller) SetCartRoute(l logging.Interface, service service.ICartService) {
+
+	a := NewCartController(l, service)
+
+	c.handler.GET("/cart/:id", a.GetMyCart)
+}
+
+// order
+func (c *Controller) SetOrderRoute(l logging.Interface) {
+
+}

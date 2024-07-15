@@ -55,16 +55,19 @@ func main() {
 	userRepo := mypostgres.NewUserRepository(db)
 	supplierRepo := mypostgres.NewSupplierRepository(db)
 	racketRepo := mypostgres.NewRacketRepository(db)
+	cartRepo := mypostgres.NewCartRepository(db)
 
 	userService := service.NewUserService(l, userRepo)
 	// supplierService := service.NewSupplierService(l, supplierRepo)
 	racketService := service.NewRacketService(l, racketRepo, supplierRepo)
+	cartService := service.NewCartService(l, cartRepo, racketRepo)
 
 	handler := gin.New()
 	controller := http.NewRouter(handler)
 
 	controller.SetUserRoute(l, userService)
 	controller.SetProductRoute(l, racketService)
+	controller.SetCartRoute(l, cartService)
 
 	// Create router
 	router := httpserver.New(handler, httpserver.Port(cfg.HTTP.Port))
