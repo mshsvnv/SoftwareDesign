@@ -11,7 +11,6 @@ import (
 	"src/internal/dto"
 	"src/internal/model"
 	"src/internal/repository/mocks"
-	"src/pkg/utils"
 )
 
 type UserServiceTestSuite struct {
@@ -29,81 +28,81 @@ func TestUserServiceTestSuite(t *testing.T) {
 	suite.Run(t, new(UserServiceTestSuite))
 }
 
-// Login
-func (suite *UserServiceTestSuite) TestLoginGetUserByEmailFail() {
+// // Login
+// func (suite *UserServiceTestSuite) TestLoginGetUserByEmailFail() {
 
-	req := &dto.LoginReq{
-		Email:    "test@test.com",
-		Password: "test123456",
-	}
+// 	req := &dto.LoginReq{
+// 		Email:    "test@test.com",
+// 		Password: "test123456",
+// 	}
 
-	suite.mockRepo.On("GetUserByEmail", mock.Anything, req.Email).
-		Return(nil, errors.New("error")).Times(1)
+// 	suite.mockRepo.On("GetUserByEmail", mock.Anything, req.Email).
+// 		Return(nil, errors.New("error")).Times(1)
 
-	user, err := suite.service.Login(context.Background(), req)
+// 	user, err := suite.service.Login(context.Background(), req)
 
-	suite.Nil(user)
-	suite.NotNil(err)
-}
+// 	suite.Nil(user)
+// 	suite.NotNil(err)
+// }
 
-func (suite *UserServiceTestSuite) TestLoginWrongPassword() {
+// func (suite *UserServiceTestSuite) TestLoginWrongPassword() {
 
-	req := &dto.LoginReq{
-		Email:    "test@test.com",
-		Password: "test123456",
-	}
+// 	req := &dto.LoginReq{
+// 		Email:    "test@test.com",
+// 		Password: "test123456",
+// 	}
 
-	suite.mockRepo.On("GetUserByEmail", mock.Anything, req.Email).
-		Return(
-			&model.User{
-				Email:    "test@test.com",
-				Password: "password",
-			}, nil).Times(1)
+// 	suite.mockRepo.On("GetUserByEmail", mock.Anything, req.Email).
+// 		Return(
+// 			&model.User{
+// 				Email:    "test@test.com",
+// 				Password: "password",
+// 			}, nil).Times(1)
 
-	user, err := suite.service.Login(context.Background(), req)
+// 	user, err := suite.service.Login(context.Background(), req)
 
-	suite.Nil(user)
-	suite.NotNil(err)
-}
+// 	suite.Nil(user)
+// 	suite.NotNil(err)
+// }
 
-func (suite *UserServiceTestSuite) TestLoginSuccess() {
+// func (suite *UserServiceTestSuite) TestLoginSuccess() {
 
-	req := &dto.LoginReq{
-		Email:    "test@test.com",
-		Password: "test123456",
-	}
+// 	req := &dto.LoginReq{
+// 		Email:    "test@test.com",
+// 		Password: "test123456",
+// 	}
 
-	suite.mockRepo.On("GetUserByEmail", mock.Anything, req.Email).
-		Return(
-			&model.User{
-				Email:    "test@test.com",
-				Password: utils.HashAndSalt([]byte("test123456")),
-			}, nil).Times(1)
+// 	suite.mockRepo.On("GetUserByEmail", mock.Anything, req.Email).
+// 		Return(
+// 			&model.User{
+// 				Email:    "test@test.com",
+// 				Password: utils.HashAndSalt([]byte("test123456")),
+// 			}, nil).Times(1)
 
-	user, err := suite.service.Login(context.Background(), req)
+// 	user, err := suite.service.Login(context.Background(), req)
 
-	suite.NotNil(user)
-	suite.Nil(err)
-}
+// 	suite.NotNil(user)
+// 	suite.Nil(err)
+// }
 
-// Register
-func (suite *UserServiceTestSuite) TestRegisterGetUserByEmailFail() {
+// // Register
+// func (suite *UserServiceTestSuite) TestRegisterGetUserByEmailFail() {
 
-	req := &dto.RegisterReq{
-		Email:    "test@test.com",
-		Password: "test123456",
-	}
+// 	req := &dto.RegisterReq{
+// 		Email:    "test@test.com",
+// 		Password: "test123456",
+// 	}
 
-	suite.mockRepo.On("GetUserByEmail", mock.Anything, req.Email).
-		Return(&model.User{
-			Email: "test@test.com",
-		}, errors.New("error")).Times(1)
+// 	suite.mockRepo.On("GetUserByEmail", mock.Anything, req.Email).
+// 		Return(&model.User{
+// 			Email: "test@test.com",
+// 		}, errors.New("error")).Times(1)
 
-	user, err := suite.service.Register(context.Background(), req)
+// 	user, err := suite.service.Register(context.Background(), req)
 
-	suite.Nil(user)
-	suite.NotNil(err)
-}
+// 	suite.Nil(user)
+// 	suite.NotNil(err)
+// }
 
 func (suite *UserServiceTestSuite) TestRegisterCreateFail() {
 

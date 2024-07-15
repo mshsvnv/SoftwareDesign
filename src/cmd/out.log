@@ -1,0 +1,16 @@
+{"level":"info","time":"2024-07-15T16:30:07+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"register email pppppppp"}
+{"level":"info","time":"2024-07-15T16:30:31+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email pppppppp"}
+{"level":"info","time":"2024-07-15T16:30:40+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email pppppppp"}
+{"level":"error","time":"2024-07-15T16:30:40+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"wrong password, error crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"level":"info","time":"2024-07-15T16:30:40+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"error"}
+{"level":"info","time":"2024-07-15T16:50:41+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-07-15T16:53:58+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email pppppppp"}
+{"level":"error","time":"2024-07-15T16:53:58+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"wrong password, error crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"level":"info","time":"2024-07-15T16:53:58+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"error"}
+{"level":"info","time":"2024-07-15T16:54:05+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email pppppppp"}
+{"level":"info","time":"2024-07-15T17:08:49+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-07-15T17:09:03+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 0"}
+{"level":"error","time":"2024-07-15T17:09:03+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id fail, error no rows in result set"}
+{"level":"error","time":"2024-07-15T17:09:03+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"failed to list fullInfoCards: get racket by id fail, error no rows in result set"}
+{"level":"info","time":"2024-07-15T17:09:11+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-07-15T17:10:38+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}

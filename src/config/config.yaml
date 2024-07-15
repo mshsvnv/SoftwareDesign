@@ -2,6 +2,11 @@ logger:
   level: 'info'
   file: 'out.log'
 
+auth:
+  signingKey: "racket_shop"
+  accessTokenTTL: 100m
+  refreshTokenTTL: 120h
+
 http:
   port: 8080
 

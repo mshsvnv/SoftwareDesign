@@ -1,6 +1,8 @@
 package config
 
 import (
+	"time"
+
 	"github.com/spf13/viper"
 )
 
@@ -8,6 +10,7 @@ const configPath = "../config/config.yaml"
 
 type Config struct {
 	Logger   LoggerConfig   `yaml:"logger"`
+	Auth     AuthConfig     `yaml:"auth"`
 	HTTP     HTTPConfig     `yaml:"http"`
 	Database DatabaseConfig `yaml:"database"`
 }
@@ -15,6 +18,12 @@ type Config struct {
 type LoggerConfig struct {
 	Level string `yaml:"level"`
 	File  string `yaml:"file"`
+}
+
+type AuthConfig struct {
+	SigningKey      string        `yaml:"signingKey"`
+	AccessTokenTTL  time.Duration `yaml:"accessTokenTTL"`
+	RefreshTokenTTL time.Duration `yaml:"refreshTokenTTL"`
 }
 
 type HTTPConfig struct {

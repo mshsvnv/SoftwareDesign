@@ -1,24 +1,48 @@
 package http
 
-// import (
-// 	"net/http"
+import (
+	"github.com/gin-gonic/gin"
+	// httputils "course/internal/controller/http/utils"
+	"src/internal/service"
+	"src/pkg/logging"
+)
 
-// 	"github.com/gin-gonic/gin"
+type Controller struct {
+	handler *gin.Engine
+}
 
-// 	httputils "course/internal/controller/http/utils"
-// )
+func NewRouter(handler *gin.Engine) *Controller {
 
-// type Controller struct {
-// 	handler *gin.Engine
-// }
+	handler.Use(gin.Logger())
+	handler.Use(gin.Recovery())
+	// handler.OPTIONS("/*any", httputils.DisableCors)
 
-// func NewRouter(handler *gin.Engine) *Controller {
-// 	handler.Use(gin.Logger())
-// 	handler.Use(gin.Recovery())
+	return &Controller{handler: handler}
+}
 
-// 	handler.GET("/healthcheck", func(c *gin.Context) { c.Status(http.StatusOK) })
+// user
+func (c *Controller) SetUserRoute(l logging.Interface, service service.IUserService) {
 
-// 	handler.OPTIONS("/*any", httputils.DisableCors)
+	a := NewUserController(l, service)
 
-// 	return &Controller{handler: handler}
-// }
+	c.handler.POST("/register", a.Register)
+	c.handler.POST("/login", a.Login)
+	c.handler.POST("/refresh", a.RefreshToken)
+	c.handler.GET("/me")
+}
+
+// order
+func (c *Controller) SetOrderRoute(l logging.Interface) {
+
+}
+
+// product
+func (c *Controller) SetProductRoute(l logging.Interface, service service.IRacketService) {
+
+	a := NewRacketController(l, service)
+
+	c.handler.GET("/rackets", a.ListsAllRackets)
+	c.handler.GET("/rackets/:id", a.GetRacketByID)
+}
+
+// cart

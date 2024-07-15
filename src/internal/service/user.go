@@ -13,6 +13,11 @@ import (
 	"src/pkg/utils"
 )
 
+// type tokens struct {
+// 	AccessToken  string `json:"accessToken"`
+// 	RefreshToken string `json:"refreshToken"`
+// }
+
 //go:generate mockery --name=IUserService
 type IUserService interface {
 	Login(ctx context.Context, req *dto.LoginReq) (*model.User, error)
