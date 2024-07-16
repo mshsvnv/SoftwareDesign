@@ -57,3 +57,39 @@
 {"level":"error","time":"2024-07-15T19:01:19+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"failed to list fullInfoCards: get racket by id fail, error no rows in result set"}
 {"level":"info","time":"2024-07-15T19:01:31+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
 {"level":"info","time":"2024-07-15T19:03:21+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart, user 10"}
+{"level":"info","time":"2024-07-16T17:14:02+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-07-16T17:14:30+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email ppppppp"}
+{"level":"error","time":"2024-07-16T17:14:31+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by email fail, error no rows in result set"}
+{"level":"info","time":"2024-07-16T17:14:31+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"error"}
+{"level":"info","time":"2024-07-16T17:15:19+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email pppppppp"}
+{"level":"info","time":"2024-07-16T17:15:19+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"error"}
+{"level":"info","time":"2024-07-16T17:16:22+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email pppppppp"}
+{"level":"info","time":"2024-07-16T17:16:22+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"error"}
+{"level":"info","time":"2024-07-16T17:17:10+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email pppppppp"}
+{"level":"info","time":"2024-07-16T17:17:11+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"error"}
+{"level":"info","time":"2024-07-16T17:19:57+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email pppppppp"}
+{"level":"info","time":"2024-07-16T17:19:58+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"error"}
+{"level":"info","time":"2024-07-16T17:22:01+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email pppppppp"}
+{"level":"error","time":"2024-07-16T17:22:01+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"token fails, error key is of invalid type: ECDSA sign expects *ecdsa.PrivateKey"}
+{"level":"info","time":"2024-07-16T17:22:01+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"error"}
+{"level":"info","time":"2024-07-16T17:29:52+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email pppppppp"}
+{"level":"info","time":"2024-07-16T17:32:11+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email pppppppp"}
+{"level":"error","time":"2024-07-16T18:22:37+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"token claims are not of type *tokenClaims, error %!s(<nil>)"}
+{"level":"info","time":"2024-07-16T18:23:09+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email pppppppp"}
+{"level":"error","time":"2024-07-16T18:28:29+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"token claims are not of type *tokenClaims, error %!s(<nil>)"}
+{"level":"info","time":"2024-07-16T18:31:45+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"UserID: 0"}
+{"level":"info","time":"2024-07-16T18:32:46+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"UserID: 0"}
+{"level":"info","time":"2024-07-16T18:33:23+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email pppppppp"}
+{"level":"info","time":"2024-07-16T18:33:23+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"UserID: 15"}
+{"level":"info","time":"2024-07-16T18:35:07+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email pppppppp"}
+{"level":"info","time":"2024-07-16T18:35:07+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"UserID: 15"}
+{"level":"error","time":"2024-07-16T18:36:21+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"invalid signing method, error token signature is invalid: signature is invalid"}
+{"level":"error","time":"2024-07-16T18:38:07+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"invalid signing method, error token signature is invalid: signature is invalid"}
+{"level":"error","time":"2024-07-16T18:41:53+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"token signature is invalid: signature is invalid"}
+{"level":"error","time":"2024-07-16T18:44:34+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"token signature is invalid: signature is invalid"}
+{"level":"error","time":"2024-07-16T18:45:22+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"token signature is invalid: signature is invalid"}
+{"level":"info","time":"2024-07-16T18:45:23+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"user id is: -2"}
+{"level":"error","time":"2024-07-16T18:50:21+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"token signature is invalid: signature is invalid"}
+{"level":"info","time":"2024-07-16T18:50:21+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"user id is: -2"}
+{"level":"info","time":"2024-07-16T18:52:00+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email pppppppp"}
+{"level":"info","time":"2024-07-16T18:52:12+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"user id is: 15"}

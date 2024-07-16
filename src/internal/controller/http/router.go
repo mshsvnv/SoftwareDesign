@@ -21,14 +21,14 @@ func NewRouter(handler *gin.Engine) *Controller {
 }
 
 // user
-func (c *Controller) SetUserRoute(l logging.Interface, service service.IUserService) {
+func (c *Controller) SetUserRoute(l logging.Interface, service service.IUserService, authService service.IAuthService) {
 
-	a := NewUserController(l, service)
+	a := NewUserController(l, service, authService)
 
-	c.handler.POST("/register", a.Register)
-	c.handler.POST("/login", a.Login)
-	c.handler.POST("/refresh", a.RefreshToken)
-	c.handler.GET("/me")
+	group := c.handler.Group("auth")
+
+	group.POST("/register", a.Register)
+	group.POST("/login", a.Login)
 }
 
 // product
@@ -41,11 +41,14 @@ func (c *Controller) SetProductRoute(l logging.Interface, service service.IRacke
 }
 
 // cart
-func (c *Controller) SetCartRoute(l logging.Interface, service service.ICartService) {
+func (c *Controller) SetCartRoute(l logging.Interface, service service.ICartService, userService service.IUserService, authService service.IAuthService) {
 
 	a := NewCartController(l, service)
+	b := NewUserController(l, userService, authService)
 
-	c.handler.GET("/cart/:id", a.GetMyCart)
+	group := c.handler.Group("api", b.UserIdentity)
+
+	group.GET("/cart", a.GetMyCart)
 }
 
 // order

@@ -10,36 +10,57 @@ import (
 )
 
 type UserController struct {
-	l       logging.Interface
-	service service.IUserService
+	l           logging.Interface
+	service     service.IUserService
+	authService service.IAuthService
 }
 
-func NewUserController(l logging.Interface, service service.IUserService) *UserController {
+func NewUserController(l logging.Interface, service service.IUserService, authService service.IAuthService) *UserController {
 	return &UserController{
-		l:       l,
-		service: service,
+		l:           l,
+		authService: authService,
+		service:     service,
 	}
 }
 
 func (u *UserController) Login(c *gin.Context) {
 
+	// var req dto.LoginReq
+
+	// if err := c.ShouldBindJSON(&req); c.Request.Body == nil || err != nil {
+	// 	u.l.Infof("error")
+	// 	c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{"error": "error"})
+	// 	return
+	// }
+
+	// _, err := u.service.Login(c, &req)
+	// if err != nil {
+	// 	u.l.Infof("error")
+	// 	c.AbortWithStatusJSON(http.StatusInternalServerError, gin.H{"error": "error"})
+	// 	return
+	// }
+
+	// c.JSON(http.StatusOK, gin.H{
+	// 	"msg": "you are logined",
+	// })
+
 	var req dto.LoginReq
 
 	if err := c.ShouldBindJSON(&req); c.Request.Body == nil || err != nil {
 		u.l.Infof("error")
-		c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{"error": "error"})
+		c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{"error": "error 1"})
 		return
 	}
 
-	_, err := u.service.Login(c, &req)
+	token, err := u.authService.GenerateToken(c, &req)
 	if err != nil {
 		u.l.Infof("error")
-		c.AbortWithStatusJSON(http.StatusInternalServerError, gin.H{"error": "error"})
+		c.AbortWithStatusJSON(http.StatusInternalServerError, gin.H{"error": "error 2"})
 		return
 	}
 
 	c.JSON(http.StatusOK, gin.H{
-		"msg": "you are logined",
+		"token": token,
 	})
 }
 

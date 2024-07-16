@@ -61,13 +61,14 @@ func main() {
 	// supplierService := service.NewSupplierService(l, supplierRepo)
 	racketService := service.NewRacketService(l, racketRepo, supplierRepo)
 	cartService := service.NewCartService(l, cartRepo, racketRepo)
+	authService := service.NewAuthService(l, userRepo)
 
 	handler := gin.New()
 	controller := http.NewRouter(handler)
 
-	controller.SetUserRoute(l, userService)
+	controller.SetUserRoute(l, userService, authService)
 	controller.SetProductRoute(l, racketService)
-	controller.SetCartRoute(l, cartService)
+	controller.SetCartRoute(l, cartService, userService, authService)
 
 	// Create router
 	router := httpserver.New(handler, httpserver.Port(cfg.HTTP.Port))
