@@ -2,8 +2,10 @@ package http
 
 import (
 	"net/http"
+	"src/internal/dto"
 	"src/internal/service"
 	"src/pkg/logging"
+	"strconv"
 
 	"github.com/gin-gonic/gin"
 )
@@ -22,26 +24,115 @@ func NewCartController(l logging.Interface, service service.ICartService) *CartC
 
 func (cc *CartController) GetMyCart(c *gin.Context) {
 
-	userID, _ := c.Get(userCtx)
+	userID, err := getUserID(c)
+
+	if err != nil {
+		cc.l.Errorf(err.Error())
+		c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+	}
+
+	cart, err := cc.service.GetCartByID(c, userID)
+	if err != nil {
+		cc.l.Errorf(err.Error())
+		c.AbortWithStatusJSON(http.StatusInternalServerError, gin.H{"error": "Failed to list rackets"})
+	}
 
 	c.JSON(http.StatusOK, gin.H{
-		"id": userID,
+		"cart": cart,
 	})
+}
 
-	// userID, err := strconv.Atoi(c.Param("id"))
+func (cc *CartController) AddRacket(c *gin.Context) {
 
-	// if err != nil {
-	// 	cc.l.Infof("userID: %d %s", userID, err.Error())
-	// }
+	userID, err := getUserID(c)
 
-	// cart, err := cc.service.GetCartByID(c, userID)
-	// if err != nil {
-	// 	cc.l.Errorf("failed to list fullInfoCards: %s", err.Error())
-	// 	c.AbortWithStatusJSON(http.StatusInternalServerError, gin.H{"error": "Failed to list rackets"})
+	if err != nil {
+		cc.l.Errorf(err.Error())
+		c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+	}
+
+	var req dto.AddRacketCartReq
+
+	if err := c.ShouldBindJSON(&req); c.Request.Body == nil || err != nil {
+		cc.l.Infof(err.Error())
+		c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		return
+	}
+
+	req.UserID = userID
+
+	cart, err := cc.service.AddRacket(c, &req)
+	if err != nil {
+		cc.l.Errorf(err.Error())
+		c.AbortWithStatusJSON(http.StatusInternalServerError, gin.H{"error": "Failed to list rackets"})
+	}
+
+	c.JSON(http.StatusOK, gin.H{
+		"cart": cart,
+	})
+}
+
+func (cc *CartController) RemoveRacket(c *gin.Context) {
+
+	userID, err := getUserID(c)
+
+	if err != nil {
+		cc.l.Errorf(err.Error())
+		c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+	}
+
+	var req dto.RemoveRacketCartReq
+
+	// if err := c.ShouldBindJSON(&req); c.Request.Body == nil || err != nil {
+	// 	cc.l.Infof(err.Error())
+	// 	c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 	// 	return
 	// }
 
-	// c.JSON(http.StatusOK, gin.H{
-	// 	"cart": cart,
-	// })
+	racketID, _ := strconv.Atoi(c.Param("id"))
+
+	req.RacketID = racketID
+	req.UserID = userID
+
+	cart, err := cc.service.RemoveRacket(c, &req)
+	if err != nil {
+		cc.l.Errorf(err.Error())
+		c.AbortWithStatusJSON(http.StatusInternalServerError, gin.H{"error": "Failed to list rackets"})
+	}
+
+	c.JSON(http.StatusOK, gin.H{
+		"cart": cart,
+	})
+}
+
+func (cc *CartController) UpdateRacket(c *gin.Context) {
+
+	userID, err := getUserID(c)
+
+	if err != nil {
+		cc.l.Errorf(err.Error())
+		c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+	}
+
+	var req dto.UpdateRacketCartReq
+	if err := c.ShouldBindJSON(&req); c.Request.Body == nil || err != nil {
+		cc.l.Infof(err.Error())
+		c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		return
+	}
+
+	racketID, _ := strconv.Atoi(c.Param("id"))
+
+	req.RacketID = racketID
+	req.UserID = userID
+
+	cart, err := cc.service.UpdateRacket(c, &req)
+	if err != nil {
+		cc.l.Errorf(err.Error())
+		c.AbortWithStatusJSON(http.StatusInternalServerError, gin.H{"error": "Failed to list rackets"})
+	}
+
+	c.JSON(http.StatusOK, gin.H{
+		"cart": cart,
+	})
 }

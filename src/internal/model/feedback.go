@@ -5,7 +5,7 @@ import "time"
 type Feedback struct {
 	RacketID int
 	UserID   int
-	Feedback string
-	Date     time.Time
-	Rating   float32
+	Feedback string    `json:"feedback"`
+	Date     time.Time `json:"date"`
+	Rating   float32   `json:"rating"`
 }

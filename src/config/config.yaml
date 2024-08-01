@@ -4,8 +4,7 @@ logger:
 
 auth:
   signingKey: "racket_shop"
-  accessTokenTTL: 100m
-  refreshTokenTTL: 120h
+  accessTokenTTL: 12h
 
 http:
   port: 8080

@@ -34,6 +34,10 @@ func main() {
 		log.Fatal(err)
 	}
 
+	if err != nil {
+		log.Fatal(err)
+	}
+
 	loggerFile, err := os.OpenFile(
 		cfg.Logger.File,
 		os.O_APPEND|os.O_CREATE|os.O_WRONLY,
@@ -56,20 +60,24 @@ func main() {
 	supplierRepo := mypostgres.NewSupplierRepository(db)
 	racketRepo := mypostgres.NewRacketRepository(db)
 	cartRepo := mypostgres.NewCartRepository(db)
+	orderRepo := mypostgres.NewOrderRepository(db)
+	feedbackRepo := mypostgres.NewFeedbackRepository(db)
 
 	userService := service.NewUserService(l, userRepo)
 	// supplierService := service.NewSupplierService(l, supplierRepo)
 	racketService := service.NewRacketService(l, racketRepo, supplierRepo)
 	cartService := service.NewCartService(l, cartRepo, racketRepo)
-	authService := service.NewAuthService(l, userRepo)
+	authService := service.NewAuthService(l, userRepo, cfg.Auth.SigningKey, cfg.Auth.AccessTokenTTL)
+	orderService := service.NewOrderService(l, orderRepo, cartRepo, racketRepo)
+	feedbackService := service.NewFeedbackService(l, feedbackRepo)
 
 	handler := gin.New()
 	controller := http.NewRouter(handler)
 
-	controller.SetUserRoute(l, userService, authService)
-	controller.SetProductRoute(l, racketService)
-	controller.SetCartRoute(l, cartService, userService, authService)
-
+	controller.SetAuthRoute(l, authService)
+	controller.SetRacketRoute(l, racketService, feedbackService)
+	controller.SetUserRoute(l, cartService, authService, userService, orderService)
+	controller.SetOrderRoute(l, authService, orderService)
 	// Create router
 	router := httpserver.New(handler, httpserver.Port(cfg.HTTP.Port))
 

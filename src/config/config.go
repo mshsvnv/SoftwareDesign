@@ -21,9 +21,8 @@ type LoggerConfig struct {
 }
 
 type AuthConfig struct {
-	SigningKey      string        `yaml:"signingKey"`
-	AccessTokenTTL  time.Duration `yaml:"accessTokenTTL"`
-	RefreshTokenTTL time.Duration `yaml:"refreshTokenTTL"`
+	SigningKey     string        `yaml:"signingKey"`
+	AccessTokenTTL time.Duration `yaml:"accessTokenTTL"`
 }
 
 type HTTPConfig struct {

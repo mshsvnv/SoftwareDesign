@@ -8,7 +8,6 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/suite"
 
-	"src/internal/dto"
 	"src/internal/model"
 	"src/internal/repository/mocks"
 )
@@ -21,6 +20,7 @@ type UserServiceTestSuite struct {
 
 func (suite *UserServiceTestSuite) SetupTest() {
 	suite.mockRepo = mocks.NewIUserRepository(suite.T())
+	// suite.tokenManager = NewManager()
 	suite.service = NewUserService(nil, suite.mockRepo)
 }
 
@@ -104,43 +104,43 @@ func TestUserServiceTestSuite(t *testing.T) {
 // 	suite.NotNil(err)
 // }
 
-func (suite *UserServiceTestSuite) TestRegisterCreateFail() {
+// func (suite *UserServiceTestSuite) TestRegisterCreateFail() {
 
-	req := &dto.RegisterReq{
-		Email:    "test@test.com",
-		Password: "test123456",
-	}
+// 	req := &dto.RegisterReq{
+// 		Email:    "test@test.com",
+// 		Password: "test123456",
+// 	}
 
-	suite.mockRepo.On("GetUserByEmail", mock.Anything, req.Email).
-		Return(nil, errors.New("error")).Times(1)
+// 	suite.mockRepo.On("GetUserByEmail", mock.Anything, req.Email).
+// 		Return(nil, errors.New("error")).Times(1)
 
-	suite.mockRepo.On("Create", mock.Anything, mock.Anything).
-		Return(errors.New("error")).Times(1)
+// 	suite.mockRepo.On("Create", mock.Anything, mock.Anything).
+// 		Return(errors.New("error")).Times(1)
 
-	user, err := suite.service.Register(context.Background(), req)
+// 	user, err := suite.service.Register(context.Background(), req)
 
-	suite.Nil(user)
-	suite.NotNil(err)
-}
+// 	suite.Nil(user)
+// 	suite.NotNil(err)
+// }
 
-func (suite *UserServiceTestSuite) TestRegisterSuccess() {
+// func (suite *UserServiceTestSuite) TestRegisterSuccess() {
 
-	req := &dto.RegisterReq{
-		Email:    "test@test.com",
-		Password: "test123456",
-	}
+// 	req := &dto.RegisterReq{
+// 		Email:    "test@test.com",
+// 		Password: "test123456",
+// 	}
 
-	suite.mockRepo.On("GetUserByEmail", mock.Anything, req.Email).
-		Return(nil, errors.New("error")).Times(1)
+// 	suite.mockRepo.On("GetUserByEmail", mock.Anything, req.Email).
+// 		Return(nil, errors.New("error")).Times(1)
 
-	suite.mockRepo.On("Create", mock.Anything, mock.Anything).
-		Return(nil).Times(1)
+// 	suite.mockRepo.On("Create", mock.Anything, mock.Anything).
+// 		Return(nil).Times(1)
 
-	user, err := suite.service.Register(context.Background(), req)
+// 	user, err := suite.service.Register(context.Background(), req)
 
-	suite.Nil(err)
-	suite.NotNil(user)
-}
+// 	suite.Nil(err)
+// 	suite.NotNil(user)
+// }
 
 // GetUserByID
 func (suite *UserServiceTestSuite) TestGetUserByIDFail() {

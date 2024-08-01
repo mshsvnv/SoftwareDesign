@@ -12,11 +12,11 @@ import (
 )
 
 type IOrderService interface {
-	CreateOrder(ctx context.Context, req *dto.PlaceOrderReq) (*model.Order, error)
+	CreateOrder(ctx context.Context, req *dto.PlaceOrderReq) error
 	GetMyOrders(ctx context.Context, userID int) ([]*model.Order, error)
 	GetAllInProgressOrders(ctx context.Context) ([]*model.Order, error)
 	GetOrderByID(ctx context.Context, orderID int) (*model.Order, error)
-	UpdateOrder(ctx context.Context, orderID int, userID int) (*model.Order, error)
+	// UpdateOrder(ctx context.Context, orderID int, userID int) (*model.Order, error)
 }
 
 type OrderService struct {

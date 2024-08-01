@@ -10,20 +10,25 @@ import (
 )
 
 type RacketController struct {
-	l       logging.Interface
-	service service.IRacketService
+	l               logging.Interface
+	racketService   service.IRacketService
+	feedbackService service.IFeedbackService
 }
 
-func NewRacketController(l logging.Interface, service service.IRacketService) *RacketController {
+func NewRacketController(
+	l logging.Interface,
+	racketService service.IRacketService,
+	feedbackService service.IFeedbackService) *RacketController {
 	return &RacketController{
-		l:       l,
-		service: service,
+		l:               l,
+		racketService:   racketService,
+		feedbackService: feedbackService,
 	}
 }
 
 func (r *RacketController) ListsAllRackets(c *gin.Context) {
 
-	rackets, err := r.service.GetAllRackets(c)
+	rackets, err := r.racketService.GetAllRackets(c)
 	if err != nil {
 		r.l.Errorf("failed to list fullInfoCards: %s", err.Error())
 		c.AbortWithStatusJSON(http.StatusInternalServerError, gin.H{"error": "Failed to list rackets"})
@@ -39,14 +44,22 @@ func (r *RacketController) GetRacketByID(c *gin.Context) {
 
 	racketID, _ := strconv.Atoi(c.Param("id"))
 
-	racket, err := r.service.GetRacketByID(c, racketID)
+	racket, err := r.racketService.GetRacketByID(c, racketID)
 	if err != nil {
-		r.l.Errorf("failed to list fullInfoCards: %s", err.Error())
-		c.AbortWithStatusJSON(http.StatusInternalServerError, gin.H{"error": "Failed to list rackets"})
+		r.l.Errorf("failed to GetRacketByID: %s", err.Error())
+		c.AbortWithStatusJSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+		return
+	}
+
+	feedbacks, err := r.feedbackService.GetFeedbacksByRacketID(c, racketID)
+	if err != nil {
+		r.l.Errorf("failed to GetFeedbacksByRacketID: %s", err.Error())
+		c.AbortWithStatusJSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return
 	}
 
 	c.JSON(http.StatusOK, gin.H{
-		"racket": racket,
+		"racket":    racket,
+		"feedbacks": feedbacks,
 	})
 }

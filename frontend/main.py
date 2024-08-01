@@ -1,9 +1,10 @@
 import flet as ft
 import auth
+import rackets
 import racket
+import orders
 import user
-
-import utils
+import cart
 
 def main(page: ft.Page):
 
@@ -13,9 +14,14 @@ def main(page: ft.Page):
         actions = [
             ft.IconButton(ft.icons.SHOPPING_CART, scale = 1.5, on_click = lambda _: page.go("/api/cart")),
             ft.Icon(),
-            ft.IconButton(ft.icons.MAN, scale = 1.5, on_click = lambda _: page.go("/api/profile") if page.client_storage.get("token") else page.go("/auth/login"))
+            ft.IconButton(ft.icons.ALL_INBOX, scale = 1.5, on_click = lambda _: page.go("/api/orders")),
+            ft.Icon(),
+            # ft.IconButton(ft.icons.ACCOUNT_BOX, scale = 1.5, on_click = lambda _: page.go("/api/profile") if page.client_storage.get("token") else page.go("/auth/login")),
+            ft.IconButton(ft.icons.ACCOUNT_BOX, scale = 1.5, on_click = lambda _: page.go("/api/profile")),
+            ft.Icon(),
         ],
-        leading_width = 100
+        leading_width = 100,
+        toolbar_height = 80
     )
 
     def route_change(route):
@@ -27,9 +33,24 @@ def main(page: ft.Page):
                 ft.View(
                     route = "/rackets",
                     controls = [
-                        racket.Rackets(page)
+                        rackets.Rackets(page)
                     ],
-                    appbar = bar
+                    appbar = bar,
+                    scroll = ft.ScrollMode.ADAPTIVE,
+                    vertical_alignment = ft.MainAxisAlignment.CENTER
+                )
+            )
+
+        if "/rackets/" in page.route:
+            page.views.append(
+                ft.View(
+                    route = page.route,
+                    controls = [
+                        racket.Racket(page),
+                    ],
+                    appbar = bar,
+                    scroll = ft.ScrollMode.ADAPTIVE,
+                    vertical_alignment = ft.MainAxisAlignment.CENTER
                 )
             )
 
@@ -58,6 +79,19 @@ def main(page: ft.Page):
                     appbar = bar,
                 )
             )
+        
+        if page.route == "/api/orders":
+            page.views.append(
+                ft.View(
+                    route = "/api/orders",
+                    controls = [
+                        orders.Orders()
+                    ],
+                    vertical_alignment = ft.CrossAxisAlignment.CENTER,
+                    horizontal_alignment = ft.CrossAxisAlignment.CENTER,
+                    appbar = bar,
+                )
+            )
 
         if page.route == "/api/profile":
             page.views.append(
@@ -66,9 +100,22 @@ def main(page: ft.Page):
                     controls = [
                         user.Profile(page)
                     ],
-                    vertical_alignment = ft.CrossAxisAlignment.CENTER,
-                    # horizontal_alignment = ft.CrossAxisAlignment.CENTER,
                     appbar = bar,
+                    scroll = ft.ScrollMode.ADAPTIVE,
+                    vertical_alignment = ft.MainAxisAlignment.CENTER
+                )
+            )
+
+        if page.route == "/api/cart":
+            page.views.append(
+                ft.View(
+                    route = "/api/cart",
+                    controls = [
+                        cart.Cart(page)
+                    ],
+                    appbar = bar,
+                    scroll = ft.ScrollMode.ADAPTIVE,
+                    vertical_alignment = ft.MainAxisAlignment.CENTER
                 )
             )
 
@@ -83,4 +130,4 @@ def main(page: ft.Page):
     # page.on_view_pop = view_pop
     page.go("/rackets")
 
-ft.app(target=main, view=ft.AppView.WEB_BROWSER)
+ft.app(target = main, view = ft.AppView.WEB_BROWSER)

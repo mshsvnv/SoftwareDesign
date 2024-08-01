@@ -7,8 +7,8 @@ type CartLine struct {
 }
 
 type Cart struct {
-	UserID     int
-	TotalPrice float32
-	Quantity   int
-	Lines      []*CartLine
+	UserID     int         `json:"user_id"`
+	TotalPrice float32     `json:"total_price"`
+	Quantity   int         `json:"quantity"`
+	Lines      []*CartLine `json:"lines"`
 }

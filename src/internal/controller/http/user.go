@@ -2,7 +2,6 @@ package http
 
 import (
 	"net/http"
-	"src/internal/dto"
 	"src/internal/service"
 	"src/pkg/logging"
 
@@ -10,82 +9,61 @@ import (
 )
 
 type UserController struct {
-	l           logging.Interface
-	service     service.IUserService
-	authService service.IAuthService
+	l            logging.Interface
+	userService  service.IUserService
+	cartService  service.ICartService
+	orderService service.IOrderService
 }
 
-func NewUserController(l logging.Interface, service service.IUserService, authService service.IAuthService) *UserController {
+func NewUserController(
+	l logging.Interface,
+	userService service.IUserService,
+	cartService service.ICartService,
+	orderService service.IOrderService) *UserController {
 	return &UserController{
-		l:           l,
-		authService: authService,
-		service:     service,
+		l:            l,
+		userService:  userService,
+		cartService:  cartService,
+		orderService: orderService,
 	}
 }
 
-func (u *UserController) Login(c *gin.Context) {
+func (u *UserController) GetMyProfile(c *gin.Context) {
 
-	// var req dto.LoginReq
+	userID, err := getUserID(c)
 
-	// if err := c.ShouldBindJSON(&req); c.Request.Body == nil || err != nil {
-	// 	u.l.Infof("error")
-	// 	c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{"error": "error"})
-	// 	return
-	// }
-
-	// _, err := u.service.Login(c, &req)
-	// if err != nil {
-	// 	u.l.Infof("error")
-	// 	c.AbortWithStatusJSON(http.StatusInternalServerError, gin.H{"error": "error"})
-	// 	return
-	// }
-
-	// c.JSON(http.StatusOK, gin.H{
-	// 	"msg": "you are logined",
-	// })
-
-	var req dto.LoginReq
-
-	if err := c.ShouldBindJSON(&req); c.Request.Body == nil || err != nil {
-		u.l.Infof("error")
-		c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{"error": "error 1"})
-		return
+	if err != nil {
+		u.l.Infof(err.Error())
+		c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 	}
 
-	token, err := u.authService.GenerateToken(c, &req)
+	user, err := u.userService.GetUserByID(c, userID)
 	if err != nil {
-		u.l.Infof("error")
-		c.AbortWithStatusJSON(http.StatusInternalServerError, gin.H{"error": "error 2"})
-		return
+		u.l.Infof(err.Error())
+		c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 	}
 
 	c.JSON(http.StatusOK, gin.H{
-		"token": token,
+		"user": user,
 	})
 }
 
-func (u *UserController) Register(c *gin.Context) {
+func (u *UserController) GetMyOrders(c *gin.Context) {
 
-	var req dto.RegisterReq
-	if err := c.ShouldBindBodyWithJSON(&req); c.Request.Body == nil || err != nil {
-		u.l.Infof("error")
-		c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{"error": "error"})
-		return
-	}
-
-	_, err := u.service.Register(c, &req)
+	userID, err := getUserID(c)
 
 	if err != nil {
-		u.l.Infof("error")
-		c.AbortWithStatusJSON(http.StatusInternalServerError, gin.H{"error": "error"})
-		return
+		u.l.Infof(err.Error())
+		c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+	}
+
+	orders, err := u.orderService.GetMyOrders(c, userID)
+	if err != nil {
+		u.l.Infof(err.Error())
+		c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 	}
 
 	c.JSON(http.StatusOK, gin.H{
-		"msg": "you are registered",
+		"orders": orders,
 	})
-}
-
-func (u *UserController) RefreshToken(c *gin.Context) {
-
 }

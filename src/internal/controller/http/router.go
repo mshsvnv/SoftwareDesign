@@ -15,43 +15,64 @@ func NewRouter(handler *gin.Engine) *Controller {
 
 	handler.Use(gin.Logger())
 	handler.Use(gin.Recovery())
+
 	// handler.OPTIONS("/*any", httputils.DisableCors)
 
 	return &Controller{handler: handler}
 }
 
-// user
-func (c *Controller) SetUserRoute(l logging.Interface, service service.IUserService, authService service.IAuthService) {
+func (c *Controller) SetAuthRoute(l logging.Interface, authService service.IAuthService) {
 
-	a := NewUserController(l, service, authService)
+	authController := NewAuthController(l, authService)
 
-	group := c.handler.Group("auth")
+	api := c.handler.Group("auth")
 
-	group.POST("/register", a.Register)
-	group.POST("/login", a.Login)
+	api.POST("/register", authController.Register)
+	api.POST("/login", authController.Login)
 }
 
-// product
-func (c *Controller) SetProductRoute(l logging.Interface, service service.IRacketService) {
+func (c *Controller) SetRacketRoute(l logging.Interface, racketService service.IRacketService, feedbackService service.IFeedbackService) {
 
-	a := NewRacketController(l, service)
+	racketController := NewRacketController(l, racketService, feedbackService)
 
-	c.handler.GET("/rackets", a.ListsAllRackets)
-	c.handler.GET("/rackets/:id", a.GetRacketByID)
+	c.handler.GET("/rackets", racketController.ListsAllRackets)
+	c.handler.GET("/rackets/:id", racketController.GetRacketByID)
 }
 
-// cart
-func (c *Controller) SetCartRoute(l logging.Interface, service service.ICartService, userService service.IUserService, authService service.IAuthService) {
+func (c *Controller) SetUserRoute(
+	l logging.Interface,
+	cartService service.ICartService,
+	authService service.IAuthService,
+	userService service.IUserService,
+	orderService service.IOrderService) {
 
-	a := NewCartController(l, service)
-	b := NewUserController(l, userService, authService)
+	cartController := NewCartController(l, cartService)
+	authController := NewAuthController(l, authService)
+	userController := NewUserController(l, userService, cartService, orderService)
 
-	group := c.handler.Group("api", b.UserIdentity)
+	api := c.handler.Group("api", authController.UserIdentity)
 
-	group.GET("/cart", a.GetMyCart)
+	api.GET("/profile", userController.GetMyProfile)
+
+	api.GET("/cart", cartController.GetMyCart)
+	api.POST("/cart", cartController.AddRacket)
+	api.PUT("/cart/:id", cartController.UpdateRacket)
+	api.DELETE("/cart/:id", cartController.RemoveRacket)
+
+	api.GET("/orderlist", userController.GetMyOrders)
 }
 
 // order
-func (c *Controller) SetOrderRoute(l logging.Interface) {
+func (c *Controller) SetOrderRoute(
+	l logging.Interface,
+	authService service.IAuthService,
+	orderService service.IOrderService) {
 
+	authController := NewAuthController(l, authService)
+	orderController := NewOrderController(l, orderService)
+
+	api := c.handler.Group("api", authController.UserIdentity)
+
+	api.POST("/orders", orderController.CreateOrder)
+	api.GET("/orders", orderController.GetMyOrders)
 }

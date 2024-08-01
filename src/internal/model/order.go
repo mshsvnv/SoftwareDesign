@@ -16,9 +16,9 @@ type OrderLine struct {
 }
 
 type OrderInfo struct {
-	DeliveryDate  time.Time
-	Address       string
-	RecepientName string
+	DeliveryDate  time.Time `json:"delivery_date"`
+	Address       string    `json:"address"`
+	RecepientName string    `json:"recepient_name"`
 }
 
 type Order struct {

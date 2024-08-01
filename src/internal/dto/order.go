@@ -9,5 +9,5 @@ type UpdateOrder struct {
 
 type PlaceOrderReq struct {
 	UserID    int
-	OrderInfo *model.OrderInfo
+	OrderInfo *model.OrderInfo `json:"orderinfo"`
 }
