@@ -3,11 +3,10 @@ package dto
 import "time"
 
 type CreateFeedbackReq struct {
-	RacketID int
-	UserID   int
-	Feedback string
-	Date     time.Time
-	Rating   float32
+	RacketID int    `json:"racket_id"`
+	UserID   int    `json:"user_id"`
+	Feedback string `json:"feedback"`
+	Rating   int    `json:"rating"`
 }
 
 type RemoveFeedbackReq struct {
@@ -25,5 +24,5 @@ type UpdateFeedbackReq struct {
 	UserID   int
 	Feedback string
 	Date     time.Time
-	Rating   float32
+	Rating   int
 }

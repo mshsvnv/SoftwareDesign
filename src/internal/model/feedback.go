@@ -3,9 +3,9 @@ package model
 import "time"
 
 type Feedback struct {
-	RacketID int
-	UserID   int
+	RacketID int       `json:"racket_id"`
+	UserID   int       `json:"user_id"`
 	Feedback string    `json:"feedback"`
 	Date     time.Time `json:"date"`
-	Rating   float32   `json:"rating"`
+	Rating   int       `json:"rating"`
 }

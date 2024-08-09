@@ -44,12 +44,11 @@ func (s *FeedbackService) CreateFeedback(ctx context.Context, req *dto.CreateFee
 	err := s.repo.Create(ctx, &feedback)
 
 	if err != nil {
-		s.logger.Errorf("create order fail, error %s", err.Error())
-		return nil, fmt.Errorf("create order fail, error %s", err)
+		s.logger.Errorf("create feedback fail, error %s", err.Error())
+		return nil, fmt.Errorf("create feedback fail, error %s", err)
 	}
 
 	return &feedback, nil
-
 }
 
 func (s *FeedbackService) RemoveFeedback(ctx context.Context, req *dto.RemoveFeedbackReq) error {

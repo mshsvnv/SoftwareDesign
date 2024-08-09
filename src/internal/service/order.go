@@ -38,6 +38,7 @@ func NewOrderService(logger logging.Interface, repo repo.IOrderRepository, repoC
 func (s *OrderService) CreateOrder(ctx context.Context, req *dto.PlaceOrderReq) error {
 
 	s.logger.Infof("create order user %d", req.UserID)
+	
 	order := &model.Order{}
 	utils.Copy(&order, &req)
 

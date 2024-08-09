@@ -1,10 +1,10 @@
 package http
 
 import (
-	"github.com/gin-gonic/gin"
-	// httputils "course/internal/controller/http/utils"
 	"src/internal/service"
 	"src/pkg/logging"
+
+	"github.com/gin-gonic/gin"
 )
 
 type Controller struct {
@@ -15,8 +15,6 @@ func NewRouter(handler *gin.Engine) *Controller {
 
 	handler.Use(gin.Logger())
 	handler.Use(gin.Recovery())
-
-	// handler.OPTIONS("/*any", httputils.DisableCors)
 
 	return &Controller{handler: handler}
 }
@@ -50,6 +48,8 @@ func (c *Controller) SetUserRoute(
 	authController := NewAuthController(l, authService)
 	userController := NewUserController(l, userService, cartService, orderService)
 
+	c.handler.GET("/user/:id", userController.GetUserByID)
+
 	api := c.handler.Group("api", authController.UserIdentity)
 
 	api.GET("/profile", userController.GetMyProfile)
@@ -73,6 +73,24 @@ func (c *Controller) SetOrderRoute(
 
 	api := c.handler.Group("api", authController.UserIdentity)
 
-	api.POST("/orders", orderController.CreateOrder)
+	api.POST("/order", orderController.CreateOrder)
 	api.GET("/orders", orderController.GetMyOrders)
+}
+
+// feedback
+func (c *Controller) SetFeedbackRoute(
+	l logging.Interface,
+	authService service.IAuthService,
+	feedbackService service.IFeedbackService) {
+
+	authController := NewAuthController(l, authService)
+	feedbackController := NewFeedbackController(l, feedbackService)
+
+	c.handler.GET("/feedbacks/:id", feedbackController.GetFeedbacksByRacketID)
+
+	api := c.handler.Group("api", authController.UserIdentity)
+
+	api.GET("/feedbacks", feedbackController.GetFeedbacksByUserID)
+	api.POST("/feedback", feedbackController.CreateFeedback)
+	api.DELETE("/feedback/:id", feedbackController.DeleteFeedback)
 }

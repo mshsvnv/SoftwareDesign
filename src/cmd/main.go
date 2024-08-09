@@ -78,6 +78,8 @@ func main() {
 	controller.SetRacketRoute(l, racketService, feedbackService)
 	controller.SetUserRoute(l, cartService, authService, userService, orderService)
 	controller.SetOrderRoute(l, authService, orderService)
+	controller.SetFeedbackRoute(l, authService, feedbackService)
+	
 	// Create router
 	router := httpserver.New(handler, httpserver.Port(cfg.HTTP.Port))
 

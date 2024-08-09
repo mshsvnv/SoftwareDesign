@@ -1,9 +1,9 @@
 package model
 
 type CartLine struct {
-	RacketID int
-	Quantity int
-	Price    float32
+	RacketID int     `json:"id"`
+	Quantity int     `json:"quantity"`
+	Price    float32 `json:"price"`
 }
 
 type Cart struct {

@@ -1,0 +1,699 @@
+{"level":"info","time":"2024-08-09T11:19:17+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"create order user 18"}
+{"level":"error","time":"2024-08-09T11:19:17+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T11:19:17+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"get cart fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T11:20:14+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"create order user 18"}
+{"level":"error","time":"2024-08-09T11:20:14+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T11:20:14+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"get cart fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T11:21:00+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T11:21:10+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T11:21:10+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T11:21:12+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart, user 18"}
+{"level":"info","time":"2024-08-09T11:21:17+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 18"}
+{"level":"info","time":"2024-08-09T11:21:21+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart, user 18"}
+{"level":"info","time":"2024-08-09T11:21:22+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart, user 18"}
+{"level":"info","time":"2024-08-09T11:21:31+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"create order user 18"}
+{"level":"error","time":"2024-08-09T11:21:31+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T11:21:31+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"get cart fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T11:23:20+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T11:23:29+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart, user 18"}
+{"level":"info","time":"2024-08-09T11:23:40+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 18"}
+{"level":"info","time":"2024-08-09T11:23:43+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart, user 18"}
+{"level":"info","time":"2024-08-09T11:23:46+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart, user 18"}
+{"level":"info","time":"2024-08-09T11:23:55+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"create order user 18"}
+{"level":"error","time":"2024-08-09T11:23:55+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T11:23:55+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"get cart fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T11:28:03+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T11:28:07+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart, user 18"}
+{"level":"info","time":"2024-08-09T11:28:25+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart, user 18"}
+{"level":"info","time":"2024-08-09T11:28:35+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"create order user 18"}
+{"level":"info","time":"2024-08-09T11:28:35+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart, user 18"}
+{"level":"info","time":"2024-08-09T11:28:59+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 18"}
+{"level":"info","time":"2024-08-09T11:30:54+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart, user 18"}
+{"level":"info","time":"2024-08-09T11:30:56+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 18"}
+{"level":"info","time":"2024-08-09T11:30:57+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T11:31:00+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart, user 18"}
+{"level":"info","time":"2024-08-09T11:31:01+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T11:31:02+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"add racket to user 18, racket 429281"}
+{"level":"info","time":"2024-08-09T11:31:03+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart, user 18"}
+{"level":"info","time":"2024-08-09T11:37:50+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T11:37:56+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T11:37:56+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T11:37:57+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart, user 18"}
+{"level":"info","time":"2024-08-09T11:37:58+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 18"}
+{"level":"info","time":"2024-08-09T11:51:23+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T11:51:28+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T11:51:28+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T11:51:29+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart, user 18"}
+{"level":"info","time":"2024-08-09T11:51:31+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 18"}
+{"level":"info","time":"2024-08-09T11:51:54+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T11:52:28+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T11:52:28+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T11:52:30+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 18"}
+{"level":"info","time":"2024-08-09T11:53:13+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T11:53:15+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart, user 18"}
+{"level":"info","time":"2024-08-09T11:53:16+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 18"}
+{"level":"info","time":"2024-08-09T11:54:15+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T11:54:18+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 18"}
+{"level":"info","time":"2024-08-09T11:54:35+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T11:54:35+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T11:54:39+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart, user 18"}
+{"level":"info","time":"2024-08-09T11:54:42+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T11:54:44+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 18"}
+{"level":"info","time":"2024-08-09T12:01:09+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T12:01:15+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T12:01:15+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T12:01:17+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 18"}
+{"level":"info","time":"2024-08-09T12:02:24+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T12:02:29+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T12:02:29+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T12:02:30+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 18"}
+{"level":"info","time":"2024-08-09T12:03:40+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T12:03:45+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T12:03:45+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T12:03:46+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart, user 18"}
+{"level":"info","time":"2024-08-09T12:03:47+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 18"}
+{"level":"info","time":"2024-08-09T12:05:10+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T12:05:16+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T12:05:16+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T12:05:17+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart, user 18"}
+{"level":"info","time":"2024-08-09T12:05:18+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 18"}
+{"level":"info","time":"2024-08-09T12:05:57+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T12:06:03+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T12:06:03+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T12:06:04+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 18"}
+{"level":"info","time":"2024-08-09T12:06:55+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T12:07:00+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T12:07:00+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T12:07:01+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart, user 18"}
+{"level":"info","time":"2024-08-09T12:07:02+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 18"}
+{"level":"info","time":"2024-08-09T12:08:32+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T12:08:38+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T12:08:38+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T12:08:39+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart, user 18"}
+{"level":"info","time":"2024-08-09T12:08:40+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 18"}
+{"level":"info","time":"2024-08-09T12:17:17+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T12:17:28+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T12:17:28+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T12:17:51+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"error","time":"2024-08-09T12:17:59+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"token is malformed: token contains an invalid number of segments"}
+{"level":"info","time":"2024-08-09T12:18:11+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email mshsvnv"}
+{"level":"info","time":"2024-08-09T12:18:11+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 19"}
+{"level":"info","time":"2024-08-09T12:18:21+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart, user 19"}
+{"level":"info","time":"2024-08-09T12:18:23+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 19"}
+{"level":"info","time":"2024-08-09T12:19:18+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T12:19:32+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email mshsvnv"}
+{"level":"info","time":"2024-08-09T12:19:32+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 19"}
+{"level":"info","time":"2024-08-09T12:19:39+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 19"}
+{"level":"info","time":"2024-08-09T12:19:42+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart, user 19"}
+{"level":"info","time":"2024-08-09T12:22:16+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 19"}
+{"level":"info","time":"2024-08-09T12:22:20+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 19"}
+{"level":"info","time":"2024-08-09T12:22:30+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart, user 19"}
+{"level":"info","time":"2024-08-09T12:22:32+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T12:22:34+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T12:22:34+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T12:27:20+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"error","time":"2024-08-09T12:27:30+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"token is malformed: token contains an invalid number of segments"}
+{"level":"info","time":"2024-08-09T12:27:31+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T12:27:32+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T12:27:32+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"error","time":"2024-08-09T12:27:33+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"token is malformed: token contains an invalid number of segments"}
+{"level":"info","time":"2024-08-09T12:27:43+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T12:27:44+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T12:27:45+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart, user 18"}
+{"level":"info","time":"2024-08-09T12:28:15+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T12:28:30+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T12:28:30+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T12:28:32+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart, user 18"}
+{"level":"info","time":"2024-08-09T12:28:35+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"add racket to user 18, racket 429281"}
+{"level":"info","time":"2024-08-09T12:28:36+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T12:28:37+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T12:28:37+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T12:28:39+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"add racket to user 18, racket 429281"}
+{"level":"info","time":"2024-08-09T12:28:39+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart, user 18"}
+{"level":"info","time":"2024-08-09T12:29:23+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T12:29:28+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T12:29:28+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T12:29:30+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T12:29:31+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T12:29:31+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T12:29:32+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"add racket to user 18, racket 429281"}
+{"level":"info","time":"2024-08-09T12:29:37+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart, user 18"}
+{"level":"info","time":"2024-08-09T12:29:41+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"add racket to user 18, racket 429281"}
+{"level":"info","time":"2024-08-09T12:29:42+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T12:29:43+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T12:29:43+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T12:29:44+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"add racket to user 18, racket 429281"}
+{"level":"info","time":"2024-08-09T12:30:11+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T12:30:15+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T12:30:15+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T12:30:16+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart, user 18"}
+{"level":"info","time":"2024-08-09T12:30:19+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"add racket to user 18, racket 429281"}
+{"level":"info","time":"2024-08-09T12:30:20+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T12:30:21+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T12:30:21+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T12:30:22+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"add racket to user 18, racket 429281"}
+{"level":"info","time":"2024-08-09T14:49:05+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T14:51:35+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T14:51:44+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T14:51:44+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T14:52:16+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart, user 18"}
+{"level":"info","time":"2024-08-09T14:52:19+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T14:52:20+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T14:52:20+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T14:53:12+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T14:53:15+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T14:53:17+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 18"}
+{"level":"info","time":"2024-08-09T14:53:33+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T14:53:33+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T15:29:59+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T15:34:45+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"create feedback"}
+{"level":"error","time":"2024-08-09T15:34:45+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"create order fail, error ОШИБКА: INSERT или UPDATE в таблице \"feedback\" нарушает ограничение внешнего ключа \"feedback_racket_id_fkey\" (SQLSTATE 23503)"}
+{"level":"error","time":"2024-08-09T15:34:45+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"create order fail, error ОШИБКА: INSERT или UPDATE в таблице \"feedback\" нарушает ограничение внешнего ключа \"feedback_racket_id_fkey\" (SQLSTATE 23503)"}
+{"level":"info","time":"2024-08-09T15:41:05+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T15:41:27+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"create feedback"}
+{"level":"error","time":"2024-08-09T15:41:27+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"create feedback fail, error ОШИБКА: INSERT или UPDATE в таблице \"feedback\" нарушает ограничение внешнего ключа \"feedback_racket_id_fkey\" (SQLSTATE 23503)"}
+{"level":"error","time":"2024-08-09T15:41:27+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"create feedback fail, error ОШИБКА: INSERT или UPDATE в таблице \"feedback\" нарушает ограничение внешнего ключа \"feedback_racket_id_fkey\" (SQLSTATE 23503)"}
+{"level":"info","time":"2024-08-09T15:42:57+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T15:43:07+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"create feedback"}
+{"level":"error","time":"2024-08-09T15:43:07+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"create feedback fail, error ОШИБКА: INSERT или UPDATE в таблице \"feedback\" нарушает ограничение внешнего ключа \"feedback_user_id_fkey\" (SQLSTATE 23503)"}
+{"level":"error","time":"2024-08-09T15:43:07+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"create feedback fail, error ОШИБКА: INSERT или UPDATE в таблице \"feedback\" нарушает ограничение внешнего ключа \"feedback_user_id_fkey\" (SQLSTATE 23503)"}
+{"level":"info","time":"2024-08-09T15:44:09+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T15:44:23+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"create feedback"}
+{"level":"info","time":"2024-08-09T15:45:07+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"json: cannot unmarshal object into Go value of type int"}
+{"level":"info","time":"2024-08-09T15:51:25+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by user id 18"}
+{"level":"info","time":"2024-08-09T15:51:57+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T15:52:27+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:05:56+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T16:06:01+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T16:06:01+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T16:06:03+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart, user 18"}
+{"level":"info","time":"2024-08-09T16:06:05+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T16:06:05+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:06:29+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T16:06:33+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T16:06:33+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:07:07+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T16:07:14+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T16:07:14+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:07:47+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T16:07:48+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T16:07:48+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:09:50+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T16:09:53+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T16:09:53+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:10:25+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T16:10:27+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T16:10:27+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:10:27+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:10:46+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T16:10:48+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T16:10:48+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:10:48+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:10:48+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 0"}
+{"level":"error","time":"2024-08-09T16:10:48+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T16:10:48+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"get user by id fail, error no rows in result set"}
+{"level":"error","time":"2024-08-09T16:11:52+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"token is malformed: token contains an invalid number of segments"}
+{"level":"info","time":"2024-08-09T16:12:05+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T16:12:05+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T16:12:05+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:12:05+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:12:05+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 0"}
+{"level":"error","time":"2024-08-09T16:12:05+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T16:12:05+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"get user by id fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T16:18:06+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T16:18:08+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T16:18:08+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:18:08+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:18:08+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 0"}
+{"level":"error","time":"2024-08-09T16:18:08+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T16:18:08+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"get user by id fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T16:19:01+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T16:19:03+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T16:19:03+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:19:03+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:19:03+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 0"}
+{"level":"error","time":"2024-08-09T16:19:03+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T16:19:03+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"get user by id fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T16:21:21+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T16:21:23+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T16:21:23+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:21:23+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:21:23+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 0"}
+{"level":"error","time":"2024-08-09T16:21:23+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T16:21:23+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"get user by id fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T16:22:06+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T16:22:07+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T16:22:07+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:22:07+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:22:07+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 0"}
+{"level":"error","time":"2024-08-09T16:22:07+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T16:22:07+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"get user by id fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T16:22:32+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T16:22:34+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T16:22:34+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:22:34+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:22:34+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 0"}
+{"level":"error","time":"2024-08-09T16:22:34+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T16:22:34+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"get user by id fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T16:23:51+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T16:23:52+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T16:23:52+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:23:52+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:23:52+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 0"}
+{"level":"error","time":"2024-08-09T16:23:52+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T16:23:52+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"get user by id fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T16:25:39+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T16:25:40+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T16:25:40+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:25:40+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:25:40+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 0"}
+{"level":"error","time":"2024-08-09T16:25:40+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T16:25:40+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"get user by id fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T16:25:54+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T16:26:00+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T16:26:00+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T16:26:03+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart, user 18"}
+{"level":"info","time":"2024-08-09T16:26:08+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 18"}
+{"level":"info","time":"2024-08-09T16:26:33+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart, user 18"}
+{"level":"info","time":"2024-08-09T16:26:44+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"add racket to user 18, racket 429281"}
+{"level":"info","time":"2024-08-09T16:26:45+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T16:26:47+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T16:26:47+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:26:47+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:26:47+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 0"}
+{"level":"error","time":"2024-08-09T16:26:47+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T16:26:47+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"get user by id fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T16:27:02+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 18"}
+{"level":"info","time":"2024-08-09T16:27:04+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart, user 18"}
+{"level":"info","time":"2024-08-09T16:27:06+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T16:30:57+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T16:30:58+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T16:30:58+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:30:58+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:30:58+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 0"}
+{"level":"error","time":"2024-08-09T16:30:58+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T16:30:58+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"get user by id fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T16:36:17+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T16:36:18+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T16:36:18+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:36:18+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:36:18+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 0"}
+{"level":"error","time":"2024-08-09T16:36:18+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T16:36:18+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"get user by id fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T16:38:16+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T16:38:17+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T16:38:17+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:38:17+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:38:17+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 0"}
+{"level":"error","time":"2024-08-09T16:38:17+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T16:38:17+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"get user by id fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T16:39:39+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T16:39:41+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T16:39:41+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:39:41+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:39:41+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 0"}
+{"level":"error","time":"2024-08-09T16:39:41+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T16:39:41+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"get user by id fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T16:41:36+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T16:42:10+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T16:42:10+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:42:10+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:42:10+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 0"}
+{"level":"error","time":"2024-08-09T16:42:10+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T16:42:10+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"get user by id fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T16:42:18+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T16:42:19+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T16:42:19+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:42:19+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:42:19+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 0"}
+{"level":"error","time":"2024-08-09T16:42:19+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T16:42:19+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"get user by id fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T16:42:24+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T16:42:27+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T16:42:27+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:42:27+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:42:27+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 0"}
+{"level":"error","time":"2024-08-09T16:42:27+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T16:42:27+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"get user by id fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T16:42:59+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T16:43:00+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T16:43:00+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:43:00+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:43:00+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 0"}
+{"level":"error","time":"2024-08-09T16:43:00+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T16:43:00+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"get user by id fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T16:43:29+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T16:43:41+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T16:43:41+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:43:41+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:43:41+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 19"}
+{"level":"info","time":"2024-08-09T16:44:20+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T16:44:21+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T16:44:21+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:44:21+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:44:21+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 19"}
+{"level":"error","time":"2024-08-09T16:44:41+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"token is malformed: token contains an invalid number of segments"}
+{"level":"error","time":"2024-08-09T16:44:43+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"token is malformed: token contains an invalid number of segments"}
+{"level":"error","time":"2024-08-09T16:44:49+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"token is malformed: token contains an invalid number of segments"}
+{"level":"info","time":"2024-08-09T16:44:52+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T16:47:42+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T16:47:48+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T16:47:48+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:47:48+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:47:48+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 19"}
+{"level":"info","time":"2024-08-09T16:48:10+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T16:48:11+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T16:48:11+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:48:11+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:48:11+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 19"}
+{"level":"error","time":"2024-08-09T16:48:17+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"token is malformed: token contains an invalid number of segments"}
+{"level":"error","time":"2024-08-09T16:48:24+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"token is malformed: token contains an invalid number of segments"}
+{"level":"error","time":"2024-08-09T16:48:26+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"token is malformed: token contains an invalid number of segments"}
+{"level":"info","time":"2024-08-09T16:50:19+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"error","time":"2024-08-09T16:50:23+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"token is malformed: token contains an invalid number of segments"}
+{"level":"error","time":"2024-08-09T16:50:28+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"token is malformed: token contains an invalid number of segments"}
+{"level":"info","time":"2024-08-09T16:50:54+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"error","time":"2024-08-09T16:50:57+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"token is malformed: token contains an invalid number of segments"}
+{"level":"error","time":"2024-08-09T16:51:04+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"token is malformed: token contains an invalid number of segments"}
+{"level":"error","time":"2024-08-09T16:51:07+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"token is malformed: token contains an invalid number of segments"}
+{"level":"info","time":"2024-08-09T16:51:41+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"error","time":"2024-08-09T16:51:48+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"token is malformed: token contains an invalid number of segments"}
+{"level":"error","time":"2024-08-09T16:51:54+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"token is malformed: token contains an invalid number of segments"}
+{"level":"info","time":"2024-08-09T16:52:22+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"error","time":"2024-08-09T16:52:24+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"token is malformed: token contains an invalid number of segments"}
+{"level":"info","time":"2024-08-09T16:52:53+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T16:53:30+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T16:55:42+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T16:55:44+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T16:55:44+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:55:44+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:55:44+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 19"}
+{"level":"info","time":"2024-08-09T16:57:04+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T16:58:46+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T16:58:48+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T16:58:48+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:58:48+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:58:48+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 19"}
+{"level":"info","time":"2024-08-09T16:58:54+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T16:59:03+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T16:59:03+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T16:59:04+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 18"}
+{"level":"info","time":"2024-08-09T16:59:11+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart, user 18"}
+{"level":"info","time":"2024-08-09T16:59:13+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T16:59:13+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T16:59:13+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:59:13+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:59:13+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 19"}
+{"level":"info","time":"2024-08-09T16:59:16+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T16:59:18+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T16:59:18+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:59:18+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T16:59:18+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 19"}
+{"level":"info","time":"2024-08-09T16:59:30+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 18"}
+{"level":"info","time":"2024-08-09T16:59:32+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T16:59:38+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 18"}
+{"level":"info","time":"2024-08-09T16:59:47+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T17:08:29+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 18"}
+{"level":"info","time":"2024-08-09T17:23:15+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T17:23:26+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T17:23:26+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T17:23:28+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart, user 18"}
+{"level":"info","time":"2024-08-09T17:23:29+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 18"}
+{"level":"info","time":"2024-08-09T17:24:50+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T17:24:54+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T17:24:54+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T17:24:56+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 18"}
+{"level":"info","time":"2024-08-09T17:26:23+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T17:26:28+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T17:26:28+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T17:26:30+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 18"}
+{"level":"info","time":"2024-08-09T17:28:01+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T17:28:34+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T17:28:34+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T17:28:35+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 18"}
+{"level":"info","time":"2024-08-09T17:31:04+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T17:32:01+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T17:32:11+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T17:32:11+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T17:32:12+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 18"}
+{"level":"info","time":"2024-08-09T17:37:21+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T17:37:26+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T17:37:26+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T17:37:27+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 18"}
+{"level":"info","time":"2024-08-09T17:41:09+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T17:41:14+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T17:41:14+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T17:41:16+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 18"}
+{"level":"info","time":"2024-08-09T17:43:03+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T17:43:08+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T17:43:08+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T17:43:09+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 18"}
+{"level":"info","time":"2024-08-09T17:43:35+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T17:43:41+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T17:43:41+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T17:43:42+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 18"}
+{"level":"info","time":"2024-08-09T17:44:56+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T17:45:00+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T17:45:00+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T17:45:01+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 18"}
+{"level":"info","time":"2024-08-09T17:52:12+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T17:52:16+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T17:52:16+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T17:52:18+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 18"}
+{"level":"info","time":"2024-08-09T17:52:54+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T17:52:59+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T17:52:59+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T17:53:00+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 18"}
+{"level":"info","time":"2024-08-09T17:53:11+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"invalid character 'r' looking for beginning of value"}
+{"level":"info","time":"2024-08-09T17:53:11+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"create feedback"}
+{"level":"error","time":"2024-08-09T17:53:11+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"create feedback fail, error ОШИБКА: INSERT или UPDATE в таблице \"feedback\" нарушает ограничение внешнего ключа \"feedback_racket_id_fkey\" (SQLSTATE 23503)"}
+{"level":"error","time":"2024-08-09T17:53:11+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"create feedback fail, error ОШИБКА: INSERT или UPDATE в таблице \"feedback\" нарушает ограничение внешнего ключа \"feedback_racket_id_fkey\" (SQLSTATE 23503)"}
+{"level":"info","time":"2024-08-09T17:54:27+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T17:54:32+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T17:54:32+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T17:54:33+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 18"}
+{"level":"info","time":"2024-08-09T17:54:40+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"invalid character 'r' looking for beginning of value"}
+{"level":"info","time":"2024-08-09T17:54:40+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"create feedback"}
+{"level":"error","time":"2024-08-09T17:54:40+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"create feedback fail, error ОШИБКА: INSERT или UPDATE в таблице \"feedback\" нарушает ограничение внешнего ключа \"feedback_racket_id_fkey\" (SQLSTATE 23503)"}
+{"level":"error","time":"2024-08-09T17:54:40+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"create feedback fail, error ОШИБКА: INSERT или UPDATE в таблице \"feedback\" нарушает ограничение внешнего ключа \"feedback_racket_id_fkey\" (SQLSTATE 23503)"}
+{"level":"info","time":"2024-08-09T17:56:44+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T17:56:58+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T17:56:58+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T17:57:00+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 18"}
+{"level":"info","time":"2024-08-09T17:57:07+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"invalid character 'r' looking for beginning of value"}
+{"level":"info","time":"2024-08-09T17:57:07+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"create feedback"}
+{"level":"error","time":"2024-08-09T17:57:07+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"create feedback fail, error ОШИБКА: INSERT или UPDATE в таблице \"feedback\" нарушает ограничение внешнего ключа \"feedback_racket_id_fkey\" (SQLSTATE 23503)"}
+{"level":"error","time":"2024-08-09T17:57:07+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"create feedback fail, error ОШИБКА: INSERT или UPDATE в таблице \"feedback\" нарушает ограничение внешнего ключа \"feedback_racket_id_fkey\" (SQLSTATE 23503)"}
+{"level":"info","time":"2024-08-09T18:02:48+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T18:02:52+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T18:02:52+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T18:02:54+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 18"}
+{"level":"info","time":"2024-08-09T18:03:01+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"invalid character 'r' looking for beginning of value"}
+{"level":"info","time":"2024-08-09T18:03:01+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"create feedback"}
+{"level":"error","time":"2024-08-09T18:03:01+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"create feedback fail, error ОШИБКА: INSERT или UPDATE в таблице \"feedback\" нарушает ограничение внешнего ключа \"feedback_racket_id_fkey\" (SQLSTATE 23503)"}
+{"level":"error","time":"2024-08-09T18:03:01+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"create feedback fail, error ОШИБКА: INSERT или UPDATE в таблице \"feedback\" нарушает ограничение внешнего ключа \"feedback_racket_id_fkey\" (SQLSTATE 23503)"}
+{"level":"info","time":"2024-08-09T18:07:00+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T18:09:01+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T18:09:01+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T18:09:02+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 18"}
+{"level":"info","time":"2024-08-09T18:09:13+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"invalid character 'r' looking for beginning of value"}
+{"level":"info","time":"2024-08-09T18:09:13+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"create feedback"}
+{"level":"error","time":"2024-08-09T18:09:13+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"create feedback fail, error ОШИБКА: INSERT или UPDATE в таблице \"feedback\" нарушает ограничение внешнего ключа \"feedback_racket_id_fkey\" (SQLSTATE 23503)"}
+{"level":"error","time":"2024-08-09T18:09:13+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"create feedback fail, error ОШИБКА: INSERT или UPDATE в таблице \"feedback\" нарушает ограничение внешнего ключа \"feedback_racket_id_fkey\" (SQLSTATE 23503)"}
+{"level":"info","time":"2024-08-09T18:11:51+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T18:12:36+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"create feedback"}
+{"level":"info","time":"2024-08-09T18:12:58+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"invalid character 'r' looking for beginning of value"}
+{"level":"info","time":"2024-08-09T18:12:58+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"create feedback"}
+{"level":"error","time":"2024-08-09T18:12:58+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"create feedback fail, error ОШИБКА: INSERT или UPDATE в таблице \"feedback\" нарушает ограничение внешнего ключа \"feedback_racket_id_fkey\" (SQLSTATE 23503)"}
+{"level":"error","time":"2024-08-09T18:12:58+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"create feedback fail, error ОШИБКА: INSERT или UPDATE в таблице \"feedback\" нарушает ограничение внешнего ключа \"feedback_racket_id_fkey\" (SQLSTATE 23503)"}
+{"level":"info","time":"2024-08-09T18:13:46+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T18:14:02+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T18:14:02+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T18:14:05+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T18:14:06+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T18:14:06+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T18:14:06+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T18:14:06+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T18:14:10+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 18"}
+{"level":"info","time":"2024-08-09T18:14:22+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"create feedback"}
+{"level":"error","time":"2024-08-09T18:14:22+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"create feedback fail, error ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности \"feedback_pkey\" (SQLSTATE 23505)"}
+{"level":"error","time":"2024-08-09T18:14:22+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"create feedback fail, error ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности \"feedback_pkey\" (SQLSTATE 23505)"}
+{"level":"info","time":"2024-08-09T18:15:15+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"create feedback"}
+{"level":"info","time":"2024-08-09T18:15:53+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart, user 18"}
+{"level":"info","time":"2024-08-09T18:15:54+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T18:15:55+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T18:15:55+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T18:15:55+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T18:15:55+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T18:15:59+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T18:42:35+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T18:42:46+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T18:42:46+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T18:42:46+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T18:42:46+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T18:42:46+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 0"}
+{"level":"error","time":"2024-08-09T18:42:46+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id fail, error no rows in result set"}
+{"level":"error","time":"2024-08-09T18:42:46+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"failed to GetRacketByID: get racket by id fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T18:43:12+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T18:43:12+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T18:43:12+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T18:43:12+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T18:43:12+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 0"}
+{"level":"error","time":"2024-08-09T18:43:12+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id fail, error no rows in result set"}
+{"level":"error","time":"2024-08-09T18:43:12+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"failed to GetRacketByID: get racket by id fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T18:43:48+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T18:43:50+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T18:43:50+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T18:43:50+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T18:43:50+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T18:43:50+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 0"}
+{"level":"error","time":"2024-08-09T18:43:50+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id fail, error no rows in result set"}
+{"level":"error","time":"2024-08-09T18:43:50+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"failed to GetRacketByID: get racket by id fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T18:44:51+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T18:44:53+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T18:44:53+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T18:44:53+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T18:44:53+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T18:44:54+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 0"}
+{"level":"error","time":"2024-08-09T18:44:54+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id fail, error no rows in result set"}
+{"level":"error","time":"2024-08-09T18:44:54+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"failed to GetRacketByID: get racket by id fail, error no rows in result set"}
+{"level":"info","time":"2024-08-09T18:47:37+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T18:47:38+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T18:47:38+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T18:47:38+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T18:47:38+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T18:47:44+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T18:48:35+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T18:48:44+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T18:48:44+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T18:49:29+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T18:49:33+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T18:49:33+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T18:49:33+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by user id 18"}
+{"level":"info","time":"2024-08-09T18:50:05+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T18:50:11+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T18:50:11+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T18:50:11+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by user id 18"}
+{"level":"info","time":"2024-08-09T18:50:31+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T18:50:35+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T18:50:35+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T18:50:35+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by user id 18"}
+{"level":"info","time":"2024-08-09T18:51:21+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T18:51:23+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T18:51:23+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T18:51:23+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T18:51:23+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T18:51:28+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T18:51:28+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T18:51:28+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by user id 18"}
+{"level":"info","time":"2024-08-09T18:53:56+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T18:54:06+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T18:54:06+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T18:54:06+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by user id 18"}
+{"level":"info","time":"2024-08-09T18:54:10+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T18:54:10+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T18:54:10+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T18:54:10+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T18:54:27+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 18"}
+{"level":"info","time":"2024-08-09T18:54:37+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"create feedback"}
+{"level":"error","time":"2024-08-09T18:54:37+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"create feedback fail, error ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности \"feedback_pkey\" (SQLSTATE 23505)"}
+{"level":"error","time":"2024-08-09T18:54:37+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102","message":"create feedback fail, error ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности \"feedback_pkey\" (SQLSTATE 23505)"}
+{"level":"info","time":"2024-08-09T18:54:59+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T18:54:59+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by user id 18"}
+{"level":"info","time":"2024-08-09T18:55:01+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T18:55:08+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email mshsvnv"}
+{"level":"info","time":"2024-08-09T18:55:08+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 19"}
+{"level":"info","time":"2024-08-09T18:55:08+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by user id 19"}
+{"level":"info","time":"2024-08-09T18:55:31+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 19"}
+{"level":"info","time":"2024-08-09T18:55:32+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T18:55:33+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T18:55:33+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T18:55:33+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T18:55:33+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T18:55:35+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"add racket to user 19, racket 429281"}
+{"level":"info","time":"2024-08-09T18:55:37+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart, user 19"}
+{"level":"info","time":"2024-08-09T18:55:41+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart, user 19"}
+{"level":"info","time":"2024-08-09T18:55:52+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"create order user 19"}
+{"level":"info","time":"2024-08-09T18:55:52+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart, user 19"}
+{"level":"info","time":"2024-08-09T18:55:55+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 19"}
+{"level":"info","time":"2024-08-09T18:56:08+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"create feedback"}
+{"level":"info","time":"2024-08-09T18:56:18+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart, user 19"}
+{"level":"info","time":"2024-08-09T18:56:19+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 19"}
+{"level":"info","time":"2024-08-09T18:56:22+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T18:56:23+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T18:56:23+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T18:56:23+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T18:56:23+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T18:56:23+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 19"}
+{"level":"info","time":"2024-08-09T18:56:31+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 19"}
+{"level":"info","time":"2024-08-09T18:56:31+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by user id 19"}
+{"level":"info","time":"2024-08-09T18:56:40+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T18:56:40+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T18:56:40+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T18:56:40+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T18:56:40+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 19"}
+{"level":"info","time":"2024-08-09T18:56:43+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 19"}
+{"level":"info","time":"2024-08-09T18:56:43+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by user id 19"}
+{"level":"info","time":"2024-08-09T18:57:41+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T18:57:43+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T18:57:43+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T18:57:43+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T18:57:43+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T18:57:43+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 19"}
+{"level":"info","time":"2024-08-09T18:57:57+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T18:57:57+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T18:57:57+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by user id 18"}
+{"level":"info","time":"2024-08-09T18:57:59+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 18"}
+{"level":"info","time":"2024-08-09T18:58:12+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T18:58:12+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T18:58:12+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T18:58:12+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T18:58:12+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 19"}
+{"level":"info","time":"2024-08-09T18:58:16+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T18:58:16+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by user id 18"}
+{"level":"info","time":"2024-08-09T18:58:19+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T19:05:55+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T19:06:01+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T19:06:01+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T19:06:01+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by user id 18"}
+{"level":"info","time":"2024-08-09T19:06:37+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart, user 18"}
+{"level":"info","time":"2024-08-09T19:06:39+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T19:06:39+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by user id 18"}
+{"level":"info","time":"2024-08-09T19:08:55+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T19:08:59+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T19:08:59+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T19:08:59+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by user id 18"}
+{"level":"info","time":"2024-08-09T19:11:09+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T19:11:22+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T19:11:22+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T19:11:22+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by user id 18"}
+{"level":"info","time":"2024-08-09T19:11:26+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T19:12:49+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T19:12:56+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T19:12:56+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T19:12:56+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by user id 18"}
+{"level":"info","time":"2024-08-09T19:13:27+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T19:13:37+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"login email aaa"}
+{"level":"info","time":"2024-08-09T19:13:37+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T19:13:37+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by user id 18"}
+{"level":"info","time":"2024-08-09T19:13:40+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"remove feedback, userID, racketID%!(EXTRA int=18, int=429281)"}
+{"level":"info","time":"2024-08-09T19:14:10+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart, user 18"}
+{"level":"info","time":"2024-08-09T19:14:11+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T19:14:11+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by user id 18"}
+{"level":"info","time":"2024-08-09T19:14:18+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart, user 18"}
+{"level":"info","time":"2024-08-09T19:14:19+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T19:14:20+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by user id 18"}
+{"level":"info","time":"2024-08-09T19:14:36+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart, user 18"}
+{"level":"info","time":"2024-08-09T19:14:38+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T19:14:40+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get racket by id 429281"}
+{"level":"info","time":"2024-08-09T19:14:40+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T19:14:40+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by racket id 429281"}
+{"level":"info","time":"2024-08-09T19:14:40+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 19"}
+{"level":"info","time":"2024-08-09T19:14:42+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"add racket to user 18, racket 429281"}
+{"level":"info","time":"2024-08-09T19:14:43+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"add racket to user 18, racket 429281"}
+{"level":"info","time":"2024-08-09T19:14:47+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get cart, user 18"}
+{"level":"info","time":"2024-08-09T19:14:56+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"add racket to user 18, racket 429281"}
+{"level":"info","time":"2024-08-09T19:14:58+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get all rackets"}
+{"level":"info","time":"2024-08-09T19:14:59+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user's orders 18"}
+{"level":"info","time":"2024-08-09T19:15:08+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get user by id 18"}
+{"level":"info","time":"2024-08-09T19:15:08+03:00","caller":"C:/Users/mshsv/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185","message":"get feedback by user id 18"}

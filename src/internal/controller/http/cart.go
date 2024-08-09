@@ -56,7 +56,6 @@ func (cc *CartController) AddRacket(c *gin.Context) {
 	if err := c.ShouldBindJSON(&req); c.Request.Body == nil || err != nil {
 		cc.l.Infof(err.Error())
 		c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{"error": err.Error()})
-		return
 	}
 
 	req.UserID = userID
@@ -83,18 +82,13 @@ func (cc *CartController) RemoveRacket(c *gin.Context) {
 
 	var req dto.RemoveRacketCartReq
 
-	// if err := c.ShouldBindJSON(&req); c.Request.Body == nil || err != nil {
-	// 	cc.l.Infof(err.Error())
-	// 	c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{"error": err.Error()})
-	// 	return
-	// }
-
 	racketID, _ := strconv.Atoi(c.Param("id"))
 
 	req.RacketID = racketID
 	req.UserID = userID
 
 	cart, err := cc.service.RemoveRacket(c, &req)
+
 	if err != nil {
 		cc.l.Errorf(err.Error())
 		c.AbortWithStatusJSON(http.StatusInternalServerError, gin.H{"error": "Failed to list rackets"})

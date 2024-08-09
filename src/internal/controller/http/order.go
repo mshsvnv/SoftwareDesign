@@ -44,11 +44,6 @@ func (o *OrderController) CreateOrder(c *gin.Context) {
 		c.AbortWithStatusJSON(http.StatusInternalServerError, gin.H{"error": "error 2"})
 		return
 	}
-
-	// TODO
-	c.JSON(http.StatusOK, gin.H{
-		"msg": "your order is done",
-	})
 }
 
 func (o *OrderController) GetMyOrders(c *gin.Context) {
@@ -64,7 +59,7 @@ func (o *OrderController) GetMyOrders(c *gin.Context) {
 
 	if err != nil {
 		o.l.Errorf(err.Error())
-		c.AbortWithStatusJSON(http.StatusInternalServerError, gin.H{"error": "Failed to list rackets"})
+		c.AbortWithStatusJSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 	}
 
 	c.JSON(http.StatusOK, gin.H{

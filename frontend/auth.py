@@ -81,8 +81,10 @@ class Login(ft.Container):
             data = resp.json()
 
             self.page.client_storage.set("token", data["token"])
+            
             self.page.go("/api/profile")
         else:
+            # error
             print(resp)
 
 class Register(ft.Container):
@@ -165,6 +167,7 @@ class Register(ft.Container):
         )
 
     def register(self, e):
+
         data = {
             "name": self.name.value,
             "surname": self.surname.value,
@@ -174,11 +177,14 @@ class Register(ft.Container):
 
         resp = req.post(utils.url + "/auth/register", json = data)
 
+        # TODO
         if resp.status_code == 200:
             data = resp.json()
 
             self.page.client_storage.set("token", data["token"])
+        
             self.page.go("/api/profile")
         else:
+            # error
             print(resp)
 

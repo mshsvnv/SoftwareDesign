@@ -11,8 +11,8 @@ const (
 )
 
 type OrderLine struct {
-	RacketID int
-	Quantity int
+	RacketID int `json:"racket_id"`
+	Quantity int `json:"quantity"`
 }
 
 type OrderInfo struct {
@@ -22,11 +22,11 @@ type OrderInfo struct {
 }
 
 type Order struct {
-	ID           int
-	UserID       int
-	CreationDate time.Time
-	OrderInfo    *OrderInfo
-	Status       OrderStatus
-	Lines        []*OrderLine
-	TotalPrice   float32
+	ID           int          `json:"id"`
+	UserID       int          `json:"user_id"`
+	CreationDate time.Time    `json:"creation_date"`
+	OrderInfo    *OrderInfo   `json:"order_info"`
+	Status       OrderStatus  `json:"status"`
+	Lines        []*OrderLine `json:"lines"`
+	TotalPrice   float32      `json:"total_price"`
 }

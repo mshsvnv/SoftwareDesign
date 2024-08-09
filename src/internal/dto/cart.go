@@ -7,12 +7,12 @@ type AddRacketCartReq struct {
 }
 
 type RemoveRacketCartReq struct {
-	UserID   int
+	UserID   int `json:"user_id"`
 	RacketID int `json:"racket_id"`
 }
 
 type UpdateRacketCartReq struct {
-	UserID   int
+	UserID   int `json:"user_id"`
 	RacketID int `json:"racket_id"`
 	Quantity int `json:"quantity"`
 }

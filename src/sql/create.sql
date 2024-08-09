@@ -72,6 +72,6 @@ CREATE TABLE IF NOT EXISTS feedback (
     user_id INT REFERENCES "user"(id) ON DELETE CASCADE,
     PRIMARY KEY (user_id, racket_id),
     feedback TEXT,
-    rating FLOAT,
+    rating INT,
     date TIMESTAMP
 );

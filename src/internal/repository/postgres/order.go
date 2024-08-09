@@ -2,6 +2,7 @@ package mypostgres
 
 import (
 	"context"
+	"fmt"
 
 	"github.com/Masterminds/squirrel"
 	"github.com/jackc/pgx/v5"
@@ -301,6 +302,7 @@ func (r *OrderRepository) GetOrderByID(ctx context.Context, orderID int) (*model
 	sql, args, err := query.ToSql()
 
 	if err != nil {
+		fmt.Print("6")
 		return nil, err
 	}
 
@@ -309,24 +311,29 @@ func (r *OrderRepository) GetOrderByID(ctx context.Context, orderID int) (*model
 	order, err := r.rowToModel(row)
 
 	if err != nil {
+		fmt.Print("7")
 		return nil, err
 	}
 
 	query = r.Builder.
-		Select(racketIDField,
-			quantityField).
+		Select(
+			racketIDField,
+			quantityField,
+		).
 		From(orderRacketTable).
 		Where(squirrel.Eq{orderIDField: orderID})
 
 	sql, args, err = query.ToSql()
 
 	if err != nil {
+		fmt.Print("8")
 		return nil, err
 	}
 
 	rows, err := r.Pool.Query(ctx, sql, args...)
 
 	if err != nil {
+		fmt.Print("9")
 		return nil, err
 	}
 
@@ -337,6 +344,7 @@ func (r *OrderRepository) GetOrderByID(ctx context.Context, orderID int) (*model
 		line, err := r.rowToModelOrderRacket(rows)
 
 		if err != nil {
+			fmt.Print("10")
 			return nil, err
 		}
 
@@ -353,6 +361,7 @@ func (r *OrderRepository) GetMyOrders(ctx context.Context, userID int) ([]*model
 	ordersID, err := r.getMyOrders(ctx, userID)
 
 	if err != nil {
+		fmt.Print("1")
 		return nil, err
 	}
 
@@ -363,6 +372,7 @@ func (r *OrderRepository) GetMyOrders(ctx context.Context, userID int) ([]*model
 		order, err := r.GetOrderByID(ctx, id)
 
 		if err != nil {
+			fmt.Print("2")
 			return nil, err
 		}
 
@@ -382,12 +392,14 @@ func (r *OrderRepository) getMyOrders(ctx context.Context, userID int) ([]int, e
 	sql, args, err := query.ToSql()
 
 	if err != nil {
+		fmt.Print("3")
 		return nil, err
 	}
 
 	rows, err := r.Pool.Query(ctx, sql, args...)
 
 	if err != nil {
+		fmt.Print("4")
 		return nil, err
 	}
 
@@ -402,6 +414,7 @@ func (r *OrderRepository) getMyOrders(ctx context.Context, userID int) ([]int, e
 		)
 
 		if err != nil {
+			fmt.Print("5")
 			return nil, err
 		}
 

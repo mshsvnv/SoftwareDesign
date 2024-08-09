@@ -8,6 +8,6 @@ type UpdateOrder struct {
 }
 
 type PlaceOrderReq struct {
-	UserID    int
-	OrderInfo *model.OrderInfo `json:"orderinfo"`
+	UserID    int              `json:"user_id"`
+	OrderInfo *model.OrderInfo `json:"order_info"`
 }
