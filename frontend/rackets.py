@@ -27,9 +27,11 @@ class Racket(ft.Container):
                     controls = [
                         ft.Text(
                             value = f"Цена: {self.racket['price']}",
+                            size = 16
                         ),
-                        ft.FilledButton(
+                        ft.ElevatedButton(
                             text = "В корзину",
+                            scale = 1.15,
                             style = style.styleGreen,
                             on_click = self.addRacketToCart
                         )
@@ -60,11 +62,52 @@ class Racket(ft.Container):
             json = data
         )
 
-        # TODO
         if resp.status_code == 200:
-            print("success")
+            bs = ft.BottomSheet(
+                content = ft.Container(
+                    padding = 25,
+                    content = ft.Column(
+                        tight = True,
+                        controls = [
+                            ft.Text(
+                                value = "Ракетка добавлена в корзину!",
+                                size = 18
+                            ),
+                            ft.ElevatedButton(
+                                scale = 1.15,
+                                text = "Закрыть", 
+                                on_click = lambda _: self.page.close(bs),
+                                style = style.styleGrey
+                            ),
+                        ],
+                    ),
+                )
+            )
+
+            self.page.open(bs)
         else:
-            print(resp)
+            bs = ft.BottomSheet(
+                content = ft.Container(
+                    padding = 25,
+                    content = ft.Column(
+                        tight = True,
+                        controls = [
+                            ft.Text(
+                                value = "Произошла ошибка сервера!",
+                                size = 18
+                            ),
+                            ft.ElevatedButton(
+                                scale = 1.15,
+                                text = "Закрыть", 
+                                on_click = lambda _: self.page.close(bs),
+                                style = style.styleGrey
+                            ),
+                        ],
+                    ),
+                )
+            )
+
+            self.page.open(bs)
 
 class Rackets(ft.Container):
     
@@ -74,7 +117,7 @@ class Rackets(ft.Container):
         self.page = page
         self.padding = 50
         
-        self.rackets = ft.ResponsiveRow()
+        self.rackets = None
         self.getRackets()
 
         self.content = ft.Column(
@@ -96,13 +139,19 @@ class Rackets(ft.Container):
         if resp.status_code == 200:
             data = resp.json()
 
-            for racket in data["rackets"]:
-                
-                self.rackets.controls.append(
-                    Racket(racket, self.page)
-                )
-
-            self.update()
+            if data["rackets"] is not None:
+                self.rackets = ft.ResponsiveRow()
+                for racket in data["rackets"]:
+                    
+                    self.rackets.controls.append(
+                        Racket(racket, self.page)
+                    )
+            else:
+                self.rackets = ft.Text(
+                    "Ракеток нет!", 
+                    size = 30,
+                    text_align = ft.TextAlign.CENTER
+                ),
         else:
-            print(resp.error)
+            print(resp)
         

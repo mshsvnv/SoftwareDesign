@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS supplier (
     id SERIAL,
     email TEXT UNIQUE,
     name TEXT,
-    phone TEXT check (CHAR_LENGTH(phone) = 11),
+    phone TEXT,
     town TEXT
 );
 

@@ -29,12 +29,23 @@ func (c *Controller) SetAuthRoute(l logging.Interface, authService service.IAuth
 	api.POST("/login", authController.Login)
 }
 
-func (c *Controller) SetRacketRoute(l logging.Interface, racketService service.IRacketService, feedbackService service.IFeedbackService) {
+func (c *Controller) SetRacketRoute(
+	l logging.Interface,
+	racketService service.IRacketService,
+	feedbackService service.IFeedbackService,
+	authService service.IAuthService,
+	userService service.IUserService) {
 
-	racketController := NewRacketController(l, racketService, feedbackService)
+	racketController := NewRacketController(l, racketService, feedbackService, userService)
+	authController := NewAuthController(l, authService)
 
 	c.handler.GET("/rackets", racketController.ListsAllRackets)
 	c.handler.GET("/rackets/:id", racketController.GetRacketByID)
+
+	api := c.handler.Group("api", authController.UserIdentity)
+
+	api.POST("/racket", racketController.AddRacket)
+	api.PUT("/racket/:id", racketController.UpdateRacket)
 }
 
 func (c *Controller) SetUserRoute(
@@ -58,8 +69,6 @@ func (c *Controller) SetUserRoute(
 	api.POST("/cart", cartController.AddRacket)
 	api.PUT("/cart/:id", cartController.UpdateRacket)
 	api.DELETE("/cart/:id", cartController.RemoveRacket)
-
-	api.GET("/orderlist", userController.GetMyOrders)
 }
 
 // order
@@ -93,4 +102,21 @@ func (c *Controller) SetFeedbackRoute(
 	api.GET("/feedbacks", feedbackController.GetFeedbacksByUserID)
 	api.POST("/feedback", feedbackController.CreateFeedback)
 	api.DELETE("/feedback/:id", feedbackController.DeleteFeedback)
+}
+
+// supplier
+func (c *Controller) SetSupplierRoute(
+	l logging.Interface,
+	authService service.IAuthService,
+	supplierService service.ISupplierService,
+	userService service.IUserService) {
+
+	authController := NewAuthController(l, authService)
+	supplierController := NewSupplierController(l, supplierService, userService)
+
+	api := c.handler.Group("api", authController.UserIdentity)
+
+	api.GET("/suppliers", supplierController.ListsAllSuppliers)
+	api.POST("/supplier", supplierController.AddSupplier)
+	api.DELETE("/supplier/:id", supplierController.RemoveSupplier)
 }

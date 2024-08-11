@@ -45,22 +45,28 @@ class Login(ft.Container):
                     controls = [
                         ft.Row(
                             controls = [
-                                ft.Text("Нет аккаунта?"),
+                                ft.Text(
+                                    value = "Нет аккаунта?",
+                                    size = 16
+                                ),
                                 ft.Text(
                                     spans = [
                                         ft.TextSpan(
                                             text = "Зарегестрироваться",
                                             on_click = lambda _: self.page.go("/auth/register"),
                                             style = ft.TextStyle(
-                                                weight = ft.FontWeight.BOLD
+                                                weight = ft.FontWeight.BOLD,
+                                                size = 16,
+                                                decoration=ft.TextDecoration.UNDERLINE
                                             )
                                         )
                                     ]
                                 ),
                             ]
                         ),
-                        ft.FilledButton(
+                        ft.ElevatedButton(
                             text = "Войти",
+                            scale = 1.15,
                             on_click = self.login,
                             style = style.styleGreen
                         )
@@ -84,8 +90,28 @@ class Login(ft.Container):
             
             self.page.go("/api/profile")
         else:
-            # error
-            print(resp)
+            bs = ft.BottomSheet(
+                content = ft.Container(
+                    padding = 25,
+                    content = ft.Column(
+                        tight = True,
+                        controls = [
+                            ft.Text(
+                                value = "Произошла ошибка!",
+                                size = 18
+                            ),
+                            ft.ElevatedButton(
+                                scale = 1.15,
+                                text = "Закрыть", 
+                                on_click = lambda _: self.page.close(bs),
+                                style = style.styleGrey
+                            ),
+                        ],
+                    ),
+                )
+            )
+
+            self.page.open(bs)
 
 class Register(ft.Container):
 
@@ -142,22 +168,28 @@ class Register(ft.Container):
                     controls = [
                         ft.Row(
                             controls = [
-                                ft.Text("Есть аккаунт?"),
+                                ft.Text(
+                                    value = "Есть аккаунт?",
+                                    size = 16
+                                ),
                                 ft.Text(
                                     spans = [
                                         ft.TextSpan(
                                             text = "Войти",
                                             on_click = lambda _: self.page.go("/auth/login"),
                                             style = ft.TextStyle(
-                                                weight = ft.FontWeight.BOLD
+                                                weight = ft.FontWeight.BOLD,
+                                                size = 16,
+                                                decoration=ft.TextDecoration.UNDERLINE
                                             )
                                         )
                                     ]
                                 ),
                             ]
                         ),
-                        ft.FilledButton(
+                        ft.ElevatedButton(
                             text = "Зарегестрироваться",
+                            scale = 1.15,
                             on_click = self.register,
                             style = style.styleGreen
                         )
@@ -177,7 +209,6 @@ class Register(ft.Container):
 
         resp = req.post(utils.url + "/auth/register", json = data)
 
-        # TODO
         if resp.status_code == 200:
             data = resp.json()
 
@@ -185,6 +216,26 @@ class Register(ft.Container):
         
             self.page.go("/api/profile")
         else:
-            # error
-            print(resp)
+            bs = ft.BottomSheet(
+                content = ft.Container(
+                    padding = 25,
+                    content = ft.Column(
+                        tight = True,
+                        controls = [
+                            ft.Text(
+                                value = "Произошла ошибка!",
+                                size = 18
+                            ),
+                            ft.ElevatedButton(
+                                scale = 1.15,
+                                text = "Закрыть", 
+                                on_click = lambda _: self.page.close(bs),
+                                style = style.styleGrey
+                            ),
+                        ],
+                    ),
+                )
+            )
+
+            self.page.open(bs)
 

@@ -17,10 +17,12 @@ class CartInfo(ft.Container):
         self.col = {"md": 4}
 
         self.quantity = ft.Text(
-            value = quantity
+            value = quantity,
+            size = 16
         )
         self.total_price = ft.Text(
-            value = total_price
+            value = total_price,
+            size = 16
         )
 
         self.rowQuantity = ft.Row(
@@ -28,6 +30,7 @@ class CartInfo(ft.Container):
             controls = [
                 ft.Text(
                     value = 'Товаров',
+                    size = 18
                 ),
                 self.quantity
             ]
@@ -38,6 +41,7 @@ class CartInfo(ft.Container):
             controls = [
                 ft.Text(
                     value = 'Итог',
+                    size = 18,
                     weight = ft.FontWeight.BOLD
                 ),
                 self.total_price
@@ -148,7 +152,8 @@ class Order(ft.Container):
                                             alignment = ft.MainAxisAlignment.SPACE_BETWEEN,
                                             controls = [
                                                 self.date,
-                                                ft.FilledButton(
+                                                ft.ElevatedButton(
+                                                    scale = 1.15,
                                                     text = "Дата получения",
                                                     style = style.styleGrey,
                                                     icon = ft.icons.CALENDAR_MONTH,
@@ -162,7 +167,8 @@ class Order(ft.Container):
                                             alignment = ft.MainAxisAlignment.SPACE_BETWEEN,
                                             controls = [
                                                 self.time,
-                                                ft.FilledButton(
+                                                ft.ElevatedButton(
+                                                    scale = 1.15,
                                                     text = "Время получения",
                                                     style = style.styleGrey,
                                                     icon = ft.icons.TIME_TO_LEAVE,
@@ -177,13 +183,15 @@ class Order(ft.Container):
                                         ft.Row(
                                             alignment = ft.MainAxisAlignment.SPACE_BETWEEN,
                                             controls = [
-                                                ft.FilledButton(
+                                                ft.ElevatedButton(
                                                     text = "Подтвердить",
+                                                    scale = 1.15,
                                                     style = style.styleGreen,
                                                     on_click = self.createOrder
                                                 ),
-                                                ft.FilledButton(
+                                                ft.ElevatedButton(
                                                     text = "Отменить",
+                                                    scale = 1.15,
                                                     style = style.styleOrange,
                                                     on_click = lambda _: self.page.go("/api/cart")
                                                 )
@@ -241,5 +249,30 @@ class Order(ft.Container):
             json = data 
         )
 
-        if resp.status_code == 200:
+        def close(e):
+            self.page.close(bs)
             self.page.go("/api/cart")
+
+        if resp.status_code == 200:
+            bs = ft.BottomSheet(
+                content = ft.Container(
+                    padding = 25,
+                    content = ft.Column(
+                        tight = True,
+                        controls = [
+                            ft.Text(
+                                value = "Ракетка добавлена в корзину!",
+                                size = 18
+                            ),
+                            ft.ElevatedButton(
+                                scale = 1.15,
+                                text = "Закрыть", 
+                                on_click = close,
+                                style = style.styleGrey
+                            ),
+                        ],
+                    ),
+                )
+            )
+
+            self.page.open(bs)

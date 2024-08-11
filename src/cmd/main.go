@@ -64,7 +64,7 @@ func main() {
 	feedbackRepo := mypostgres.NewFeedbackRepository(db)
 
 	userService := service.NewUserService(l, userRepo)
-	// supplierService := service.NewSupplierService(l, supplierRepo)
+	supplierService := service.NewSupplierService(l, supplierRepo)
 	racketService := service.NewRacketService(l, racketRepo, supplierRepo)
 	cartService := service.NewCartService(l, cartRepo, racketRepo)
 	authService := service.NewAuthService(l, userRepo, cfg.Auth.SigningKey, cfg.Auth.AccessTokenTTL)
@@ -75,11 +75,12 @@ func main() {
 	controller := http.NewRouter(handler)
 
 	controller.SetAuthRoute(l, authService)
-	controller.SetRacketRoute(l, racketService, feedbackService)
+	controller.SetRacketRoute(l, racketService, feedbackService, authService, userService)
 	controller.SetUserRoute(l, cartService, authService, userService, orderService)
 	controller.SetOrderRoute(l, authService, orderService)
 	controller.SetFeedbackRoute(l, authService, feedbackService)
-	
+	controller.SetSupplierRoute(l, authService, supplierService, userService)
+
 	// Create router
 	router := httpserver.New(handler, httpserver.Port(cfg.HTTP.Port))
 

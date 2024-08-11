@@ -45,7 +45,8 @@ class Feedback(ft.AlertDialog):
                         alignment = ft.MainAxisAlignment.SPACE_BETWEEN,
                         controls = [
                             ft.Text(
-                                value = "Ракетка"
+                                value = "Ракетка",
+                                size = 18    
                             ),
                             self.racketID
                         ]
@@ -54,7 +55,8 @@ class Feedback(ft.AlertDialog):
                         alignment = ft.MainAxisAlignment.SPACE_BETWEEN,
                         controls = [
                             ft.Text(
-                                value = "Оценка"
+                                value = "Оценка",
+                                size = 18
                             ),
                             self.rating
                         ]
@@ -63,7 +65,8 @@ class Feedback(ft.AlertDialog):
                     ft.Row(
                         alignment = ft.MainAxisAlignment.END,
                         controls = [
-                            ft.FilledButton(
+                            ft.ElevatedButton(
+                                scale = 1.15,
                                 text = "Оценить",
                                 style = style.styleGreen,
                                 on_click = self.makeFeedback

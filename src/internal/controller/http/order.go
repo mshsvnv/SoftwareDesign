@@ -10,14 +10,14 @@ import (
 )
 
 type OrderController struct {
-	l       logging.Interface
-	service service.IOrderService
+	l            logging.Interface
+	orderService service.IOrderService
 }
 
-func NewOrderController(l logging.Interface, service service.IOrderService) *OrderController {
+func NewOrderController(l logging.Interface, orderService service.IOrderService) *OrderController {
 	return &OrderController{
-		l:       l,
-		service: service,
+		l:            l,
+		orderService: orderService,
 	}
 }
 
@@ -39,7 +39,7 @@ func (o *OrderController) CreateOrder(c *gin.Context) {
 
 	req.UserID = userID
 
-	if err := o.service.CreateOrder(c, &req); err != nil {
+	if err := o.orderService.CreateOrder(c, &req); err != nil {
 		o.l.Infof(err.Error())
 		c.AbortWithStatusJSON(http.StatusInternalServerError, gin.H{"error": "error 2"})
 		return
@@ -55,7 +55,7 @@ func (o *OrderController) GetMyOrders(c *gin.Context) {
 		c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 	}
 
-	orders, err := o.service.GetMyOrders(c, userID)
+	orders, err := o.orderService.GetMyOrders(c, userID)
 
 	if err != nil {
 		o.l.Errorf(err.Error())

@@ -146,11 +146,6 @@ func (suite *CartServiceTestSuite) TestAddRacketSuccess() {
 	suite.Nil(err)
 }
 
-// RemoveRacket
-// UpdateRacket
-// GetCartByUserID
-
-// TODO
 func (suite *CartServiceTestSuite) TestGetCartByUserIDFail() {
 
 	userID := 0

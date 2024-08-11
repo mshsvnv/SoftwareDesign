@@ -18,7 +18,7 @@ func TestSupplierRepositoryCreate(t *testing.T) {
 		Name:  "IP petrov",
 		Email: "petrov@mail.ru",
 		Town:  "Armavir",
-		Phone: "8-800-555-35-35",
+		Phone: "88005553535",
 	}
 
 	err := repo.Create(ctx, supplier)
@@ -39,7 +39,7 @@ func TestSupplierRepositoryUpdate(t *testing.T) {
 		Name:  "IP petrov",
 		Email: "petrov@mail.ru",
 		Town:  "Armavir",
-		Phone: "8-800-555-35-35",
+		Phone: "88005553535",
 	}
 
 	err := repo.Create(ctx, supplier)
@@ -64,7 +64,7 @@ func TestSupplierRepositoryGetSupplierByID(t *testing.T) {
 		Name:  "IP petrov",
 		Email: "petrov@mail.ru",
 		Town:  "Armavir",
-		Phone: "8-800-555-35-35",
+		Phone: "88005553535",
 	}
 
 	err := repo.Create(ctx, supplier)
@@ -89,7 +89,7 @@ func TestSupplierRepositoryGetSupplierByEmail(t *testing.T) {
 		Name:  "IP petrov",
 		Email: "petrov@mail.ru",
 		Town:  "Armavir",
-		Phone: "8-800-555-35-35",
+		Phone: "88005553535",
 	}
 
 	err := repo.Create(ctx, supplier)
@@ -114,7 +114,7 @@ func TestSupplierRepositoryRemove(t *testing.T) {
 		Name:  "IP petrov",
 		Email: "petrov@mail.ru",
 		Town:  "Armavir",
-		Phone: "8-800-555-35-35",
+		Phone: "88005553535",
 	}
 
 	err := repo.Create(ctx, supplier)

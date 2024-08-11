@@ -1,8 +1,8 @@
 package dto
 
 type CreateSupplierReq struct {
-	Name  string
-	Phone string
-	Town  string
-	Email string
+	Name  string `json:"name"`
+	Phone string `json:"phone"`
+	Town  string `json:"town"`
+	Email string `json:"email"`
 }

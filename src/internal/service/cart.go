@@ -34,7 +34,6 @@ func NewCartService(logger logging.Interface, repo repo.ICartRepository, repoRac
 
 func (s *CartService) UpdateRacket(ctx context.Context, req *dto.UpdateRacketCartReq) (*model.Cart, error) {
 
-	// TODO
 	cart, _ := s.repo.GetCartByID(ctx, req.UserID)
 
 	for _, lines := range cart.Lines {

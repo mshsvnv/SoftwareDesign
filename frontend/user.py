@@ -26,11 +26,12 @@ class UserInfo(ft.Container):
                     controls = [
                         ft.Text(
                             value = "Имя",
-                            size = 15
+                            size = 18,
+                            weight = ft.FontWeight.BOLD
                         ),
                         ft.Text(
                             value = self.name,
-                            size = 15
+                            size = 16
                         )
                     ]
                 ),
@@ -39,11 +40,12 @@ class UserInfo(ft.Container):
                     controls = [
                         ft.Text(
                             value = "Фамилия",
-                            size = 15
+                            size = 18,
+                            weight = ft.FontWeight.BOLD
                         ),
                         ft.Text(
                             value = self.surname,
-                            size = 15
+                            size = 16
                         )
                     ]
                 ),
@@ -52,18 +54,20 @@ class UserInfo(ft.Container):
                     controls = [
                         ft.Text(
                             value = "Почта",
-                            size = 15
+                            size = 18,
+                            weight = ft.FontWeight.BOLD
                         ),
                         ft.Text(
                             value = self.email,
-                            size = 15
+                            size = 16
                         )
                     ]
                 ),
                 ft.Row(
                     alignment = ft.MainAxisAlignment.END,
                     controls = [ 
-                        ft.FilledButton(
+                        ft.ElevatedButton(
+                            scale = 1.15,
                             text = "Выйти",
                             style = style.styleOrange,
                             on_click = self.exit
@@ -88,13 +92,42 @@ class UserInfo(ft.Container):
             self.surname = data["user"]["surname"]
             self.email = data["user"]["email"]
         else:
-            # error
             print(resp)
 
     def exit(self, e):
 
-        self.page.client_storage.remove("token")
-        self.page.go("/rackets")
+        def handleOpen(e):
+            self.page.close(dlg)
+            self.page.client_storage.remove("token")
+            self.page.go("/rackets")
+
+        def handleClose(e):
+            self.page.close(dlg)
+
+        dlg = ft.AlertDialog(
+            title = ft.Text(
+                value = "Выйти из профиля",
+                style = ft.FontWeight.BOLD
+            ),
+            content = ft.Text(
+                "Вы действительно хотите выйти?",
+                size = 16
+            ),
+            actions = [
+                ft.ElevatedButton(
+                    text = "Да", 
+                    on_click = handleOpen,
+                    style = style.styleGreen
+                ),
+                ft.ElevatedButton(
+                    text = "Нет", 
+                    on_click = handleClose,
+                    style = style.styleOrange
+                ),
+            ]
+        )
+
+        self.page.open(dlg)
 
 class Feedback(ft.Container):
 
@@ -102,7 +135,7 @@ class Feedback(ft.Container):
         super().__init__()
 
         self.page = page
-        self.height = 200
+        self.height = 300
         self.padding = 25
 
         feedbacks = self.getFeedbacks()
@@ -110,7 +143,7 @@ class Feedback(ft.Container):
         if feedbacks is None:
             self.content = ft.Text(
                 value = "Отзывов нет",
-                size = 15,
+                size = 25,
                 text_align = ft.TextAlign.LEFT
             )
         else:
@@ -137,6 +170,7 @@ class Feedback(ft.Container):
                                 controls = [
                                     ft.Text(
                                         value = f"{feedback['date'][:10]}",
+                                        size = 16
                                     ),
                                     *[
                                         ft.Icon(
@@ -154,8 +188,9 @@ class Feedback(ft.Container):
                     ft.Row(
                         alignment = ft.MainAxisAlignment.SPACE_BETWEEN,
                         controls = [
-                            ft.Text(feedback["feedback"]),
-                            ft.FilledButton(
+                            ft.Text(feedback["feedback"], size = 16),
+                            ft.ElevatedButton(
+                                scale = 1.15,
                                 text = "Удалить",
                                 style = style.styleOrange,
                                 on_click = lambda _: self.deleteFeedback(feedback['racket_id']),
@@ -163,11 +198,13 @@ class Feedback(ft.Container):
                         ]
                     )
                 )
+
+                controls.append(ft.Divider())
             
-                self.content = ft.Column(
-                    alignment = ft.MainAxisAlignment.SPACE_AROUND,
-                    controls = controls
-                )
+            self.content = ft.Column(
+                alignment = ft.MainAxisAlignment.SPACE_AROUND,
+                controls = controls
+            )
 
     def getFeedbacks(self):
 
@@ -184,21 +221,70 @@ class Feedback(ft.Container):
             data = resp.json()
             return data["feedbacks"]
         else:
-            # error
-            print(resp)
+            bs = ft.BottomSheet(
+                content = ft.Container(
+                    padding = 25,
+                    content = ft.Column(
+                        tight = True,
+                        controls = [
+                            ft.Text(
+                                value = "Произошла ошибка!",
+                                size = 18
+                            ),
+                            ft.ElevatedButton(
+                                scale = 1.15,
+                                text = "Закрыть", 
+                                on_click = lambda _: self.page.close(bs),
+                                style = style.styleGrey
+                            ),
+                        ],
+                    ),
+                )
+            )
+
+            self.page.open(bs)
 
     def deleteFeedback(self, racketID: int):
 
-        headers = {
-            'Authorization': f'Bearer {self.page.client_storage.get("token")}'
-        }
+        def handleOpen(e):
+            self.page.close(dlg)
 
-        resp = req.delete(
-            utils.url + f'/api/feedback/{racketID}',
-            headers = headers,
-        )
+            headers = {
+                'Authorization': f'Bearer {self.page.client_storage.get("token")}'
+            }
 
-        print(resp)
+            resp = req.delete(
+                utils.url + f'/api/feedback/{racketID}',
+                headers = headers,
+            )
+
+        def handleClose(e):
+            self.page.close(dlg)
+
+        dlg = ft.AlertDialog(
+            title = ft.Text(
+                value = "Удалить отзыв",
+                style = ft.FontWeight.BOLD
+            ),
+            content = ft.Text(
+                "Вы действительно хотите удалить этот отзыв?",
+                size = 16
+            ),
+            actions = [
+                    ft.ElevatedButton(
+                        text = "Да", 
+                        on_click = handleOpen,
+                        style = style.styleGreen
+                        ),
+                    ft.ElevatedButton(
+                        text = "Нет", 
+                        on_click = handleClose,
+                        style = style.styleOrange
+                    )
+                ]
+            )
+
+        self.page.open(dlg)
 
 class Profile(ft.Container):
 

@@ -79,7 +79,6 @@ func (suite *RacketServiceTestSuite) TestUpdateRacketGetFail() {
 
 	req := &dto.UpdateRacketReq{
 		ID:        0,
-		Avaliable: false,
 	}
 
 	suite.mockRepo.On("GetRacketByID", mock.Anything, req.ID).
@@ -103,7 +102,6 @@ func (suite *RacketServiceTestSuite) TestUpdateRacketSuccess() {
 
 	req := &dto.UpdateRacketReq{
 		ID:        0,
-		Avaliable: false,
 	}
 
 	suite.mockRepo.On("GetRacketByID", mock.Anything, req.ID).

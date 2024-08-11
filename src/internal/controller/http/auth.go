@@ -14,7 +14,9 @@ type AuthController struct {
 	authService service.IAuthService
 }
 
-func NewAuthController(l logging.Interface, authService service.IAuthService) *AuthController {
+func NewAuthController(
+	l logging.Interface,
+	authService service.IAuthService) *AuthController {
 	return &AuthController{
 		l:           l,
 		authService: authService,

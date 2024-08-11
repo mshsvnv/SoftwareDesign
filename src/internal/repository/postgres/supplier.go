@@ -30,7 +30,7 @@ func (r *SupplierRepository) Create(ctx context.Context, supplier *model.Supplie
 			supplier.Phone,
 			supplier.Town,
 			supplier.Email).
-		Suffix("returning email")
+		Suffix("returning id")
 
 	sql, ars, err := query.ToSql()
 
@@ -41,7 +41,7 @@ func (r *SupplierRepository) Create(ctx context.Context, supplier *model.Supplie
 	row := r.Pool.QueryRow(ctx, sql, ars...)
 
 	err = row.Scan(
-		&supplier.Email,
+		&supplier.ID,
 	)
 
 	if err != nil {

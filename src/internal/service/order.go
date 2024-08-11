@@ -16,7 +16,6 @@ type IOrderService interface {
 	GetMyOrders(ctx context.Context, userID int) ([]*model.Order, error)
 	GetAllInProgressOrders(ctx context.Context) ([]*model.Order, error)
 	GetOrderByID(ctx context.Context, orderID int) (*model.Order, error)
-	// UpdateOrder(ctx context.Context, orderID int, userID int) (*model.Order, error)
 }
 
 type OrderService struct {

@@ -19,12 +19,23 @@ class CartInfo(ft.Container):
         self.content = ft.Column(
             alignment = ft.MainAxisAlignment.SPACE_AROUND,
             controls = [
-                ft.Text(
-                    value = f"Цена: {price}",
-                    weight = ft.FontWeight.BOLD
+                ft.Row(
+                    alignment = ft.MainAxisAlignment.SPACE_BETWEEN,
+                    controls = [
+                        ft.Text(
+                            value = "Цена",
+                            size = 18
+                        ),
+                        ft.Text(
+                            value = f"{price}",
+                            size = 16,
+                            weight = ft.FontWeight.BOLD
+                        ),
+                    ]
                 ),
-                ft.FilledButton(
+                ft.ElevatedButton(
                     text = "В корзину",
+                    scale = 1.15,
                     style = style.styleGreen,
                     on_click = addRacket
                 )
@@ -48,36 +59,56 @@ class RacketInfo(ft.Container):
                 ft.Row(
                     alignment = ft.MainAxisAlignment.SPACE_BETWEEN,
                     controls = [
-                        ft.Text("Фирма"),
                         ft.Text(
-                            value = self.racket['brand']
+                            value = "Фирма",
+                            size = 18,
+                            weight = ft.FontWeight.BOLD
+                        ),
+                        ft.Text(
+                            value = self.racket['brand'],
+                            size = 16
                         )
                     ]    
                 ),
                 ft.Row(
                     alignment = ft.MainAxisAlignment.SPACE_BETWEEN,
                     controls = [
-                        ft.Text("Вес"),
                         ft.Text(
-                            value = self.racket['weight']
+                            value = "Вес",
+                            size = 18,
+                            weight = ft.FontWeight.BOLD
+                        ),
+                        ft.Text(
+                            value = self.racket['weight'],
+                            size = 16
                         )
                     ]    
                 ),
                 ft.Row(
                     alignment = ft.MainAxisAlignment.SPACE_BETWEEN,
                     controls = [
-                        ft.Text("Баланс"),
                         ft.Text(
-                            value = self.racket['balance']
+                            value = "Баланс",
+                            size = 18,
+                            weight = ft.FontWeight.BOLD
+                        ),
+                        ft.Text(
+                            value = self.racket['balance'],
+                            size = 16
                         )
                     ]    
                 ),
                 ft.Row(
                     alignment = ft.MainAxisAlignment.SPACE_BETWEEN,
                     controls = [ 
-                        ft.Text("Размер головы"),
                         ft.Text(
-                            value = self.racket['headsize']
+                            value = "Размер головы",
+                            size = 18,
+                            weight = ft.FontWeight.BOLD
+                        ),
+                        ft.Text(
+                            value = self.racket['headsize'],
+                            size = 16
                         )
                     ]   
                 )
@@ -102,9 +133,51 @@ class RacketInfo(ft.Container):
         )
 
         if resp.status_code == 200:
-            print("ok")
+            bs = ft.BottomSheet(
+                content = ft.Container(
+                    padding = 25,
+                    content = ft.Column(
+                        tight = True,
+                        controls = [
+                            ft.Text(
+                                value = "Ракетка добавлена в корзину!",
+                                size = 18
+                            ),
+                            ft.ElevatedButton(
+                                scale = 1.15,
+                                text = "Закрыть", 
+                                on_click = lambda _: self.page.close(bs),
+                                style = style.styleGrey
+                            ),
+                        ],
+                    ),
+                )
+            )
+
+            self.page.open(bs)
         else:
-            print(resp)
+            bs = ft.BottomSheet(
+                content = ft.Container(
+                    padding = 25,
+                    content = ft.Column(
+                        tight = True,
+                        controls = [
+                            ft.Text(
+                                value = "Произошла ошибка сервера!",
+                                size = 18
+                            ),
+                            ft.ElevatedButton(
+                                scale = 1.15,
+                                text = "Закрыть", 
+                                on_click = lambda _: self.page.close(bs),
+                                style = style.styleGrey
+                            ),
+                        ],
+                    ),
+                )
+            )
+
+            self.page.open(bs)
 
 class Feedback(ft.Container):
 
@@ -123,13 +196,16 @@ class Feedback(ft.Container):
                     alignment = ft.MainAxisAlignment.SPACE_BETWEEN,
                     controls = [
                         ft.Text(
-                            value = name
+                            value = name,
+                            size = 18,
+                            weight = ft.FontWeight.BOLD
                         ),
                         ft.Row(
                             alignment = ft.MainAxisAlignment.END,
                             controls = [
                                 ft.Text(
                                     value = f"{feedback['date'][:10]}",
+                                    size = 16
                                 ),
                                 *[
                                     ft.Icon(
@@ -140,7 +216,7 @@ class Feedback(ft.Container):
                         ),
                     ]
                 ),
-                ft.Text(feedback["feedback"])
+                ft.Text(feedback["feedback"], size = 16)
             ]
         )
 
@@ -176,7 +252,9 @@ class Racket(ft.Container):
         else:
             controls.append(
                 ft.Text(
-                    value = "Отзывов нет!"
+                    value = "Отзывов нет",
+                    size = 25,
+                    text_align = ft.TextAlign.LEFT
                 )
             )
 

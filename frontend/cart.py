@@ -23,8 +23,9 @@ class Cart(ft.Container):
                         "Корзина пуста", 
                         size = 40
                     ),
-                    ft.FilledButton(
+                    ft.ElevatedButton(
                         text = "Начать покупки",
+                        scale = 1.25, 
                         style = style.styleGreen,
                         on_click = lambda _: self.page.go("/rackets")
                     )
@@ -106,15 +107,15 @@ class Cart(ft.Container):
 
         if self.cart is None or self.cart['total_price'] == 0:
             self.content = ft.Column(
-                # horizontal_alignment = ft.CrossAxisAlignment.CENTER,
                 alignment = ft.MainAxisAlignment.SPACE_BETWEEN,
                 controls = [
                     ft.Text(
                         "Корзина пуста", 
                         size = 40
                     ),
-                    ft.FilledButton(
+                    ft.ElevatedButton(
                         text = "Начать покупки",
+                        scale = 1.25,
                         style = style.styleGreen,
                         on_click = lambda _: self.page.go("/rackets")
                     )
@@ -178,10 +179,12 @@ class CartInfo(ft.Container):
         self.col = {"md": 4}
 
         self.quantity = ft.Text(
-            value = quantity
+            value = quantity,
+            size = 16
         )
         self.total_price = ft.Text(
-            value = total_price
+            value = total_price,
+            size = 16
         )
 
         self.rowQuantity = ft.Row(
@@ -189,6 +192,7 @@ class CartInfo(ft.Container):
             controls = [
                 ft.Text(
                     value = 'Товаров',
+                    size = 18
                 ),
                 self.quantity
             ]
@@ -199,7 +203,8 @@ class CartInfo(ft.Container):
             controls = [
                 ft.Text(
                     value = 'Итог',
-                    weight = ft.FontWeight.BOLD
+                    weight = ft.FontWeight.BOLD,
+                    size = 18
                 ),
                 self.total_price
             ]
@@ -215,7 +220,7 @@ class CartInfo(ft.Container):
                 ),
                 self.rowQuantity,
                 self.rowPrice,
-                ft.FilledButton(
+                ft.ElevatedButton(
                     text = "Оформить заказ",
                     style = style.styleGreen,
                     on_click = lambda _: self.page.go("/api/order")
@@ -251,14 +256,15 @@ class RacketInfo(ft.Container):
 
         self.quantity = ft.Text(
             value = f"{self.racket['quantity']}",
+            size = 16
         )
-        self.addButton = ft.FilledButton(
+        self.addButton = ft.ElevatedButton(
             text = "+",
             style = style.styleGreen,
             on_click = self.addRacket
         )
 
-        self.deleteButton = ft.FilledButton(
+        self.deleteButton = ft.ElevatedButton(
             text = "-",
             style = style.styleGreen,
             on_click = self.deleteRacket
@@ -274,23 +280,18 @@ class RacketInfo(ft.Container):
                             spans = [
                                 ft.TextSpan(
                                     text = f"Код: {self.racket['id']}",
+                                    style = ft.TextStyle(
+                                        size = 16
+                                    ),
                                     on_click = lambda _: self.page.go(f"/rackets/{self.racket['id']}")
                                 )
                             ]
                         ),
                         ft.Row(
                             controls = [
-                                ft.FilledButton(
-                                    text = "-",
-                                    style = style.styleGreen,
-                                    on_click = self.deleteRacket
-                                ),
+                                self.deleteButton,
                                 self.quantity,
-                                ft.FilledButton(
-                                    text = "+",
-                                    style = style.styleGreen,
-                                    on_click = self.addRacket
-                                )
+                                self.addButton
                             ]
                         )
                     ]
@@ -300,9 +301,9 @@ class RacketInfo(ft.Container):
                     controls = [
                         ft.Text(
                             value = f"Цена: {self.racket['price']}",
-                            size = 15,
+                            size = 16,
                         ),
-                        ft.FilledButton(
+                        ft.ElevatedButton(
                             text = "Удалить",
                             style = style.styleOrange,
                             on_click = self.deleteRacketAll
@@ -417,12 +418,12 @@ class RacketInfo(ft.Container):
             ),
             content = ft.Text("Вы действительно хотите удалить эту ракетку?"),
             actions = [
-                ft.FilledButton(
+                ft.ElevatedButton(
                     text = "Да", 
                     on_click = handleOpen,
                     style = style.styleGreen
                 ),
-                ft.FilledButton(
+                ft.ElevatedButton(
                     text = "Нет", 
                     on_click = handleClose,
                     style = style.styleOrange

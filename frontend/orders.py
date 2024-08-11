@@ -5,6 +5,17 @@ import style
 import utils
 import feedback
 
+class CustomButton(ft.TextButton):
+
+    def __init__(self, page: ft.Page, i: int):
+        super().__init__()
+
+        self.style = style.styleGrey
+        self.text = f'{i}'
+
+        self.on_click = lambda _: self.page.go(f'/rackets/{i}')
+
+
 class Order(ft.Container):
 
     def __init__(self, page: ft.Page, order: dict):
@@ -21,6 +32,13 @@ class Order(ft.Container):
         self.racketsID = []
         self.getRackets()
 
+        self.goods = ft.Row()
+        
+        for i in self.racketsID:
+            self.goods.controls.append(
+                CustomButton(self.page, i)
+            )
+
         self.content = ft.Column(
             alignment = ft.MainAxisAlignment.SPACE_AROUND,
             controls = [
@@ -32,35 +50,56 @@ class Order(ft.Container):
                             size = 25,
                             weight = ft.FontWeight.BOLD
                         ),
-                        ft.Text(f"отплачено {self.order['total_price']} ₽")
-                    ]
-                ),
-                ft.Row(
-                    controls = [
-                        ft.Text("Статус"),
-                        ft.FilledButton(
-                            text = "В пути" if self.order["status"] == 'InProgress' else "Получен",
-                            style = style.styleGrey,
-                        )
-                    ]
-                ),
-                ft.Text(f"Дата доставки {self.order['order_info']['delivery_date'][:10]} в {self.order['order_info']['delivery_date'][11:19]}"),
-                ft.Text(f"Получатель {self.order['order_info']['recepient_name']}"),
-                ft.Row(
-                    controls = [
-                        ft.Text("Товары"),
-                        ft.Text(
-                            spans = [
-                                ft.TextSpan(
-                                    text = f"{id}",
-                                    on_click = lambda _: self.page.go(f"/rackets/{id}")
-                                ) for id in self.racketsID
+                        ft.Row(
+                            controls = [
+                                ft.Text(
+                                    "оплачено",
+                                    size = 16
+                                ),
+                                ft.Text(
+                                    f"{self.order['total_price']} ₽",
+                                    size = 16,
+                                    weight = ft.FontWeight.BOLD
+                                )
                             ]
                         )
                     ]
                 ),
-                ft.FilledButton(
+                ft.Row(
+                    controls = [
+                        ft.Text(
+                            value = "Статус",
+                            size = 18,
+                            weight = ft.FontWeight.BOLD
+                        ),
+                        ft.ElevatedButton(
+                            text = "В пути" if self.order["status"] == 'InProgress' else "Получен",
+                            style = style.styleGrey,
+                            scale = 1.15
+                        )
+                    ]
+                ),
+                ft.Text(
+                    value = f"Дата доставки {self.order['order_info']['delivery_date'][:10]} в {self.order['order_info']['delivery_date'][11:19]}",
+                    size = 16
+                ),
+                ft.Text(
+                    value = f"Получатель {self.order['order_info']['recepient_name']}",
+                    size = 16
+                ),
+                ft.Row(
+                    controls = [
+                        ft.Text(
+                            value = "Товары",
+                            size = 18,
+                            weight = ft.FontWeight.BOLD
+                        ),
+                        self.goods
+                    ]
+                ),
+                ft.ElevatedButton(
                     text = "Оценить товар",
+                    scale = 1.15,
                     style = style.styleGrey,
                     on_click = self.evaluateRacket
                 )
@@ -77,6 +116,9 @@ class Order(ft.Container):
         dlg = feedback.Feedback(self.page, self.racketsID)
 
         self.page.open(dlg)
+
+    def print(self, i):
+        print(i)
 
 class Orders(ft.Container):
 
@@ -97,8 +139,9 @@ class Orders(ft.Container):
                         "Заказов нет", 
                         size = 40
                     ),
-                    ft.FilledButton(
+                    ft.ElevatedButton(
                         text = "Начать покупки",
+                        scale = 1.15,
                         style = style.styleGreen,
                         on_click = lambda _: self.page.go("/rackets")
                     )

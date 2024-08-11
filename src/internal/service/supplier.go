@@ -38,7 +38,7 @@ func (s *SupplierService) CreateSupplier(ctx context.Context, req *dto.CreateSup
 
 	if err == nil {
 		s.logger.Errorf("get supplier by email fail")
-		return nil, fmt.Errorf("get supplier by email fail, error %s", err)
+		return nil, fmt.Errorf("get supplier by email fail")
 	}
 
 	var supplier model.Supplier
@@ -48,7 +48,7 @@ func (s *SupplierService) CreateSupplier(ctx context.Context, req *dto.CreateSup
 
 	if err != nil {
 		s.logger.Errorf("create fail, error %s", err.Error())
-		return nil, fmt.Errorf("create fail, error %s", err)
+		return nil, fmt.Errorf("create fail, error %s", err.Error())
 	}
 
 	return &supplier, nil
